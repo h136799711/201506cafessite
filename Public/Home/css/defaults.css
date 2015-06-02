@@ -1,0 +1,6013 @@
+*{
+	margin:0;
+	padding:0;
+}
+BODY {
+	font-family: "微软雅黑";
+	font-size:80%;
+	width:100%;
+	}
+#all{
+	font-size:12px;
+	margin:0 auto;
+	width:100%;
+	}
+	BODY > #all{
+		font-size:12px;
+		}
+	BODY #cms > #all{
+		font-size:12px;
+		}
+#all, .centrar-contenido{
+	margin:0 auto;
+	text-align:center;
+	}
+#general {
+	text-align:left;
+	margin:0 auto;
+	}
+A IMG{
+	border:0;
+	}
+
+IMG{
+	border: 0;
+}
+.navigator{
+	display:none;
+	}
+
+div[class~='block']{
+	overflow:hidden;
+	float:none!important;
+}
+
+LI.odd{
+    background-color:#f2f2f2;
+}
+LI.even{
+    background-color:#ffffff;
+}
+	#content,
+	#content .centrar-contenido,
+	#menu-completo,
+	#menu-principal,
+	#menu-secundario,
+	#header .centrar-contenido,
+	#footer .centrar-contenido{
+		text-align:left;
+		}
+UL {
+	padding:0 0 0 1.3em;
+	list-style-type:none;
+	}
+	UL LI{
+		padding:0 0 0 0em;
+		}
+OL {
+	padding:0 0 0 2em;
+	}
+P{
+	margin:0.5em 0;
+	}
+TABLE {
+	empty-cells:show;
+	border-collapse:collapse;
+	font-size:1em;
+	}
+.js-attribute {
+    display: none;
+}
+
+/********************************************************************************/
+/*				maquetacion incicial con bordes									*/
+/********************************************************************************/
+#header,
+#footer,
+#content{
+	clear:both;
+}
+/********************************************************************************/
+/*				Estilos para las clases usadas habitualmente					*/
+/********************************************************************************/
+.imagen-derecha,
+.nicEdit-imagen-derecha{
+	float:right;
+	margin:0 0 0.5em 0.5em;
+	}
+.imagen-izquierda,
+.nicEdit-imagen-izquierda{
+	float:left;
+	margin:0 0.5em 0.5em 0;
+	}
+
+/************************************************************/
+/*						NOTICIAS							*/
+/************************************************************/
+#content-informacion{
+	float:left;
+}
+.content-listado-modulo{
+	float:none;
+}
+.interior-listado-modulo{
+	/*float:left;*/
+}
+/*.content-listado-modulo > .interior-listado-modulo{
+	float:none;
+	}*/
+
+.contenedor-listado-modulo{
+	clear:both;
+	}
+.content-categoria{
+	clear:both;
+	}
+
+/* Si el buscador ocupa el 100% esta regla (div[class='content-listado-modulo']) deberia de tener un clear:both; 
+para que se vea, sino por culpa del overflow se pondria a la derecha del paginador y no se veria*/
+div[class='content-listado-modulo'] {
+	float:none;
+	overflow:hidden;
+}
+
+
+/****************listado********************/
+.izquierda-listado-noticias{
+	clear:both;
+	}
+.contenedor-listado-modulo{
+	float:left;
+	width:100%;
+	clear:both;	
+	}
+	.contenedor-listado-modulo UL{
+		float:left;
+		width:100%;
+		margin-left:0;
+		padding:0;
+		clear:both;
+		list-style-type:none;
+		}
+		.contenedor-listado-modulo LI{
+			float:left;
+			padding:0;
+			width:100%;
+			clear:both;
+			background:none;
+			}
+			.contenedor-listado-modulo LI.ultimo{
+				margin-bottom:0;
+				}
+		.contenedor-listado-modulo IMG{
+			}
+
+	.contenedor-listado-modulo SPAN.fecha{
+		display:block;
+		font-size:0.85em;
+		}
+	.contenedor-listado-modulo P{
+		font-style:normal;
+		}
+/****************Ampliada********************/
+
+.content-modulo-ampliada{
+	clear:none;
+	float:left;
+	width:100%;
+	}
+	SPAN.fecha{
+		display:block;
+		}
+	DIV.sumary{
+		margin-bottom:0.8em;
+		}
+		.enlaces-comentarios A.add-comentario{
+			background:url(../../../Public/Home/img/ico-add-comentarios.gif) left top no-repeat;
+			padding-left:1.5em;
+			}
+	.buyproduct{
+		clear:both;
+	}
+/*********************enlaces a comentarios ********************/
+.enlaces-comentarios{
+	margin-top:0.3em;
+	}
+	.enlaces-comentarios A{
+		text-decoration:none;
+		}
+		.enlaces-comentarios A:hover{
+			text-decoration:underline;
+			}
+	.enlaces-comentarios A.ver-comentario{
+		background:url(../../../Public/Home/img/ico-comentarios.gif) left top no-repeat;
+		margin-right:0.5em;
+		padding-left:1.5em;
+		}
+
+/************************************************************/
+/*						COMENTARIOS							*/
+/************************************************************/
+#comentarios {
+	clear:both;
+	}
+	#comentarios H2{
+		padding:1.2em 0 0.5em 0;
+		background:url(../../../Public/Home/img/esq_comentarios.gif) no-repeat right bottom;
+		}
+	#comentarios UL{
+		background:#F2F2F2;
+		padding:0.5em 0.5em 0 0.5em ;
+		}
+	#comentarios LI{
+		border-bottom:0.05em solid #FFFFFF;
+		padding:0.5em ;
+		background:none;
+		}
+	#comentarios A{
+		text-decoration:none;
+		}
+		#comentarios A:hover{
+			text-decoration:underline;
+			}
+/************************************************************/
+/*						ADD COMENTARIO						*/
+/************************************************************/
+#add-comentario {
+	margin-top:1.3em;
+	}
+
+/************************************************************/
+/*						VOLVER								*/
+/************************************************************/
+.volver {
+	clear:both;
+	margin-top:0.5em;
+	border-top:0.05em solid #AAAAAA;
+	padding-top:0.5em;
+	}
+/************************************************************/
+/*						EVENTO								*/
+/************************************************************/
+
+
+/************************************************************/
+/*						FORMULARIOS							*/
+/************************************************************/
+	FIELDSET {
+		padding:1em;
+		}
+	LABEL {
+		text-align:left;
+		vertical-align:middle;
+		margin-right:0.2em;
+		}
+	INPUT,
+	TEXTAREA{
+		vertical-align:middle;
+		padding:0.2em 0.3em 0.2em 0.3em;
+		line-height:1.1em;
+		}
+	FORM IMG {
+		vertical-align:middle;
+		width:auto;
+		}
+	.formulario .aceptaprivacidad{
+		clear:both;
+		}
+		.formulario .aceptaprivacidad INPUT{
+			vertical-align:baseline;
+			border:0;
+			padding:0;
+			background:none;
+			}
+		.formulario .aceptaprivacidad LABEL{
+			width: auto;
+			line-height:1.2em;
+			}
+	.botones {
+		clear:both;
+		width:auto;
+		}
+		.botones DIV {
+			float:left;
+			margin:0;
+			padding:0;
+			}
+		.botones INPUT{
+			}
+/********************************************************************************/
+/*			ERROR EXPLANATION - ERROR FLASH (ERROR-NOTICE-WARNINGS)				*/
+/********************************************************************************/
+/*****      sobre fondo negro  errores del formulario de contacto, recetas...   *****/
+.error-top-izq{
+	float:left;
+	margin:1em 0;
+	width:100%;
+	background:url(../../../Public/Home/img/error_flash_top_izq_negro.gif) no-repeat scroll left top #fed9cb;
+	}
+.error-top-der{
+	float:left;
+	width:100%;
+	background: transparent url(../../../Public/Home/img/error_flash_top_der_negro.gif) top right no-repeat;
+	}
+.error-bot-izq{
+	float:left;
+	width:100%;
+	margin: 1em 0 0;
+	padding: 0 0 0.1em;
+	background: transparent url(../../../Public/Home/img/error_flash_bottom_izq_negro.gif) bottom left no-repeat;
+	}
+.error-bot-der{
+	float:left;
+	width:100%;
+	background: transparent url(../../../Public/Home/img/error_flash_bottom_der_negro.gif) bottom right no-repeat;
+	}
+	
+/***** sobre fondo blanco---> margino por fondo-total -----*****/
+.fondo-total .error-top-izq{
+	float:left;
+	margin:1em 0;
+	width:100%;
+	background:url(../../../Public/Home/img/error_flash_top_izq.gif) no-repeat scroll left top #fed9cb;
+	}
+.fondo-total .error-top-der{
+	float:left;
+	width:100%;
+	background: transparent url(../../../Public/Home/img/error_flash_top_der.gif) top right no-repeat;
+	}
+.fondo-total .error-bot-izq{
+	float:left;
+	width:100%;
+	margin: 1em 0 0;
+	padding: 0 0 0.1em;
+	background: transparent url(../../../Public/Home/img/error_flash_bottom_izq.gif) bottom left no-repeat;
+	}
+.fondo-total .error-bot-der{
+	float:left;
+	width:100%;
+	background: transparent url(../../../Public/Home/img/error_flash_bottom_der.gif) bottom right no-repeat;
+	}	
+	
+.errorExplanation {
+	margin: 0 1em;
+	border: 0;
+	padding: 0 0 1em;
+	}
+	.errorExplanation H2{
+		display:none;
+		}
+	.errorExplanation P{
+		margin: 0;
+		padding: 0.5em 0 0.5em 0.5em;
+		background: transparent url(../../../Public/Home/img/icono-error.gif) top right no-repeat;
+		font-size: 15px;
+		text-transform:uppercase;
+		font-weight: 700;
+		color: #cf031c;
+		}
+	.errorExplanation UL{
+		margin: 0;
+		padding: 0 0 0 15px;
+		list-style-type: none;
+		}
+		.errorExplanation UL LI{
+			font-weight: normal;
+			font-size: 12px;
+			color:#3c3c3c;
+			background:none;
+			padding: 3px 0 3px 11px;
+			list-style-type: none;
+			background:url(../../../Public/Home/img/lista_error.gif) no-repeat left 9px;
+			}
+
+.error-flash {
+	background:#fed9cb;
+	margin:1em 0;
+	padding:0;
+	float:left;
+	width:100%;
+	}
+	#all > #general .error-flash{
+		float:none;
+		overflow:hidden;
+		width:100%;
+		}
+	.error-flash UL{
+		padding:1em;
+		list-style:square;
+		margin-left:1em;
+		}
+		.error-flash UL LI{
+			color:#3C3C3C;
+			}
+	.error-flash H2{
+		background:transparent url(../../../Public/Home/img/icono-error.gif) no-repeat scroll right center;
+		font-size:15px;
+		font-weight:bold;
+		font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+		letter-spacing:normal;
+		margin:0;
+		padding:0.5em 0.5em 0.5em 0.5em ;
+		text-align:left;
+		}
+.notice-flash {
+	background:#eaedb7;
+	margin:1em 0;
+	padding:0;
+	float:left;
+	width:100%;
+	}
+	#all > #general .notice-flash{
+		float:none;
+		overflow:hidden;
+		width:100%;
+		}
+	#content-home .notice-flash h2,
+	.notice-flash H2{
+		background:transparent url(../../../Public/Home/img/icono-notice.gif) no-repeat scroll right center;
+		color:#478a0b;
+		font-size:15px;
+		font-weight:bold;
+		font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+		letter-spacing:normal;
+		margin:0;
+		padding:0.5em 0.5em 0.5em 0em ;
+		text-transform:uppercase;
+		text-align:left;
+		}
+.warnings-flash {
+	background:#fffcd0;
+	margin:1em 0;
+	padding:0;
+	float:left;
+	width:100%;
+	}
+	#all > #general .warnings-flash{
+		float:none;
+		overflow:hidden;
+		width:100%;
+		}
+		
+	.warnings-flash H2{
+		background:transparent url(../../../Public/Home/img/icono-warnings.gif) no-repeat scroll left center;
+		color:#3c3c3c;
+		font-size:1.5em;
+		font-weight:bold;
+		font-family: Arial, Helvetica, sans-serif;
+		letter-spacing:normal;
+		margin:0;
+		padding:0.5em 0.5em 0.5em 2em ;
+		}
+
+		
+/****** notice-flash de la home.... sobre fondo verde *******************/	
+	 .error-flash-top-izq{
+		background:transparent url(../../../Public/Home/img/error_flash_top_izq_home.gif) no-repeat scroll left top;
+		float:left;
+		width:100%;
+		}
+	 .error-flash-top-der{
+		background:transparent url(../../../Public/Home/img/error_flash_top_der_home.gif) no-repeat scroll right top;
+		float:left;
+		width:100%;
+		}
+ 	.error-flash-bot-der{
+		background:transparent url(../../../Public/Home/img/error_flash_bottom_der_home.gif) no-repeat scroll right bottom;
+		float:left;
+		width:100%;
+		}
+	 .error-flash-bot-izq{
+		background:transparent url(../../../Public/Home/img/error_flash_bottom_izq_home.gif) no-repeat scroll left bottom;
+		margin-top:1em;
+		padding:0em 1em 1em 1em;
+		}
+
+
+	 .error-flash .error-flash-top-izq{
+		background:url(../../../Public/Home/img/error_flash_top_izq_negro.gif) no-repeat scroll left top #fed9cb;
+		float:left;
+		width:100%;
+		}
+	 .error-flash .error-flash-top-der{
+		background: transparent url(../../../Public/Home/img/error_flash_top_der_negro.gif) top right no-repeat;
+		float:left;
+		width:100%;
+		}
+ 	.error-flash .error-flash-bot-der{
+		
+		background: transparent url(../../../Public/Home/img/error_flash_bottom_der_negro.gif) bottom right no-repeat;
+		float:left;
+		width:100%;
+		}
+	 .error-flash .error-flash-bot-izq{
+		background: transparent url(../../../Public/Home/img/error_flash_bottom_izq_negro.gif) bottom left no-repeat;
+		margin-top:1em;
+		padding:0em 1em 1em 1em;
+		}		
+		
+		
+		
+/************************************************************/
+/*						RSS									*/
+/************************************************************/
+.enlaces-rss{
+	clear:both;
+	font-size:0.9em;
+	margin-right:1em;
+	}
+	.enlaces-rss A{
+		padding-left:1.7em;
+		background:url(../../../Public/Home/img/rss.gif) no-repeat 0 0.2em;
+		color:#3e3e3e;
+		font-weight:bold;
+		text-decoration:none;
+		line-height:1.5em;
+		}
+
+/************************************************************/
+/*						XML									*/
+/************************************************************/
+.xml{
+	font-size:0.9em;
+	margin-right:1em;
+	}
+	.xml A{
+		padding-left:4em;
+		background:url(../../../Public/Home/img/xml.gif) no-repeat 0 0.2em;
+		color:#3e3e3e;
+		font-weight:bold;
+		text-decoration:none;
+		line-height:1.5em;
+		}
+
+
+/************************************************************/
+/*						PAGINADOR							*/
+/************************************************************/
+/**************** paginador ************/		
+#content .content-paginacion-news {
+	clear:both;
+	float:left;
+	width:100%;
+	}
+	#content .multimedia-paginacion {
+		clear:both;
+		float:left;
+		padding-left:0;
+		width:98.8%;
+		font-size:11px;
+		margin-top:0px;
+		}
+		#content .multimedia-paginacion UL{
+			float:left;
+			margin:0;
+			padding:0px;
+			width:auto;
+			line-height:normal;
+			}
+			#content .multimedia-paginacion UL LI{								
+				float:left;
+				clear:none;
+				font-size:12px;
+				font-weight:bold;
+				padding:0 0em 0 0;
+				width:auto;
+				border:0;
+				margin-right:3px;
+				background:url(../../../Public/Home/img/bg_li_paginador.gif) no-repeat right center;
+				}
+				#content .multimedia-paginacion UL LI span{
+					background:none;
+					padding:0px 7px;
+					color:#838383;
+					}
+				#content .multimedia-paginacion UL LI A{
+					color:#838383;
+					font-weight:normal;
+					text-decoration:none;
+					background:none;
+					padding:5px 8px;
+					font-size:12px;
+					}
+					#content .multimedia-paginacion ul li a:hover {
+						text-decoration:underline;
+						}
+		#content .multimedia-paginacion .buttons {
+			float:right;
+			font-size:12px;
+			padding:0 0 0 1em;
+			}
+			#content .multimedia-paginacion .buttons A{
+				text-decoration:none;
+				}
+			#content .multimedia-paginacion .buttons a.prev_page, 
+			#content .multimedia-paginacion .buttons span.prev_page{				
+				padding:12px 10px 10px 27px;
+				background:none;
+				color:#c6c6c7;		
+				}
+				#content .multimedia-paginacion .buttons a.prev_page,
+				#content .multimedia-paginacion .buttons span.prev_page{
+					background:url(../../../Public/Home/img/bg_anterior.gif) no-repeat left top;
+					padding:4px 10px 4px 16px;
+					margin-right:0px;
+					color:#c6c6c7;					
+					}
+				#content .multimedia-paginacion .buttons span.Anterior{
+					background:url(../../../Public/Home/img/bg_siguiente.gif) no-repeat left center;
+					padding-left:13px;
+					}
+				#content .multimedia-paginacion .buttons a.next_page, 
+				#content .multimedia-paginacion .buttons span.next_page{
+					background:url(../../../Public/Home/img/bg_siguiente.gif) no-repeat right center;
+					padding:4px 16px 4px 5px;
+					margin-left:0;
+					color:#c6c6c7;
+					text-decoration:none;
+					}
+					#content .multimedia-paginacion .buttons a.next_page:hover{
+						text-decoration:none;
+						}
+				#content .multimedia-paginacion .buttons a.next_page,
+				#content .multimedia-paginacion .buttons a.prev_page{
+				    font-weight:normal;
+					}
+					#content .multimedia-paginacion .buttons a.next_page:hover,
+					#content .multimedia-paginacion .buttons a.prev_page:hover{
+						text-decoration:underline;
+						}
+
+/************************************************************/
+/*				CAJA GRIS CON 4 ESQUINAS					*/
+/************************************************************/
+.esq-top-izq{
+	margin-top:0em;
+	background:url(../../../Public/Home/img/esq_gris_top_izq.gif) no-repeat top left;
+	}
+.esq-top-der{
+	background:url(../../../Public/Home/img/esq_gris_top_der.gif) no-repeat top right;
+	}
+.esq-bottom-izq{
+	background:url(../../../Public/Home/img/esq_gris_bottom_izq.gif) no-repeat bottom left;
+	}
+.esq-bottom-der{
+	background:url(../../../Public/Home/img/esq_gris_bottom_der.gif) no-repeat bottom right;
+	}
+.caja-gris {
+	padding:0.8em 0.8em 3em 0.8em;
+	}
+/************************************************************/
+/*						ASTERISCO							*/
+/************************************************************/
+.asterisco {
+	color:#000000;
+	}
+/************************************************************/
+/*						VOTO								*/
+/************************************************************/
+.voto {
+	float:left;
+	font-size: 0.8em;
+	margin: 0;
+	position: relative;
+	text-align:center;
+	width:183px;
+	padding:6px 0;
+	}
+	.listado-recetas .receta .voto{
+		width:170px;
+		}
+	/******************Mostrar votos*********************/
+	.voto UL{
+		float: right;
+		background: url(../../../Public/Home/img/votoUnSel.png) no-repeat 0 0;
+		height: 1.6em;
+		list-style-type: none;
+		margin: 0;
+		padding: 0 0 1px;
+		position: relative;
+		width: 8em;
+		text-align:center;
+		clear:none;
+		}
+		.listado-recetas .receta .voto UL{
+			width:8em;
+			margin-right:5px;
+			}
+		.voto UL LI{
+			background: none;
+			color: #FFFFFF;
+			display: inline;
+			font-size: 1.1em;
+			height: 1.4em;
+			width: 1.45em;
+			padding: 0;
+			margin:0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			}
+			.voto ul li.votoActual{
+				background-image: url(../../../Public/Home/img/votosSel.png);
+				background-position: 0;
+				background-repeat: no-repeat;
+				}
+		.voto SPAN{
+			font-size:1em;
+		}
+		.voto SPAN.content-total-voto{
+			float:left;
+			line-height:normal;
+			padding-top:0.2em;
+			padding-left:7px;
+			color:#c2c1c1;
+			font-size:11px;
+			}
+			.voto SPAN.total-votos {
+				float:left;
+				line-height:normal;
+				}
+		
+			.voto SPAN.voto-agradecimiento{
+				float:left;
+				color:#C2C1C1;	
+				padding-left:1.1em;
+				line-height:normal;
+				font-size:11px;
+				}
+.voto a{
+	background: transparent none repeat scroll 0%;
+	color: #FFF;
+	display: block;
+	height: 1.4em;
+	left: 0;
+	padding: 0;
+	position: absolute;
+	text-decoration: underline;
+	top: 0;
+	width: 100%;
+	}
+.voto a:hover{
+	background: transparent url(../../../Public/Home/img/votosOver.png) no-repeat scroll 0 50%;
+	}
+.voto ul li.votoActual{
+	background-image: url(../../../Public/Home/img/votosSel.png);
+	background-position: 0;
+	background-repeat: no-repeat;
+	}
+.voto ul li.star1{
+	position: absolute;
+	width: 1.45em;
+	z-index: 6;
+	}
+.voto ul li.star2{
+	position: absolute;
+	width: 2.9em;
+	z-index: 5;
+	}
+.voto ul li.star3{
+	position: absolute;
+	width: 4.35em;
+	z-index: 4;
+	}
+.voto ul li.star4{
+	position: absolute;
+	width: 5.8em;
+	z-index: 3;
+	}
+.voto ul li.star5{
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	}
+/**********************         GALERIA         ****************************/
+.galeria{
+	margin:0 0 15px;
+	}
+	.galeria .esq-top-izq{		
+		}
+	.galeria .caja{
+	    padding:0 10px;
+		}
+
+.galeria IMG{
+    border:none;
+    background-color:transparent;
+}
+.galeria .slideshow{
+    text-align:center;
+    /*width:100%;
+    float: left;*/
+	clear:both;   
+	}
+.galeria .slideshow .image-wrapper{
+    line-height: 0.9em;
+    /*float: left;*/
+    width:auto;
+	
+    background-color:#eeeeee;
+	}
+	.galeria .slideshow .image-wrapper A{
+
+		}
+.galeria .controls{
+    width:auto;
+    float: right;
+	}
+.galeria .controls DIV{
+    float: right;
+    padding-right:1em;
+}
+.galeria .embox,
+.galeria .navigation{
+    /*float: left;*/
+	width:auto;
+	clear:both;
+	}
+.galeria .embox .download{
+    float: right;
+    padding-right:0.5em;
+}
+.galeria .embox .image-title{
+    padding-left:0.5em;
+}
+.galeria UL{
+    padding: 0;
+}
+.galeria UL LI{
+    list-style-type:none;
+    list-style-image:none;
+    float:left;
+    background-image:none;
+    margin: 0 0 0.45em 0.45em;
+    padding: 0.05em;
+    border: 0.05em solid #cccccc;
+    height:auto;
+    width: auto;
+    text-align: center;
+    line-height:normal;
+}
+.galeria UL LI IMG{
+    vertical-align: middle;
+}
+.galeria .pagination{
+    text-align:right;
+    width:auto;
+    margin:0.9em;
+}
+.galeria .pagination a{
+    margin:0 0.45em;
+}
+
+/************************   Ventanas emergentes    *************************/
+
+.videoplayer {
+    display: block;
+    width: 23.25em;
+    height: 17.35em;
+}
+
+.videoplayer_playlist {
+    display: block;
+    width: 26.2em;
+    height: auto;
+}
+/**************************** buscadores *************************************/
+#content .fecha-desde INPUT,
+#content .fecha-hasta INPUT{
+	/*width:auto;*/
+	}
+#content .fecha-desde LABEL.label_date,
+#content .fecha-hasta LABEL.label_date{
+	display:none;
+	}
+/********************************************************************************/
+/*						Advertencia - Errores - Avisos							*/
+/********************************************************************************/
+.caja-con-margen{
+	border:0.05em solid #dcdcdc;
+	padding:0.15em;
+	clear:both;
+	}
+	.caja-con-margen .destacado-advertencia {
+		font-size:1.1em;
+		background:url(../../../Public/Home/img/exclamacion_advertencia.gif) no-repeat 0.6em 50% #fffcd0;
+		padding:0.9em 0.9em 0.9em 4.7em;
+		height:2.8em;		
+		}
+		.caja-con-margen > .destacado-advertencia {
+			min-height:2.8em;
+			height:auto;
+			}
+		.destacado-advertencia P{
+			margin:0.1em 0;
+			padding:0 0.9em 0 0.4em;
+			}
+/****************************** NENSAJES DE ADVERTENCIA ****************************/
+.altura-absoluta{
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	}
+.caja-con-margen-absoluta{
+	border:0.05em solid #dcdcdc;
+	padding:0.05em;
+	clear:both;
+	position:absolute;
+	top:50%;
+	left:20%;
+	height:auto;
+	width:67.1em;
+	background:#ffffff;
+	float:left;
+	}
+	.caja-con-margen-absoluta .destacado-advertencia,
+	.caja-con-margen-absoluta .destacado-ok,
+	.caja-con-margen-absoluta .destacado-cancel {
+		background:#ededed;
+		padding:0.9em;
+		float:left;
+		width:65.4em;
+		}
+		.caja-con-margen-absoluta .destacado-advertencia H3,
+		.caja-con-margen-absoluta .destacado-ok H3,
+		.caja-con-margen-absoluta .destacado-cancel H3{
+			background:url(../../../Public/Home/img/exclamacion_advertencia.gif) no-repeat 0.6em 50% #ededed;
+			height:4em;
+			padding:1.5em 0.9em 0.9em 4.7em;
+			margin:0;
+			}
+			.caja-con-margen-absoluta .destacado-ok H3{
+				background:url(../../../Public/Home/img/icono-ok.gif) no-repeat 0.6em 50% #ededed;
+				}
+			.caja-con-margen-absoluta .destacado-cancel H3{
+				background:url(../../../Public/Home/img/icono-cancel.gif) no-repeat 0.6em 50% #ededed;
+				}
+			.caja-con-margen-absoluta > .destacado-advertencia H3,
+			.caja-con-margen-absoluta > .destacado-ok H3,
+			.caja-con-margen-absoluta > .destacado-calcel H3 {
+				min-height:4em;
+				height:auto;
+				}
+/******************************** galeria de imagenes ***********************************/
+/**************** galeria de imagenes *********************/
+#content #content-informacion .contenido-derecha .galeria IMG{
+	background:none;
+	padding:0;
+	margin-bottom:0;
+	}
+.contenido-home .derecha-home .caja-inferior div.galeria,
+#footer .galeria{
+	display:none;
+	}	
+.galeria {	
+	float:none;
+	width:100%;
+	clear:both;
+	line-height:0.05em;
+	height:auto!important;
+	min-height:0.05em;
+	height:0.05em;
+	margin-bottom:0.05em;
+	}
+	.galeria .pagination{
+		margin:0.6em 0;
+		background:none;
+		}
+	.galeria .caja{
+		float:none;
+		width:98%;
+		display:block;
+		}
+	.galeria .content,
+	.contenido-home .derecha-home .caja-inferior .galeria .content{		
+		float:left;
+		width:100%;
+		clear:both;
+		margin-top:0;
+		line-height:normal;
+		position:relative;
+		}
+		.galeria .content .embox {
+			font-size:1em;
+			}
+		div.galeria .content .controls{
+			float:none;
+			padding:0;
+			width:99%;
+			clear:both;
+			}
+			div.galeria .content .controls div{
+				display:inline;
+				float:right;
+				width:auto;
+				clear:none;
+				padding-right:0.2em;
+				}	
+				div.galeria .content .controls div SPAN,			
+				div.galeria .content .controls div A{
+					height:2.2em;
+					width:2.2em;
+					display:block;
+					padding:0;
+					}
+				.contenido-home .derecha-home .caja-inferior .galeria A,
+				.caja-gris .galeria A{
+					float:none;
+					padding:0;
+					width:auto;
+					display:block;
+					height:auto;
+					background:none;
+					}
+				#content div.galeria .content .controls div IMG{
+					float:left;
+					margin-bottom:0;
+					background:none;
+					border:0;
+					padding:0;
+					}
+		div.galeria .content  .embox{
+			float:left;
+			padding:0;
+			clear:both;
+			width:99%;		
+			}
+			div.galeria .content .embox div.download{
+				float:left;
+				padding:0;				
+				width:48%;
+				clear:none;
+				font-weight:bolder;
+				}
+				div.galeria .content .embox div.download A,
+				div.galeria .content .embox div.download{
+					color:#CF031C;
+					}
+			div.galeria .content .embox div.image-title{
+				float:right;
+				padding:0;
+				display:inline;				
+				width:46%;
+				clear:none;
+				text-align:right;
+				color:#010101;
+				}
+	div.galeria .navigation{
+		width:100%;
+		float:left;
+		clear:both;
+		padding:5px 0 15px;
+		}	
+		div.galeria .navigation UL.thumbs{
+			padding:0;
+			float:left;
+			width:100%;
+			clear:both;
+			}				
+			#content div.galeria .navigation UL.thumbs LI{				
+				float:left;		
+				padding:0 0 0 0;					
+				height:auto;
+				line-height:normal;	
+				background:none;
+				width:auto;				
+				padding:5px 0;
+				margin:0 0 5px 12pxx;
+				text-align:center;	
+				clear:none;			
+				}
+				#content div.galeria .navigation UL.thumbs > LI{
+					width:auto;
+					}
+				#content div.galeria .navigation UL.thumbs LI.selected IMG{
+					border:0.3em solid #CF031C;
+					padding:0.1em;
+					background:#ffffff;
+					}				
+				#content div.galeria .navigation UL.thumbs LI IMG{					
+					height:74px;
+					width:96px;
+					}
+.galeria A.delete_galeria,
+.contenido-home .derecha-home .caja-inferior .galeria A.delete_galeria{    
+    position: relative;
+	float:left;
+    top: 0;
+    left: 0.25em;
+    z-index: 10;
+    width: 1.9em;
+    height: 1.5em;
+	clear:both;
+	background: url(../../../Public/Home/img/eliminar.gif) 0 0 no-repeat;
+	}
+#content .galeria IMG{
+	border:0.3em solid #E1E1E1;
+	padding:0.1em;
+	background:none;
+	}
+	.caja-derecha .image-wrapper A img{
+		width:17.8em;
+		}
+.galeria .esq-top-izq{
+	background:none;
+	width:99%;
+	border:1px solid #E6E6E6;
+	float:left;
+	}
+	.galeria .esq-top-der{
+		width:100%;
+		background:none;
+		padding:0;
+		}
+	.galeria .esq-bottom-der{
+		width:100%;
+		padding:0;
+		background:none;
+		}
+	.galeria .esq-bottom-izq{
+		background:none;
+		}
+.galeria UL LI{
+	border:0;
+	margin-bottom:1em;
+	}
+	
+#content .contenido-derecha .galeria .caja{
+	width:auto;
+	}
+.galeria A IMG{
+	cursor:pointer;
+	}
+.galeria .slideshow{
+	width:99.5%;
+	border:0;
+	padding:7px 0;
+	margin-bottom:0.5em;
+	}		
+	.galeria .slideshow .image-wrapper{
+		width:100%;
+		background:none;
+		}	
+		#content .galeria .content .image-wrapper A IMG{
+			border:0;
+			padding:0;		
+			}	
+.contenido-izquierda .galeria .caja{
+	padding:5px 5px 5px 8px;
+	border:0;
+	}
+div.galeria .content .controls div.nav-controls{
+	width:6.2em;
+	}
+	div.galeria .content .controls div.nav-controls A{
+		display:inline;
+		}	
+		#content div.galeria .content .controls div.nav-controls A IMG{
+			padding-left:0.5em;	
+			}	 
+
+
+﻿*{
+	margin:0;
+	padding:0;
+	}
+BODY {
+	font-size:12px;
+	color:#ffffff;
+	font-family:Arial,Helvetica,sans-serif;
+	background:#231f25;
+	}
+#all{
+	font-size:12px;
+	margin:0 auto;
+	width:100%;
+	float:left;
+	background:url(../../../Public/Home/img/pixel_fondo.gif) 0 0 repeat-x;
+	}
+	BODY > #all{
+		font-size:12px;
+		}
+#all{
+	margin:0 auto;
+	text-align:center;
+	}
+#general{
+	margin:0 auto;
+	text-align:left;
+	width:100%;
+	}
+.centrar-contenido{
+	width:940px;
+	margin:0 auto;
+	padding: 0 30px 0 32px;
+	text-align:center;
+	}
+.oculto{
+	display:none;
+	}
+
+
+
+
+/****************************************************************************************************************************/
+/*													ESTILOS GENERALES 														*/
+/****************************************************************************************************************************/
+
+H1{
+	margin:0px;
+	padding:0 0 22px;
+	font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+	font-size:27px;
+	color:#ffffff;
+	font-weight:normal;
+	line-height:24px;
+	background:none;
+	letter-spacing:-1px;
+	}
+ .fondo-total .contenido-izquierda H1{
+		color:#333333;
+		}
+H2{
+	margin:0 0 0px;
+	padding:0 0 8px;
+	font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+	font-size:15px;
+	color:#cf031c;
+	font-weight:bold;
+	letter-spacing:normal;
+	line-height:18px;
+	}
+	.titulo-contacto H2{
+		
+		}
+#content-home H2{
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:-1px;
+	line-height:21px;
+	color:#0082d3;
+	}
+	H2 A{
+		color:#0082d3;
+		text-decoration:none;
+		}
+		H2 A:hover{
+			color:#0d5479;
+			}
+H3{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#8f7f5c;
+	letter-spacing:normal;
+	line-height:16px;
+	padding:0 0 7px;
+	}
+	H3 SPAN {
+		}
+	H3 A{
+		color:#222222;
+		text-decoration:none;
+		}
+		H3 A:hover{
+			color:#222222;
+			}
+
+H4{
+	font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+	font-size:11px;
+	color:#cf031c;
+	font-weight:normal;
+	letter-spacing:normal;
+	padding:0 0 5px;
+	}
+
+SPAN.asterisco{
+	font-size:11px;
+	color:#c21429;
+	}
+A{
+	color:#ab131e;
+	text-decoration:underline;
+	}
+	A:hover{
+		text-decoration:none;
+		}
+IMG,
+A IMG{
+	padding:0;
+	border:0;
+	background-color:none;
+	}
+
+P{
+	margin:0;
+	line-height:19px;
+	}
+	P.codigo{
+		margin:0;
+		font-size:14px;
+		font-weight:bold;
+		line-height:normal;
+		}
+
+UL{
+	padding:0 0 0 11px;
+	list-style:none;
+	}
+	UL LI{
+		padding:5px 0 5px 16px;
+		font-size:12px;
+		background:url(../../../Public/Home/img/icono_listas.gif) no-repeat 0 11px;
+		color:#333333;
+		}
+		UL LI UL{
+			padding:5px 0 0 5px;
+			list-style:none;
+			}
+			UL LI UL LI{
+				background:url(../../../Public/Home/img/icono_subListas.gif) no-repeat 0 6px;
+				padding:0 0 6px 15px;
+				color:#333333;
+				}
+OL{
+	margin:10px 0;
+	padding:0 0 0 26px;
+	line-height:23px;
+	}
+	OL LI {
+		padding:0;
+		}
+TABLE{
+	margin:5px 0 10px;
+	width:100%;
+	text-align:left;
+	}
+	TABLE TR TH{
+		padding:6px 13px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:10px;
+		text-transform:uppercase;
+		font-weight:bold;
+		color:#ffffff;
+		background:url(../../../Public/Home/img/bg_th.gif) no-repeat right top #c60a21;
+		}
+	TABLE TR TD{
+		padding:13px 13px 17px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:13px;
+		color:#333333;
+		background:url(../../../Public/Home/img/punteado_horizontal.gif) 0 100% repeat-x;
+		}
+		TABLE TR.ultima-fila TD{
+			background:none;
+			}
+	TABLE TFOOT TR TD{
+		padding:10px 0 0 0;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:11px;
+		color:#f27d00;
+		border-top:5px solid #0082d3;
+		background:none;
+		}
+P.texto-resultados,
+P.texto-resultado{
+	color:#ffffff;
+	font-size:14px;
+	font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+	letter-spacing:-0.5px;
+	padding-bottom:15px;
+	}
+	
+	
+/************* imagen derecha e izquierda ************/
+.imagen-derecha{
+	float:right;
+	margin:0 0 5px 5px;
+	}
+.imagen-izquierda{
+	float:left;
+	margin:0 5px 5px 0;
+	}
+span.texto-peque{
+	font-size:11px;
+	}
+	.destacado-caja-amarilla{
+		float:left;
+		width:84.3%;
+		padding:27px 10px 24px 105px;
+		background:url(../../../Public/Home/img/bg_destacado_amarillo.gif) no-repeat left top;
+		clear:both;
+		margin-bottom:23px;
+		}
+	span.negrita-destacado{
+		font-weight:bold;
+		display:block;
+		background:url(../../../Public/Home/img/bg_negrita_destacado.gif) repeat-x left bottom;
+		padding:0 0 8px 5px;
+		margin-bottom:10px;
+		}
+	
+A.enlace-localizacion{
+	text-transform:uppercase;
+	color:#333333;
+	font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+	font-size:11px;
+	text-decoration:none;
+	}
+	A.enlace-localizacion:hover{
+		text-decoration:underline;
+		}	
+span.destacado-telefono{
+	display:block;
+	background:url(../../../Public/Home/img/bg_telefono.gif) no-repeat left center;
+	padding:11px 9px 19px 38px;
+	color:#cf021b;
+	font-size:25px;
+	font-weight:bold;
+	margin-bottom:10px;
+	}	
+/*****************************************************************************************************************************/
+/*                                             Cabecera                                                                      */
+/*****************************************************************************************************************************/
+#header{
+	float:left;
+	width:100%;
+	clear:both;
+	margin:0 0 0 0;
+	padding:5px 0 13px;
+	min-width:940px;
+	background:url(../../../Public/Home/img/fondo_cabecera.gif) repeat-x left top;
+	}
+	#header .logo {
+		float:left;
+		padding-top:5px;
+		}
+		#header .logo A{
+			float:left;
+			}
+			#header .logo A IMG{
+				float:left;
+				padding:0;
+				border:0;
+				}
+
+	#header #idiomas,
+	#header #utils{
+		float:right;
+		padding:3px 5px;
+		clear:none;
+		}
+		#header #utils{
+			margin-top:0px;
+			padding:2px 0 0;
+			}
+		#header .cuenta-usuario UL LI,
+        #header #idiomas UL LI,
+		#header #utils UL LI{
+            float:left;
+            padding:0;
+            border-right:1px solid #8b8b8b;
+            background-image: none;
+            }
+			
+			#header #idiomas UL LI.primero{
+				border-left:1px solid #8b8b8b;
+				}
+			#header .cuenta-usuario UL LI,
+			#header #idiomas UL LI{
+				border:0;
+				}
+														
+#idiomas{
+	position:relative;
+	border:1px solid #211d23;
+	background:url(../../../Public/Home/img/bg_fondo_idiomas.gif) repeat-x left top;
+	margin-left:5px;
+	}
+	#idiomas ul#menu-desplegable{
+		padding:0;
+		}							
+ #idiomas ul li div.referencia{
+		clear:both;
+		float:left;
+		margin:0px 0 0 0px;
+		position:absolute;
+		text-align:left;
+		width:110px;
+		z-index:100;
+		left:0;
+		top:18px;
+		}					
+		 #idiomas ul.secundario {
+			background-color:#2b262c;
+			border-top:medium none;
+			display:none;
+			float:left;
+			left:0;
+			margin-left:0;
+			margin-top:0;
+			padding:3px;
+			position:relative;
+			text-align:left;
+			text-transform:none;
+			top:0;
+			width:108px;
+			z-index:5;
+			border-top:1px solid #211d23;
+			border-right:1px solid #211d23;
+			border-left:1px solid #211d23;
+			border-bottom:1px solid #211d23;
+			}
+			#header #idiomas ul li ul.secundario li {				
+				clear:left;
+				float:left;
+				margin:0;
+				padding:2px 3px;
+				text-align:left;
+				width:102px;
+				border:0;
+				}
+				 #idiomas ul li .referencia ul li a {
+					color:#423f39;
+					font-family:Arial,Helvetica,sans-serif;
+					font-size:13px;
+					margin-left:0;
+					padding:0;
+					text-align:left;
+					width:100%;
+					font-weight:bold;
+					background:url(../../../Public/Home/img/bg_enlace.gif) no-repeat left center;
+					}	
+				#idiomas ul li ul.secundario li:hover{
+					background:#454246;
+					}	
+					#idiomas ul li ul.secundario li:hover A{
+						background:url(../../../Public/Home/img/bg_li_enlace_clarito.gif) no-repeat left center;
+						}		
+                        #idiomas ul li:hover ul.secundario, 
+						#idiomas ul li.over ul.secundario {
+							margin:0 0 0 0;
+							display:block;
+							position:absolute;
+							text-transform:none;
+							z-index:10000;
+							}
+				
+		#header #utils A{
+			padding: 3px 8px 3px 8px;
+			/*color:#8b8b8b;*/
+			color: #ffffff;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size:12px;
+			text-decoration:none;
+			text-transform:none;
+			font-weight:normal;
+			background:url(../../../Public/Home/img/bg_separador_utils.gif) no-repeat right center;
+			}
+			#header #utils A:hover{
+				color:#fff;
+				}
+		#header #idiomas A{
+			color:#fff;
+			padding: 3px 0px 3px 0px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size:12px;
+			text-decoration:none;
+			text-transform:none;
+			font-weight:normal;			
+			}
+			#header #idiomas A SPAN{
+				background:url(../../../Public/Home/img/bg_idiomas.gif) no-repeat right center;
+				padding:0 11px 0 0;
+				}
+			#header #idiomas A:hover{
+				
+				}
+			#header #idiomas UL LI IMG{
+				vertical-align:middle;
+				padding:0 4px 0 0;
+				}
+				
+	#header .cuenta-usuario{
+		float:right;
+		background:url(../../../Public/Home/img/bg_separador_utils.gif) no-repeat right center;
+		margin:0 0px 0 5px;
+		padding:3px 5px;
+		}
+		#header .cuenta-usuario A{
+			color:#fff;
+			text-decoration:none;
+			background:url(../../../Public/Home/img/bg_micuenta.gif) no-repeat left center;
+			padding:0 0 0 20px;
+			
+			}
+			#header .cuenta-usuario A span{
+				background:url(../../../Public/Home/img/bg_idiomas.gif) no-repeat right center;
+				padding:0 11px 0 0;
+				}	
+				
+#header .cuenta-usuario{
+	position:relative;
+	border:1px solid #211d23;
+	background:url(../../../Public/Home/img/bg_fondo_idiomas.gif) repeat-x left top;
+	margin-left:5px;
+	position:relative;
+	z-index:1000;
+	}
+	#header .cuenta-usuario ul#menu-desplegable-mi-cuenta{
+		padding:0;
+		}							
+ #header .cuenta-usuario ul li div.referencia{
+		clear:both;
+		float:left;
+		margin:0px 0 0 0px;
+		position:absolute;
+		text-align:left;
+		width:110px;
+		z-index:100;
+		left:0;
+		top:17px;
+		}					
+		 #header .cuenta-usuario ul.secundario {
+			background-color:#2b262c;
+			border-top:medium none;
+			display:none;
+			float:left;
+			left:0;
+			margin-left:0;
+			margin-top:0;
+			padding:3px;
+			position:relative;
+			text-align:left;
+			text-transform:none;
+			top:0;
+			width:108px;
+			z-index:5;
+			border-top:1px solid #211d23;
+			border-right:1px solid #211d23;
+			border-left:1px solid #211d23;
+			border-bottom:1px solid #211d23;
+			}
+			 #header .cuenta-usuario ul li ul.secundario li {				
+				clear:left;
+				float:left;
+				margin:0;
+				padding:2px 3px;
+				text-align:left;
+				width:102px;
+				border:0;
+				}
+				 #header .cuenta-usuario ul li .referencia ul li a {
+					color:#ffffff;
+					font-family:Arial,Helvetica,sans-serif;
+					font-size:13px;
+					margin-left:0;
+					padding:0;
+					text-align:left;
+					width:100%;
+					font-weight:normal;
+					background:url(../../../Public/Home/img/bg_enlace.gif) no-repeat left center;
+					}	
+				#header .cuenta-usuario ul li ul.secundario li:hover{
+					background:#454246;
+					}	
+					#header .cuenta-usuario ul li ul.secundario li:hover A{
+						background:none;
+						}		
+                        #header .cuenta-usuario ul li:hover ul.secundario, 
+						#header .cuenta-usuario ul li.over ul.secundario {
+							margin:0 0 0 0;
+							display:block;
+							position:absolute;
+							text-transform:none;
+							z-index:10000;
+							}
+				
+/*****************************************************************************************************************************/
+/*                                             Menu                                                                      */	
+/*****************************************************************************************************************************/
+
+#header #menu{
+	text-align:center;
+	margin:34px 0 0 0;
+	float:left;
+	width:748px;
+	padding-top:0;
+	background:none;
+	position:relative;
+	}
+	#header #menu-principal{
+		float:right;
+		margin-top:0;
+		width:748px;
+		position:relative;
+		}
+		#header #menu-principal UL{
+			float:right;
+			padding:0 0 0 0;
+			text-align:right;
+			position:relative;
+			}
+			#header #menu-principal UL LI{
+				float:left;
+				display:inline;
+				padding:0;
+				width:auto;
+				font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+				font-weight:bold;
+				background:none;
+				margin-right:5px;
+				}
+				#header #menu-principal UL LI.ultimo{
+					padding-right:0;
+					margin-right:0;
+					}				
+				#menu-principal UL LI A{
+					float:left;
+					background:url(.../../../Public/Home/img/bg_li_menu_der.gif) no-repeat right top;
+					color:#ffffff;
+					font-size:12px;
+					font-weight:normal;
+					display:block;
+					line-height:normal;					
+					text-decoration:none;
+					padding:0 5px 0 0px;
+					}
+					#menu-principal UL LI.sel A,
+					#menu-principal UL LI A:hover{
+						background:transparent url(../../../Public/Home/img/fondo_der_.gif) no-repeat scroll right top;						
+						
+						}
+				#menu-principal UL LI SPAN{
+					float:left;
+					background:url(../../../Public/Home/img/bg_li_menu.gif) no-repeat left top;
+					display:block;
+					line-height:normal;
+					padding:13px 14px 12px 17px;
+					}
+					#menu-principal UL LI.sel SPAN,
+					#menu-principal UL LI A:hover SPAN{
+						background:transparent url(../../../Public/Home/img/fondo_izq_.gif) no-repeat scroll left top;
+						}
+						
+/*****************************************************************************************************************************/
+/*                                             newsletter-pie	                                                             */	
+/*****************************************************************************************************************************/		
+.newsletter-pie{
+	float:left;
+	padding:0 0 0 0;
+	width:100%;
+	clear:both;
+	text-align:left;
+	border-top:4px solid #333333;
+	border-bottom:4px solid #333333;
+	background:#231F25;
+	}
+	.content-newsletter-pie{
+		float:left;
+		padding:9px 0 10px 0;
+		width:100%;
+		clear:both;
+		text-align:left;
+		}
+	.titulo-suscripcion{
+		float:left;
+		padding:5px 0 0 0;
+		width:600px;
+		text-align:left;
+		}
+		.titulo-suscripcion IMG{
+			float:left;
+			margin: 0 15px -10px 0;
+    		position: relative;
+			}
+	.titulo-suscripcion H2{
+		margin:0;
+		font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+		font-size:21px;
+		font-weight:700;
+		color:#ffffff;
+		text-transform:lowercase;
+		text-shadow:0 0.05em 0.05em #afafaf;
+		}
+	.titulo-suscripcion SPAN{
+		font-size:12px;
+		color:#878787;		
+		}
+	
+	.formulario-newsletter{
+		float:right;
+		width:340px;
+		}
+		.formulario-newsletter FORM{
+			float:left;
+			padding:0 0 0 0;
+			}
+			.formulario-newsletter FORM INPUT{
+				float:left;
+				padding:6px 0 5px 8px;
+				width:320px;
+				font-size:15px;
+				font-style:italic;
+				color:#aeaeae;
+				border-top:1px solid #b8b8b8;
+				border-left:1px solid #b8b8b8;
+				border-bottom:1px solid #d8d8d8;
+				border-right:1px solid #d8d8d8;
+				}
+				.formulario-newsletter FORM .botones{
+					float:left;
+					margin-left: -90px;
+    				margin-top: 3px;
+					padding:0 0 0 8px;
+					clear:none;
+					}
+					.formulario-newsletter FORM .botones INPUT{
+						font-style:normal;
+						}
+				.formulario-newsletter FORM .aceptaprivacidad{
+					float:left;
+					padding:8px 0 0 0;
+					width:100%;
+					clear:both;
+					}
+					.formulario-newsletter FORM .aceptaprivacidad INPUT{
+						padding:0;
+						width:auto;
+						height:15px;
+						border:0;
+						}
+					.formulario-newsletter FORM .aceptaprivacidad LABEL{
+						float:left;
+						padding:0 0 0 7px;
+						font-family: "museo-sans",sans-serif;
+						font-size:12px;
+						color:#5e5e5e;
+						}
+						.formulario-newsletter FORM .aceptaprivacidad LABEL A{
+							color:#5E5E5E;
+							}							
+						
+/*****************************************************************************************************************************/
+/*                                             Pie                                                                      */
+/*****************************************************************************************************************************/
+#footer{
+	float:left;
+	margin:0px 0 0 0;
+	padding:20px 0 30px;
+	width:100%;
+	clear:both;
+	min-width:940px;
+	color:#8b8b8b;
+	line-height:22px;
+	font-size:12px;
+	background:url(../../../Public/Home/img/fondo_pie.gif) repeat-x left top;
+	}
+	#footer .tercera  .texto-superior{
+		float:left;
+		width:100%;
+		clear:both;
+		}
+
+	#footer A{
+		color:#8b8b8b;
+		text-decoration:none;
+		}
+		#footer A:hover{
+			color:#fff;
+			}
+	#footer .primera{
+		float:left;
+		width:500px;
+		}
+		#footer .primera STRONG{
+			color:#8b8b8b;
+			}
+	#footer .tercera{
+		float:right;
+		padding-left:0px;
+		width:430px;
+		background:none;
+		text-align:right;
+		}
+		#footer .tercera A{
+			text-decoration:none;
+			padding:0 6px;
+			}
+			#footer .tercera A:hover{
+				color:#fff;
+				}
+		#footer .tercera .enlaces-editables{
+			float:left;
+			width:270px;
+			clear:none;
+			}
+		#footer .tercera .facebook{
+			float:right;
+			margin-left:5px;
+			background:url(../../../Public/Home/img/bg_oquendo_facebook.gif) no-repeat left top;
+			
+			}
+			#footer .tercera .facebook A{
+				padding:2px 5px 2px 23px;
+				color:#e0dcdc;
+				}
+		#footer .tercera .texto-inferior{
+			font-size:11px;
+			float:left;
+			clear:both;
+			width:100%;
+			padding-top:25px;
+			color:#504f4f;
+			}
+			#footer .tercera .texto-inferior A{
+				color:#504f4f;
+				}
+				#footer .tercera .texto-inferior A:hover{
+					color:#fff;
+					}
+
+/***************** Contenido Home ****************/
+.carrusel-home{
+	float:left;
+	clear:both;
+	width:100%;
+	position:relative;
+	background:url(../../../Public/Home/img/bg_fondo_carrusel.gif) repeat-x left top;
+	height:462px;
+	}
+	.carrusel-home .carrusel{
+		position:relative;
+		float:left;
+		width:100%;
+		clear:both;
+		}
+	.carrusel-home .carrusel UL{
+		float:left;
+		margin:0;
+		padding:0;
+		position:relative;
+		width:100%;
+		}
+		.carrusel-home .carrusel UL LI{
+			background:none repeat scroll 0 0 transparent;
+			clear:both;
+			float:right;
+			margin:0;
+			padding:0;
+			width:100%;
+			position:absolute;
+			overflow:hidden;
+			}
+			.carrusel-home .centrar-botones{
+				padding:0px;
+				position:relative;
+				text-align:left;	
+				margin-top:5px;		
+				clear:both;				
+				}
+				.centrar-botones .content-centrar-botones{
+					background:url(../../../Public/Home/img/bg_fondo_botones.png) no-repeat left center;
+					padding:8px;
+					width:40px
+					}
+				.carrusel-home .centrar-botones A{
+					text-transform:uppercase;
+					color:#d71229;					
+					font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+					font-size:11px;
+					}
+			.carrusel-home .carrusel UL LI.no-sel{
+				display:none;
+				}
+			.carrusel-home .carrusel UL LI.sel a{
+				}
+			.carrusel .centrar-botones span, 
+			.carrusel .centrar-botones a.banner-pag{
+				left:0;
+				top:0px;
+				float:none;
+				
+				text-align:center;
+				visibility:visible;
+				z-index:100;
+				}
+				.carrusel .centrar-botones span.nosel{
+					left:15px;
+					}
+			.carrusel-home #bloque0,
+			.carrusel-home #bloque1{
+				text-align:center;
+				margin:0 auto;
+				}	
+				
+.carrusel-home .destacado-carrusel{
+	margin:0 auto;
+	padding:0;
+	position:relative;
+	text-align:left;
+	width:940px;
+	}
+	.carrusel-home .destacado-carrusel .destacado-carrusel-contenido{
+		float:left;
+		left:0;
+		top:55px;
+		position:absolute;
+		color:#ffffff;
+		font-size:14px;
+		line-height:21px;
+		
+		}
+		.carrusel-home .entradilla-home{
+			float:left;
+			width:390px;
+			}
+		.carrusel-home .destacado-carrusel-contenido H1{
+			background:none;
+			color:#ffffff;
+			font-family:"goudy-bookletter-1911-1","goudy-bookletter-1911-2",Arial,Helvetica,sans-serif;
+			font-size:40px;
+			line-height:32px;
+			}
+.carrusel-home .caja-sombra{
+	float:left;
+	width:40px;
+	margin-top:13px;
+	padding:8px 5px 5px 7px;
+	background:url(../../../Public/Home/img/botones_carrusel.png) no-repeat left center;
+	}
+#content .contenido-home{
+	float:left;
+	margin:0px 0 0 0;
+	width:100%;
+	clear:both;
+	}
+   #content-home{
+   		padding:15px 0 0;
+		float:left;
+		width:100%;
+		clear:both;
+		}
+   #content-home .tres-bloques{
+   		float:left;
+		width:100%;
+		clear:both;
+		background:none;
+		margin:0;
+		padding:0;
+		}
+		#content-home .tres-bloques .bloque{
+			float:left;
+			width:282px;
+			padding:10px 9px;
+			margin-right:20px;
+			background:url(../../../Public/Home/img/bg_bloque.gif) no-repeat left top;
+			}
+			#content-home .tres-bloques .bloque.derecha{
+				margin-right:0;
+				}
+			.tres-bloques .bloque .titulo-editable{
+				float:left;
+				width:282px;
+				height:44px;
+				background:url(../../../Public/Home/img/bg_titulo_editable.gif) no-repeat left top;
+				text-align:center;
+				padding-top:15px;
+				}
+				#content-home .tres-bloques .bloque .titulo-editable h2{
+					color:#fff;
+					font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+					font-size:16px;
+					}
+				#content-home .tres-bloques .bloque h3{
+					font-size:13px;
+					color:#d10019;
+					font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+					padding:5px 0;
+					letter-spacing:normal;
+					}				
+			.tres-bloques .bloque .caja-blanca{
+				float:left;
+				width:260px;
+				padding:5px 10px 9px;
+				background:#fff;
+				margin-left:2px;
+				line-height:19px;
+				}
+			.tres-bloques .listado-noticias{
+				float:left;
+				width:270px;
+				padding:5px 5px 9px;
+				background:#fff;
+				margin-left:2px;
+				line-height:19px;
+
+					}
+				.tres-bloques .listado-noticias UL{
+					float:left;
+					width:100%;
+					clear:both;
+					padding:0;
+					background:none;
+					margin:0;
+					}
+					.tres-bloques .listado-noticias UL LI{
+						padding:0 0 8px 0;
+						background:url(../../../Public/Home/img/bg_imagen_noticia.gif) no-repeat left bottom;
+						margin:0 0 8px 0;
+						float:left;
+						width:100%;
+						}
+						.tres-bloques .listado-noticias UL LI IMG{
+							float:left;
+							padding:0 12px 0 8px;						
+							}
+						.tres-bloques .listado-noticias UL LI .con-imagen{
+							float:left;
+							width:178px;
+							padding:0;
+							background:none;
+							}
+							#content-home .tres-bloques .listado-noticias UL LI .con-imagen H3{
+								font-family:Arial, Helvetica, sans-serif;
+								font-size:12px;
+								font-weight:normal;
+								letter-spacing:normal;
+								line-height:16px;
+								padding:0px;
+								text-transform:none;
+								}
+							#content-home .tres-bloques .listado-noticias UL LI .con-imagen .fecha{
+								font-family:"Times New Roman", Times, serif;
+								font-style:italic;
+								color:#d10019;
+								}
+			.tres-bloques .bloque-editable{
+				float:left;
+				width:100%;
+				clear:both;
+				padding-bottom:10px;
+				text-align:left;
+				color:#333333;
+				line-height:19px;
+				}
+				.tres-bloques .bloque-editable P{
+					line-height:19px;
+					}
+				.tres-bloques .bloque-editable div{
+					line-height:19px;
+					}
+				.tres-bloques .bloque-editable span{
+					line-height:19px;
+					}
+			.tres-bloques .ver-todos{
+				float:left;
+				background:url(../../../Public/Home/img/ver_todos_izq.gif) no-repeat left top;
+				height: 25.1px;
+				background-color: #D10D25;
+				}
+				.tres-bloques .ver-todos .content-ver-todos{
+					float:left;
+					background:url(../../../Public/Home/img/ver_todos_der.gif) no-repeat right top;					
+					padding:3px 28px 3px 10px;
+					}
+				.tres-bloques .ver-todos .content-ver-todos A{
+					
+					color:#ffffff;
+					font-size:10px;
+					font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+					text-decoration:none;
+					}
+/*****************************************************************************************************************************/
+/*                                             Contenido                                                                     */
+/*****************************************************************************************************************************/
+.contenedor-content{
+	min-width:940px;
+}
+#content{
+	height:400px;
+	}
+	.centrar-contenido > #content{
+		min-height:400px;
+		height:auto;
+		}
+.fondo-arriba{
+	clear:both;
+	float:left;
+	width:100%;
+	background:url(../../../Public/Home/img/fondo_total.gif) repeat-x left top #1a171b;
+	}
+	.contenedor-interior .fondo-arriba{
+		background:url(../../../Public/Home/img/bg_contenido_interior.gif) no-repeat center top #1a171b;
+		padding-top:34px;
+		padding-bottom:35px;
+		}
+.migas{
+	font-size:10px;
+	color:#c9c8ca;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-bottom:7px;
+	}	
+	.migas A{
+		color:#c9c8ca;
+		text-decoration:none;
+		}	
+		.migas A:hover{
+			text-decoration:underline;
+			}	
+/************** paginador ***************/
+.content-paginacion-noticias{
+	float:left;
+	background:url(../../../Public/Home/img/bg_pag_izq.gif) no-repeat left top;
+	width:100%;
+	margin-top:7px;
+	}
+	.multimedia-paginacion{
+		background:url(../../../Public/Home/img/bg_pag_der.gif) no-repeat right top;		
+		padding:10px;
+		margin:0;
+		}
+			
+/******************************** Contenido interior *************************/
+#content .con-menu,
+#content .sin-menu{
+	float:left;
+	width:100%;
+	clear:both;
+	}
+.content-listado-modulo{
+	}
+
+#content #menu-interior{
+	float:left;
+	width:auto;
+	}
+	#content #menu-interior #menu-secundario{
+		margin-right:5px;
+		width:157px;
+		background:url(../../../Public/Home/img/bg_menu_top.gif) no-repeat left top;
+		float:left;
+		margin-top:-30px;
+		}
+	#content #menu-interior UL{
+		background:url(../../../Public/Home/img/bg_menu_bottom.gif) no-repeat left bottom;
+		float:left;
+		margin:0;
+		padding:103px 6px 19px;
+		width:145px;
+		clear:both;
+		}
+		#content #menu-interior UL LI{
+			float:left;
+			margin:0;
+			padding:0px 0;
+			width:100%;
+			clear:both;
+			background:url(../../../Public/Home/img/bg_li_menu_secundario.gif) repeat-x left top;			
+			}
+			#content #menu-interior UL LI A{
+				float:left;
+				padding:7px 0;
+				width:100%;
+				font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+				font-size:11px;
+				color:#6f6a63;
+				text-decoration:none;
+				text-transform:uppercase;
+				background:none;
+				}
+				
+				#content #menu-interior UL LI A SPAN{
+					padding:3px 10px 3px 9px;
+					width:121px;
+					float:left;	
+					}
+			#content #menu-interior UL LI.sel{
+				background:url(../../../Public/Home/img/bg_li_sel_menu.gif) no-repeat right top;
+				border-bottom:1px solid #ffffff;
+				border-top:1px solid #ffffff;
+				}
+				#content #menu-interior UL LI.sel A,
+				#content #menu-interior UL LI A:hover{
+					float:left;
+					background:url(../../../Public/Home/img/bg_li_sel_menu.gif) no-repeat right top;
+					color:#2a2825;
+					}
+					#content #menu-interior UL LI.sel A SPAN,
+					#content #menu-interior UL LI A:hover SPAN{				
+						color:#2a2825;			
+						background:url(../../../Public/Home/img/bg_sel.gif) no-repeat right center;
+						}
+				#content #menu-interior UL LI.sel UL{
+					padding:0px;
+					width:145px;
+					background:none;
+					margin:0;
+					}
+					#content #menu-interior UL LI.sel UL LI{		
+						background:#e8dec8;
+						border-top:	1px solid #ded3b9;	
+						}
+						#content #menu-interior UL LI.sel UL LI A{
+							background:none;
+							color:#6f6a63;
+							font-size:11px;
+							font-weight:normal;
+							width:auto;
+							font-family:Arial, Helvetica, sans-serif;
+							text-transform:none;
+							padding:5px 0 5px;
+							}
+							#content #menu-interior UL LI.sel UL LI.sel{
+								border-top:1px solid #ded3b9;
+								border-bottom:1px solid #ded3b9;
+								background:#e0d6c1;
+								}
+								#content #menu-interior UL LI.sel UL LI.sel A{
+									color:#2a2825;									
+									}
+							#content #menu-interior UL LI.sel UL LI A span{
+								color:#6f6a63;
+								background:none;
+								background:url(../../../Public/Home/img/bg_flechitas.png) no-repeat 8px 4px;
+								padding:0px 0 0px 19px;
+								}
+								#content #menu-interior UL LI.sel UL LI A span:hover,
+								#content #menu-interior UL LI.sel UL LI.sel A span{
+									color:#2a2825;
+									background:url(../../../Public/Home/img/bg_flechitas.png) no-repeat 8px 4px;
+									}
+			
+						
+#content #content-informacion{
+	line-height:19px;
+	}
+	#content #content-informacion .destacado-interior{
+		margin:0 0 0;
+		padding:5px 0 25px;
+		font-size:18px;
+		font-weight:normal;
+		color:#393939;
+		letter-spacing:-1px;
+		background:url(../../../Public/Home/img/punteado_horizontal.gif) 0 100% repeat-x;
+		}
+		#content #content-informacion .destacado-interior P{
+			margin:0;
+			line-height:31px;
+			}
+	#content #content-informacion .contenido-izquierda{
+		float:left;
+		margin:0;
+		clear:left;
+		background:none;
+		color:#333333;
+		}
+		#content #content-informacion .fondo-total .contenido-izquierda{
+			float:left;
+			margin:25px 20px 10px;
+			clear:left;
+			background:#fff;
+			}
+#content #content-informacion  .contenido-derecha{
+		float:right;
+		margin:0 0 0 20px;
+		width:220px;
+		clear:right;
+		line-height:16px;
+		color:#333333;
+		}	
+		.contenido-derecha A{	
+			color:#333333;
+			}		
+#content #content-informacion .fondo-total .contenido-derecha{
+	float:right;
+	margin:0 0 0 10px;
+	width:208px;
+	clear:right;
+	line-height:16px;
+	}
+	#content #content-informacion .fondo-total .contenido-derecha .esq-top-izq{
+		margin-top:0;
+		}
+	#content #content-informacion .fondo-total .contenido-derecha IMG{
+		margin:0 0 15px;
+		padding:0;
+		border:0;
+		}
+	#content #content-informacion  .contenido-derecha .titulo-editable-derecha{
+		background:url(../../../Public/Home/img/bg_titulo_editable_derecha.gif) no-repeat left top;
+		padding:10px 10px 16px;
+		float:left;
+		width:188px;
+		color:#fff;
+		}
+		#content #content-informacion  .contenido-derecha .titulo-editable-derecha H2{
+			text-transform:uppercase;
+			font-weight:normal;
+			padding:0 0 0px;
+			font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+			color:#fff;
+			font-size:12px;
+			}
+	#content #content-informacion  .contenido-derecha .caja-blanca-derecha{
+		float:left;
+		width:192px;
+		padding:3px 4px 5px 4px;
+		border:4px solid #fff;
+		background:url(../../../Public/Home/img/bg_caja_blanca_derecha.gif) repeat-x left bottom #fff;
+		}
+		#content #content-informacion  .contenido-derecha .caja-blanca-derecha .ultima-receta{
+			float:left;
+			width:100%;
+			clear:both;
+			padding-bottom:12px;
+			}
+			#content #content-informacion  .contenido-derecha .caja-blanca-derecha h3,
+			#content #content-informacion  .contenido-derecha .caja-blanca-derecha h3 A{
+				color:#cf021b;
+				font-size:10px;
+				text-transform:uppercase;
+				font-weight:normal;
+				padding:0 0 2px;
+				font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+				}
+		#content #content-informacion  .contenido-derecha .caja-blanca-derecha UL{
+			padding:0 0 0 5px;
+			}
+			#content #content-informacion  .contenido-derecha .caja-blanca-derecha UL LI{
+				background:url("../../../Public/Home/img/icono_listas.gif") no-repeat scroll 0 9px transparent;
+				padding:2px 0 2px 13px; 
+				}
+
+
+
+/***********************************************************************************************/
+/***		                               FORMULARIOS		                                 ***/
+/***********************************************************************************************/
+.esq-top-izq {
+	float:left;
+	margin:0px 0 0;
+	width:100%;
+	background:url(../../../Public/Home/img/esq_top_izq.gif) no-repeat scroll left top;
+	}
+	.esq-top-der {
+		background:transparent url(../../../Public/Home/img/esq_top_der.gif) no-repeat scroll right top;
+		float:left;
+		width:100%;
+		}
+		.esq-bottom-der {
+			background:transparent url(../../../Public/Home/img/esq_bottom_der.gif) no-repeat scroll right bottom;
+			float:left;
+			width:100%;
+			}
+			.esq-bottom-izq {
+				background:transparent url(../../../Public/Home/img/esq_bottom_izq.gif) no-repeat scroll left bottom;
+				float:left;
+				margin:4px 0 0;
+				width:100%;
+				}
+.fondo-total{
+	float:left;
+	background:url(../../../Public/Home/img/bg_fondo_total.gif) repeat-y left top;
+	margin:0px 0 0;
+	}
+.content-fondo-total{
+	float:left;
+	background:url(../../../Public/Home/img/bg_content_fondo_total.gif) repeat-y right top;
+	width:100%;
+	}
+	.caja-formulario{
+		background-color:#fff;
+		margin:0;
+		padding:0px;
+		}
+		.caja-formulario P{
+			margin:0;
+			line-height:17px;
+			}
+		.caja-formulario H3{
+			margin:5px 0;
+			padding:0 0 10px;
+			font-size:18px;
+			color:#0082d3;
+			background:url(../../../Public/Home/img/punteado_horizontal.gif) 0 100% repeat-x;
+			}
+.formulario {
+	margin:1em 0;
+	}
+	.formulario FIELDSET {
+		border:0;
+		padding:0;
+		margin:0;
+		}
+		.formulario FIELDSET LEGEND {
+			display:none;
+			}
+	.formulario DIV {
+		clear:both;
+		margin:0 0 13px;
+		float:left;
+		width:99%;
+		}
+	.formulario INPUT,
+	.formulario SELECT,
+	.formulario TEXTAREA{
+		padding:5px 4px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:normal;
+		font-size:12px;
+		color:#333333;
+		line-height:12px;
+		border:1px solid #e1e1e1;
+		}
+	.fondo-total-trabaja-nosotros .formulario input{
+		width:231px;
+		}
+	.formulario INPUT{
+		width:300px;
+		}
+	.formulario TEXTAREA{
+		padding:0.35em 0.3em;
+		line-height:1.5em;
+		width:96.5%;
+		}
+		.formulario .checkbox INPUT{
+           width:auto;
+           }
+
+	.formulario LABEL {
+		float:none;
+		width:auto;
+		padding:2px;
+		display:block;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		font-size:12px;
+		color:#333333;
+		font-weight:bold;
+		}
+		.formulario .aceptaprivacidad LABEL{
+			font-size:12px;
+			font-style:normal;
+			color:#292929;
+			line-height:normal;
+			font-weight:normal;
+			padding:0;
+			}
+		.formulario .aceptaprivacidad INPUT{
+			float:left;
+			margin:0.05em 0.2em 0 0;
+			display:block;
+			vertical-align:top;
+			height:14px;
+			width:auto;
+			}
+
+		.formulario .botones,
+		.formulario-newsletter FORM .botones{
+			background:url(../../../Public/Home/img/botones_izq_formulario.gif) no-repeat top left;
+			padding-left:4px;
+			background-color:#D10D25 ;
+			float:right;
+			width:auto;
+			}
+			.formulario .botones INPUT,
+			.formulario-newsletter FORM .botones INPUT{				
+				padding:6px 27px 5px 4px;
+				font-size:10px;
+				font-weight:normal;
+				text-transform:uppercase;
+				
+				width: 70px;
+				color:#FFFFFF;
+				border:0;
+				margin:0;
+				display:inline;
+				background:url(../../../Public/Home/img/botones_der_formulario.gif) no-repeat top right;
+		
+				font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+				}
+		.formulario div.name,
+		.formulario div.surname,
+		.formulario div.email,
+		.formulario div.phone,				
+		.formulario div.personas,
+		.formulario div.categoria_receta,
+		.formulario div.usuario,
+		.formulario div.titulo,
+		.formulario div.nombre, 
+		.formulario div.apellidos, 
+		.formulario div.email, 
+		.formulario div.telefono {
+			clear:none;
+			float:left;
+			width:48.6%;
+			padding-left:9px;
+			}
+			.formulario div.nombre-registro{
+				clear:left;
+				}
+			.formulario div.email{
+				clear:left;
+				}
+			.formulario div.cv{
+				width:91.8%;
+				border:1px solid #E1E1E1;
+				background:url(../../../Public/Home/img/bg_cv.gif) repeat-x left bottom;
+				padding:15px;
+				margin:5px 0 12px 9px;
+				}
+				.formulario div.cv label{
+					float:left;
+					}
+		.formulario div.comments,
+		.formulario div.captcha-recetas,
+		.formulario div.comentarios,
+		.formulario div.privacidad,
+		.formulario div.aceptaprivacidad{
+			padding-left:9px;
+			}
+			.formulario .aceptaprivacidad{
+				background:url(../../../Public/Home/img/bg_obligatorios.gif) repeat-x left bottom;
+				padding-bottom:45px;
+				margin-bottom:15px;
+				}
+			.formulario div.captcha-recetas{
+				font-weight:bolder;
+				}
+.fondo-total-contacto .contenido-izquierda .esq-top-der,
+.fondo-total-contacto .contenido-izquierda .esq-top-izq,
+.fondo-total-contacto .contenido-izquierda .esq-bottom-der,
+.fondo-total-contacto .contenido-izquierda .esq-bottom-izq{
+	background:none;
+	margin:0;
+	padding:0;
+	}
+.obligatorios{
+	float:left;
+	width:100%;
+	clear:both;
+	background:url(../../../Public/Home/img/bg_obligatorios.gif) repeat-x left bottom;
+	padding:0 0px 17px;
+	}	
+.contenido-derecha-contacto A{
+	color:#333333;
+	font-size:11px;
+	}
+
+.fondo-total-trabaja-nosotros .formulario div.nombre, 
+.fondo-total-trabaja-nosotros .formulario div.apellidos, 
+.fondo-total-trabaja-nosotros .formulario div.email, 
+.fondo-total-trabaja-nosotros .formulario div.telefono{
+	padding-left:4px;
+	width:49.2%;
+	}		
+	.fondo-total-trabaja-nosotros .formulario div.cv{
+		margin-left:4px;
+		}	
+		div.cv span.formcontact-maxsize,
+		div.cv span.formcontact-extensiones{
+			display:block;
+			font-size:11px;
+			line-height:15px;
+			padding:5px 0 0 31px;
+			}
+			div.cv span.formcontact-maxsize{
+				padding-top:1px;
+				}		
+.fondo-total-trabaja-nosotros .formulario div.comentarios,
+.fondo-total-trabaja-nosotros .formulario div.privacidad,
+.fondo-total-trabaja-nosotros .formulario div.aceptaprivacidad{
+	padding-left:4px;
+	}
+	.fondo-total-trabaja-nosotros .formulario textarea{
+		width:97.2%;
+		}
+#content #content-informacion .contenido-derecha-contacto{
+	background:url(../../../Public/Home/img/bg_contacto_derecha.png) no-repeat left top;
+	padding:195px 0 0;
+	}
+#content #content-informacion .contenido-derecha-trabaja-nosotros{
+	background:url(../../../Public/Home/img/bg_trabaja_nosotros.png) no-repeat left top;
+	padding:206px 0 0;
+	}
+
+/****************************		BUSCADOR NOTICIAS		****************************/
+.buscador-noticias{
+	margin:1em 0 1em 0;
+	}
+	.caja-formulario H3.titulo-buscador{
+		padding-bottom:8px;
+		font-size:22px;
+		color:#2b2b2b;
+		}
+	.caja-formulario P.texto-buscador{
+		margin:0;
+		font-size:11px;
+		line-height:19px;
+		}
+	form .buscador-noticias DIV{
+		margin:12px 0;
+		}
+		form .buscador-noticias DIV.texto label{
+			display:none;
+			}
+		form .buscador-noticias DIV.enlaces-rss{
+			float:left;
+			}
+        form .buscador-noticias DIV.entre-fechas H3{
+            font-size: 12px;
+            padding: 0 0 5px 0;
+			display:none;
+            }
+        form .buscador-noticias DIV.entre-fechas DIV{
+            margin:10px 0;
+            }
+		form .buscador-noticias DIV LABEL{
+			float:left;
+			padding-top:2px;
+			width:45px;
+			clear:none;
+			font-size:12px;
+			font-weight:bold;
+			color:#ffffff;
+			}
+            form .buscador-noticias DIV.entre-fechas LABEL{
+                
+                }
+            form .buscador-noticias DIV LABEL.label_date{
+                display:none;
+                }
+		.buscador-noticias SELECT,
+		.buscador-noticias INPUT {
+			border:1px solid #655e5e;
+			color:#666666;
+			font-family:Arial,Helvetica,sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			line-height:12px;
+			padding:5px;
+			width:178px;
+			font-style:italic;
+			}
+            .buscador-noticias INPUT.input_day {
+                width:18px;
+                }
+            .buscador-noticias INPUT.input_month {
+                width:18px;
+                }
+            .buscador-noticias INPUT.input_year {
+                width:28px;
+                }
+	#content .buscador-noticias div.content-botones {
+		float:left;
+		width:100%;
+		clear:both;
+		margin:0;
+		}
+	.buscador-noticias .botones{
+		background:url(../../../Public/Home/img/botones_izq.gif) no-repeat top left;
+		padding-left:2px;
+		float:right
+		}
+		#content .buscador-noticias div.content-botones .botones{
+			float:right;
+			clear:none;
+			margin:3px 0 0;
+			}
+		.buscador-noticias .botones INPUT{
+			background:url(../../../Public/Home/img/botones_der.gif) no-repeat top right;
+			font-size:10px;
+			color:#fff;
+			text-transform:uppercase;
+			font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+			font-weight:normal;
+			font-style:normal;
+			border:0;
+			margin:0;
+			padding:6px 24px 6px 3px;
+			display:inline;
+			width:auto;
+			}
+		.buscador-noticias IMG{
+			border:0;
+			background:none;
+			padding:0;
+			margin:0 0.5em;
+			}
+			.buscador-noticias INPUT#noticia_fecha_hasta,
+			.buscador-noticias INPUT#noticia_fecha_desde  {
+				width:120px;
+				}
+
+
+/************************************************************/
+/*						NOTICIAS							*/
+/************************************************************/
+
+H1 SPAN.titulo-noticias{
+	display:block;
+	padding-bottom:4px;
+	background:url(../../../Public/Home/img/rss_titulo.gif) 99.6% 0 no-repeat;
+	}
+
+/****************listado********************/
+
+	.contenedor-listado-modulo H2{
+		margin-bottom:6px;
+		padding:0;
+		font-size:18px;
+		color:#393939;
+		}
+		.contenedor-listado-modulo H2 A{
+			font-size:14px;
+			text-transform:uppercase;
+			color:#ce041c;
+			font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+			}
+		.contenedor-listado-modulo H2 A:hover{
+			color:#740714;
+			text-decoration:none;
+			}
+	.contenedor-listado-modulo .superior{
+		margin-top:10px;
+		padding:0 0 10px;
+		background-position: 0 100%;
+		}
+	.contenedor-listado-modulo UL{
+		}
+		.contenedor-listado-modulo LI{
+			clear:both;
+			padding-bottom:12px;
+			margin-bottom:0px;	
+				
+			}
+			.contenedor-listado-modulo LI.ultimo{
+				padding:0;
+				margin:0;
+				background:none;
+				}
+		.contenedor-listado-modulo IMG{
+			float:left;
+			}
+		.contenedor-listado-modulo .con-imagen {
+			padding-left:0px;
+			}
+	.contenedor-listado-modulo SPAN.fecha{
+		margin-bottom:15px;
+		font-size:11px;
+		color:#1d1d1d;
+		}
+	.interior-listado-modulo{
+		float:left;		
+		width:100%;		
+		}
+	.listado-noticias{
+		float:left;	
+		padding:0;	
+		margin-bottom:0;
+		width:100%;	
+		background:url(../../../Public/Home/img/bg_listado_noticias_top.png) no-repeat right top;
+		}
+		.listado-noticias UL{
+			float:left;
+			background:url(../../../Public/Home/img/bg_listado_noticias_bottom.gif) no-repeat right bottom;		
+			padding:7px 0 8px;	
+			margin-bottom:18px;	
+		}
+		.listado-noticias P.fecha{
+			float:left;
+			color:#fff;
+			background:url(../../../Public/Home/img/bg_fecha.gif) no-repeat left top;
+			padding:4px 10px 5px;
+			font-size:12px;
+			font-family:"Times New Roman", Times, serif;
+			font-style:italic;
+			font-weight:bold;
+			margin-top:10px;
+			}
+		.listado-noticias .con-imagen{
+			float:left;
+			background:url(../../../Public/Home/img/bg_con_imagen.gif) no-repeat left bottom #ffffff;
+			width:585px;
+			padding:12px 18px 16px 17px;
+			}
+			.listado-noticias .con-imagen IMG{
+				float:right;
+				padding-left:15px;
+				}
+.contenedor-listado-modulo P{
+	line-height:18px;
+	}
+
+/****************Ampliada********************/
+.noticias-ampliada{
+	position:relative;
+	}
+	.content-modulo-ampliada .imagen{
+		float:right;
+		}
+		.content-modulo-ampliada IMG{
+			float:left;
+			margin:12px 3px 0 0;
+			}
+	.content-modulo-ampliada .rango-fechas,
+	.content-modulo-ampliada .datos-interes,
+	.content-modulo-ampliada .content-datos,
+	.content-modulo-ampliada .entradilla,
+	.content-modulo-ampliada .cuerpo{
+		float:left;
+		width:686px;
+		}
+		.content-modulo-ampliada .fecha{
+			background:url(../../../Public/Home/img/bg_fecha_ampliada.gif) no-repeat right top;
+			color:#FFFFFF;
+			float:left;
+			font-family:"Times New Roman",Times,serif;
+			font-size:12px;
+			font-style:italic;
+			font-weight:normal;
+			margin:0;
+			padding:3px 14px 12px;
+			width:auto;
+			position:absolute;
+			left:-4px;
+			}
+			.content-modulo-ampliada.recetas-ampliada .fecha{
+				padding:3px 14px 12px 10px;
+				}
+			.content-modulo-ampliada .fecha span{
+				background:url(../../../Public/Home/img/bg_span_fecha.gif) no-repeat right center;
+				padding-right:7px;
+				margin-right:5px;
+				}
+			.content-modulo-ampliada .fecha span strong{
+				font-style:normal;
+				font-family:Arial, Helvetica, sans-serif;
+				}
+		.content-modulo-ampliada .meta-info,
+		.content-modulo-ampliada .cuerpo{
+			line-height:19px;
+			width:664px;
+			padding:0 13px 15px;
+			color:#333333;
+			}
+		.content-modulo-ampliada .entradilla{
+			margin-bottom:15px;
+			padding:0 13px 15px;
+			background:url(../../../Public/Home/img/bg_entradilla.gif) repeat-x left bottom;
+			color:#706857;
+			font-size:13px;
+			text-transform:uppercase;
+			font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+			line-height:19px;
+			font-weight:bold;
+			width:664px;
+			}
+	  .content-modulo-ampliada .fecha-redes-sociales{
+			float:left;
+			width:690px;
+			margin-bottom:17px;
+			padding-top:1px;
+			background:url(../../../Public/Home/img/fecha_redes_sociales.gif) repeat-x left bottom;
+			min-height:37px;
+			}
+			.content-modulo-ampliada .redes-sociales{
+				float:right;
+				padding:6px 4px 0 0;
+				}
+			   .redes-sociales .boton-me-gusta{
+					float:left;
+					width:82px;
+					}
+				.redes-sociales .boton-twittear{
+					float:left;
+					}
+	.contenedor-noticia-ampliada{
+		float:left;
+		clear:both;
+		background:#fff;
+		background:url(../../../Public/Home/img/contenedor-ampliada.png) no-repeat left top;
+		width:100%;
+		}
+		.content-contenedor-noticia-ampliada{
+			float:left;
+			width:926px;
+			padding:7px 7px 6px;
+			clear:both;
+			background:url(../../../Public/Home/img/bg_content_noticia_ampliada.gif) no-repeat left bottom;
+			}
+		.contenedor-noticia-ampliada .txt{
+			background:#fff;
+			}
+			.recetas-ampliada .contenedor-noticia-ampliada .txt{
+				background:none;
+				}
+			
+		.contenedor-cuerpo{
+			float:left;
+			width:694px;
+			min-height:420px;
+			background:url(../../../Public/Home/img/bg_contenedor_cuerpo.gif) repeat-x left bottom #fff;
+			border:4px solid #ffffff;
+			border-right:0;
+			position:relative;
+			}
+	.recetas-ampliada .contenedor-noticia-ampliada{
+		background:url(../../../Public/Home/img/receta-ampliada.png) no-repeat left top;
+		}
+	.recetas-ampliada .content-contenedor-noticia-ampliada{
+		background:url(../../../Public/Home/img/recetas_ampliada_bottom.gif) no-repeat left bottom;
+		width:762px;
+		}
+		.recetas-ampliada .contenedor-cuerpo{
+			width:529px;
+			}
+	.recetas-ampliada.content-modulo-ampliada .fecha-redes-sociales{
+		width:525px;
+		margin-bottom:0px;
+		}
+
+	.recetas-ampliada.content-modulo-ampliada .cuerpo{
+		width:499px;
+		padding-bottom:20px;
+		}
+		.recetas-ampliada.content-modulo-ampliada .cuerpo div.descripcion{
+			padding-bottom:15px;
+			}
+	.recetas-ampliada .categorias-votos{
+		float:left;
+		clear:both;
+		background:url(../../../Public/Home/img/bg_categorias_receta.gif) no-repeat left top;
+		padding:7px 10px 17px 40px;
+		width:475px;
+		margin-bottom:13px;
+		}
+		.recetas-ampliada .categorias-votos p{
+			color:#797979;
+			font-size:11px;
+			text-transform:uppercase;
+			font-weight:bold;
+			}
+			.recetas-ampliada .categorias-votos p span{
+				display:block;
+				text-transform:none;
+				font-style:italic;
+				font-weight:normal;
+				}
+		.recetas-ampliada .categorias-votos .categoria{
+			float:left;
+			}
+		.recetas-ampliada .categorias-votos .voto{
+			float:right;
+			padding:0;
+			}
+/******************************* recetas ***************************/
+	.listado-recetas{
+		float:left;	
+		padding:0;	
+		margin-bottom:0;
+		width:100%;	
+		background:url(../../../Public/Home/img/bg_listado_recetas_top.png) no-repeat left top;
+		}
+		.listado-recetas .contenedor-listado-recetas{
+			float:left;
+			background:url(../../../Public/Home/img/recetas_bottom.png) no-repeat left bottom;		
+			padding:7px 6px 8px;	
+			margin-bottom:18px;	
+			width:99%;
+			}
+		.listado-recetas .fila-recetas{
+			float:left;
+			width:100%;
+			clear:both;
+			margin-bottom:15px;
+			}
+			.listado-recetas .fila-recetas-ultima{
+				margin:0;
+				}
+			.listado-recetas .fila-recetas .receta{
+				float:left;
+				width:170px;
+				margin-right:8px;
+				background:url(../../../Public/Home/img/bg_votos_receta.png) no-repeat left bottom;
+				min-height:256px
+				}
+				.listado-recetas .fila-recetas .receta.ultimo{
+					margin-right:0;
+					}
+				.listado-recetas .fila-recetas .receta .con-imagen{
+					float:left;
+					background:url(../../../Public/Home/img/bg_receta.gif) repeat-x left bottom #fff;
+					border:5px solid #fff;
+					border-bottom:4px solid #fff;
+					padding:0px;
+					width:160px;
+					min-height:219px;
+					}
+					.listado-recetas .fila-recetas .receta .con-imagen IMG{
+						margin-bottom:7px;
+						}
+					.listado-recetas .fila-recetas .receta .con-imagen H2 A,
+					.listado-recetas .fila-recetas .receta .con-imagen H2{
+						font-size:12px;
+						font-weight:normal;
+						padding:0 3px 0;
+						margin:0;
+						line-height:normal;
+						}
+						.listado-recetas .fila-recetas .receta .con-imagen H2 A{
+							padding:0;
+							}
+					.listado-recetas .fila-recetas .receta .con-imagen p.categoria{
+						font-size:9px;
+						text-transform:uppercase;
+						color:#797979;
+						padding:0 3px 3px;
+						line-height:16px;
+						}
+					.listado-recetas .fila-recetas .receta .con-imagen p.entradilla{
+						color:#646464;
+						line-height:17px;
+						padding:0 3px 6px;
+						}
+					.contenido-derecha form .buscador-noticias div select{
+						width:189px;
+						}
+	
+					form .buscador-noticias div.num-personas label{
+						width:126px;
+						}
+					form .buscador-noticias div.num-personas select{
+						width:60px;
+						text-align:left;
+						}
+
+
+
+/*********************enlaces a comentarios ********************/
+.enlaces-comentarios{
+	margin:5px 0;
+	clear:both;
+	}
+	.enlaces-comentarios A{
+		text-decoration:none;
+		}
+		.enlaces-comentarios A:hover{
+			text-decoration:underline;
+			}
+	.enlaces-comentarios A.ver-comentario{
+		background:url(../../../Public/Home/img/icono_anadir_comentario.gif) left top no-repeat;
+		margin-right:0.5em;
+		padding-left:20px;
+		}
+.enlaces-comentarios A.add-comentario{
+	background:url(../../../Public/Home/img/icono_comentarios.gif) left top no-repeat;
+	padding-left:20px;
+	}
+
+/************************************************************/
+/*						PAGINADOR							*/
+/************************************************************/
+.pagination{
+	margin:10px 0;
+	padding:12px 0 0 0;
+	width:100%;
+	clear:both;
+	background:url(../../../Public/Home/img/punteado_horizontal.gif) 0 0 repeat-x;
+	}
+	.pagination P{
+		margin:0;
+		color:#373737;
+		}
+		.pagination P SPAN{
+			color:#373737;
+			}
+		.pagination P A{
+			color:#f27d00;
+			font-weight:bold;
+			text-decoration:none;
+			}
+			.pagination P A:hover{
+				text-decoration:underline;
+				}
+/************************************************************/
+/*						COMENTARIOS							*/
+/************************************************************/
+#comentarios {
+	clear:both;
+	}
+	#comentarios H2{
+		}
+	#comentarios UL{
+		}
+	#comentarios LI{
+		}
+	#comentarios A{
+		}
+		#comentarios A:hover{
+			}
+
+/************************************************************/
+/*						ADD COMENTARIO						*/
+/************************************************************/
+#add-comentario {
+	margin:10px 0;
+	}
+	#add-comentario .esq-top-izq-gris{
+		margin-bottom:20px;
+		}
+/************************************************************/
+/*						RSS									*/
+/************************************************************/
+.enlaces-rss{
+	font-size:1em;
+	}
+	.enlaces-rss A{
+		padding:3px 0 5px 20px;
+		}
+
+
+/************************************************************/
+/*						XML									*/
+/************************************************************/
+.xml{
+	font-size:1em;
+	}
+	.xml A{
+		padding:2px 0 5px 40px;
+		}
+
+/************************************************************/
+/*					SOLICITAR DEMO							*/
+/************************************************************/
+.contenedor-demo{
+	float:right;
+	width:auto;
+	}
+	.contenedor-demo .demo{
+		float:left;
+		margin:0;
+		padding-left:10px;
+		line-height:normal;
+		background:transparent url(../../../Public/Home/img/botones_izq_sobre.gif) no-repeat 0 10px;
+		}
+		.contenedor-demo .demo A,
+		.contenedor-demo .demo A:hover{
+			margin:0;
+			padding:17px 61px 14px 8px;
+			border:0 none;
+			color:#FFFFFF;
+			display:inline;
+			font-size:14px;
+			font-weight:bold;
+			background:transparent url(../../../Public/Home/img/botones_der_sobre.gif) no-repeat 100% 0;
+			}
+			.contenedor-demo .demo A:hover{
+				text-decoration:none;
+				}
+/************************************************************/
+/*						VOLVER								*/
+/************************************************************/
+.volver {
+	margin-top:15px;
+	padding-top:10px;
+	clear:both;
+	border:0;
+	background:url(../../../Public/Home/img/punteado_horizontal.gif) 0 0 repeat-x;
+	}
+	.volver A{
+		float:left;
+		padding-top:12px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		color:#f27d00;
+		text-decoration:none;
+		}
+		.volver A:hover{
+			text-decoration:underline;
+			}
+
+/************************************************************/
+/*						oculto								*/
+/************************************************************/
+.oculto {
+	display:none;
+	}
+
+
+/*************************************************************************************************/
+/**********                                     ESTILOS SÓLO PARA DICAMPIS                              ***********/
+/*************************************************************************************************/
+
+.cursos-ampliada .caja{
+    padding:0 15px 15px 15px;
+}
+.area .esq-bottom-der, .area .esq-bottom-izq, .area .caja{
+    margin-bottom:0;
+    padding-bottom:0;
+    background-image: none;
+}
+.area .esq-top-der, .area .esq-top-izq{
+    margin-bottom: 0;
+ }
+.duracion .esq-top-der, .duracion .esq-top-izq{
+    margin:0;
+    padding:0;
+    background-image: none;
+}
+.duracion .esq-bottom-der, .duracion .esq-bottom-izq{
+    margin-top: 0;
+ }
+.temario strong{
+    display:block;
+    background:transparent url(../../../Public/Home/img/punteado_horizontal.gif) repeat-x scroll 0 100%;
+    color:#0082D3;
+    font-size:18px;
+    margin:5px 0;
+    padding:0 0 10px;
+}
+.ficha_del_curso strong{
+    display:block;
+    background:transparent url(../../../Public/Home/img/punteado_horizontal.gif) repeat-x scroll 0 100%;
+    color:#0082D3;
+    font-size:18px;
+    margin:5px 0;
+    padding:0 0 10px;
+}
+.ver-mas{
+    display:none;
+}
+.listado-cursos{
+    /*overflow:hidden;*/
+	float: none !important;
+	float: left;
+    margin-top: 22px;
+}
+.listado-cursos h2{
+    font-size:14px;
+    font-weight:bold;
+    }
+.listado-cursos .sin-imagen{
+    margin-bottom:15px;
+    }
+
+
+/************************************************************************************/
+/*						filter boletines											*/
+/************************************************************************************/
+UL.filter-boletines {
+	
+}
+	UL.filter-boletines LI{
+		background:none;
+		
+		}
+		UL.filter-boletines LI INPUT {
+				float:left;
+				margin:0.2em 0.4em 0 0;
+				vertical-align:middle;
+				background:none;
+				padding:0;
+				border:0;
+				width:14px;
+				height:15px;
+				}
+		UL.filter-boletines LI LABEL{
+			display:inline;
+			}
+
+/* jQuery specific overlay styles */
+
+ #jquery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 500px;
+}
+#jquery-lightbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	line-height: 0;
+}
+#jquery-lightbox a img { border: none; }
+#lightbox-container-image-box {
+	position: relative;
+	background-color: #fff;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+}
+#lightbox-container-image { padding: 10px; }
+#lightbox-loading {
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+}
+#lightbox-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+#lightbox-container-image-box > #lightbox-nav { left: 0; }
+#lightbox-nav a { outline: none;}
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+	width: 49%;
+	height: 100%;
+	display: block;
+}
+#lightbox-nav-btnPrev {
+	left: 0;
+	float: left;
+}
+#lightbox-nav-btnNext {
+	right: 0;
+	float: right;
+}
+#lightbox-container-image-data-box {
+	font: 10px Verdana, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 1.4em;
+	overflow: auto;
+	width: 100%;
+	padding: 0 10px 0;
+}
+#lightbox-container-image-data {
+	padding: 0 10px;
+	color: #666;
+}
+#lightbox-container-image-data #lightbox-image-details {
+	width: 70%;
+	float: left;
+	text-align: left;
+}
+#lightbox-image-details-caption { font-weight: bold; }
+#lightbox-image-details-currentNumber {
+	display: block;
+	clear: left;
+	padding-bottom: 1.0em;
+}
+#lightbox-secNav-btnClose {
+	width: 66px;
+	float: right;
+	padding-bottom: 0.7em;
+}
+/************************tienda listado productos *****************/
+
+.listado-productos-tienda{
+	float:left;
+	width:700px;
+	margin-right:20px;
+	}
+	.listado-productos-tienda .pestanyas{
+		float:left;
+		clear:both;
+		width:680px;
+		padding:10px 10px 35px;
+		background:url(../../../Public/Home/img/bg_fondo_pestanias.gif) no-repeat left top;
+		position:relative;
+		}
+		.listado-productos-tienda .pestanyas UL{
+			float:left;
+			width:100%;
+			clear:both;
+			padding:0;
+			}
+			.listado-productos-tienda .pestanyas UL LI{
+				float:left;
+				background:none;
+				padding:0 0px 5px 0px;
+				margin:0 5px 0 0;
+				}
+				.listado-productos-tienda .pestanyas UL LI A{
+					text-transform:uppercase;
+					color:#c8c7c9;
+					font-size:11px;
+					font-weight:bold;
+					background:url(../../../Public/Home/img/li_pes_izq.gif) no-repeat left top;					
+					padding:0 0px 0 3px;
+					float:left;
+					text-decoration:none;
+					}
+					.listado-productos-tienda .pestanyas UL LI A span{
+						background:url(../../../Public/Home/img/li_pes_der.gif) no-repeat right top;
+						padding:5px 8px 5px 6px;
+						float:left;
+						}					
+					.listado-productos-tienda .pestanyas ul li A{
+						color:#b2b2b2;
+						text-decoration:none;
+						}
+		.listado-productos-tienda .pestanyas UL LI:hover,
+		.listado-productos-tienda .pestanyas UL LI.sel{
+			background:url(../../../Public/Home/img/bg_li_sel_pes.gif) no-repeat center bottom;
+			}
+			.listado-productos-tienda .pestanyas UL LI A:hover,
+			.listado-productos-tienda .pestanyas UL LI.sel A {
+				background:url(../../../Public/Home/img/li_pes_izq_sel.gif) no-repeat left top;
+				color:#fff;
+				}
+				.listado-productos-tienda .pestanyas UL LI A span:hover,
+				.listado-productos-tienda .pestanyas UL LI.sel A span{
+					background:url(../../../Public/Home/img/li_pes_der_sel.gif) no-repeat right top;
+					}
+		.listado-productos-tienda .pestanyas UL LI.sel UL.lista-categorias{
+			float:left;
+			width:100%;
+			clear:both;
+			padding:15px 0 10px;
+			position:absolute;
+			top:35px;
+			width:auto;
+			left:11px;
+			}
+
+			.listado-productos-tienda .pestanyas  UL LI.sel UL.lista-categorias  LI{
+				background:none;
+				}
+				.listado-productos-tienda .pestanyas  UL LI.sel UL.lista-categorias  LI A{
+					background:url(../../../Public/Home/img/bg_lista_categorias_li.gif) no-repeat right center;
+					text-transform:none;
+					font-weight:normal;
+					font-size:12px;
+					padding:0 15px 0 0;
+					margin:0 15px 0 0;
+					}
+					.listado-productos-tienda .pestanyas  UL LI.sel UL.lista-categorias  LI.sel A{
+						color:#ffffff;
+						font-weight:bold;
+						text-transform:none;
+						}
+					.listado-productos-tienda .pestanyas UL LI.sel UL.lista-categorias  LI A:hover{
+						color:#ffffff;
+						}
+						
+						
+	.listado-productos-tienda .fila-productos{
+		float:left;
+		width:100%;
+		clear:both;
+		padding-bottom:21px;
+		}
+		.listado-productos-tienda .fila-productos .producto{
+			float:left;
+			width:220px;
+			padding:0px;
+			background:url(../../../Public/Home/img/carrito_top.png) no-repeat left top;
+			margin:0 20px 0 0;
+			}
+			.listado-productos-tienda .fila-productos .producto .content-producto{
+				float:left;
+				width:206px;
+				padding:7px 7px 10px;
+				background:url(../../../Public/Home/img/carrito_bottom.gif) no-repeat left bottom;
+				min-height:233px;
+				}			
+			.listado-productos-tienda .fila-productos .producto.ultimo{
+				margin-right:0;
+				}			
+			.listado-productos-tienda .fila-productos .producto .caja-blanca{
+				float:left;
+				background:#fff;
+				width:206px;
+				text-align:center;
+				margin-bottom:9px;
+				min-height:160px;
+				}
+				.listado-productos-tienda .fila-productos .producto .caja-blanca.destacada{
+					background:url(../../../Public/Home/img/destacado.png) no-repeat right top #ffffff;
+					}
+				.listado-productos-tienda .fila-productos .producto H3 A,
+				.listado-productos-tienda .fila-productos .producto H3{
+					color:#ffffff;
+					font-size:12px;
+					font-family:Arial, Helvetica, sans-serif;
+					font-weight:bold;
+					letter-spacing:normal;
+					line-height:14px;
+					}
+					.listado-productos-tienda .fila-productos .producto H3{
+						background:url(../../../Public/Home/img/bg_titulo_producto.gif) no-repeat center bottom;
+						padding:0 0 10px 3px;
+						margin-bottom:11px;
+						}
+				.listado-productos-tienda .fila-productos .producto .datos-precio{
+					float:left;
+					width:118px;
+					color:#ffffff;
+					line-height:14px;
+					}
+					.listado-productos-tienda .fila-productos .producto .datos-precio span.precio{
+						color:#df0e27;
+						font-size:18px;
+						font-family:Arial, Helvetica, sans-serif;
+						font-weight:bold;
+						}
+					.fila-productos .producto .datos-precio span.precio-anterior{
+						font-size:12px;
+						color:#ffffff;
+						text-decoration:line-through;
+						}
+					.fila-productos .producto .datos-precio span.iva{
+						color:#808080;
+						display:block;
+						font-size:10px;
+						font-family:Arial, Helvetica, sans-serif;
+						}
+				.listado-productos-tienda .fila-productos .producto A.comprar{
+					color:#fff;
+					font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+					font-size:10px;
+					text-transform:uppercase;
+					text-decoration:none;
+					background:url(../../../Public/Home/img/bg_comprar.gif) no-repeat left center;
+					width:80px;
+					padding:4px 0px 0 5px;
+					height:23px;
+					float:right;
+					}
+
+.columna-derecha{
+	float:right;
+	width:220px;
+	}
+	.caja-carrito{
+		float:left;
+		width:100%;
+		padding:7px 0 0;
+		clear:both;
+		background:url(../../../Public/Home/img/caja_carrito_top.png) no-repeat left top;
+		margin-bottom:10px;
+		}
+		.content-carrito{
+			background:url(../../../Public/Home/img/caja_carrito_bottom.gif) no-repeat left bottom;
+			float:left;
+			width:208px;
+			padding:0px 6px 7px;
+			}
+		.caja-carrito .caja-titulo{
+			float:left;
+			background:url(../../../Public/Home/img/bg_titulo_carrito.gif) no-repeat left center;
+			padding:5px 6px 16px;
+			width:196px;
+			}
+			.caja-carrito .caja-titulo H2{
+				font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+				color:#fff;
+				text-transform:uppercase;
+				font-size:12px;	
+				font-weight:normal;
+				line-height:23px;	
+				padding:0;		
+				}
+			.caja-carrito .caja-info.carrito{
+				background:#ffffff;
+				float:left;
+				padding:0 3px;
+				width:202px;
+				}
+				.caja-carrito .caja-info.carrito TABLE{
+					margin:0;					
+					}
+					.caja-carrito TR TD{
+						padding:10px 3px 5px;
+						line-height:14px;
+						background:url(../../../Public/Home/img/bg_table_td_carrito.gif) repeat-x left bottom;
+						}
+					.caja-carrito TR TD A{
+						font-size:12px;
+						color:#333333;						
+						text-decoration:none;
+						}
+						.caja-carrito TR TD.importe{
+							color:#df0e27;
+							font-weight:bold;
+							font-size:12px;
+							text-align:right;
+							}
+						.caja-carrito TR.total{							
+							}
+							.caja-carrito TR.total TD{
+								background:url(../../../Public/Home/img/bg_importe_total.gif) repeat-x left top #f3f2f2;
+								border-bottom:1px solid #dddcdc;							
+								}
+							.caja-carrito TR.total TD span.importe-total{	
+								color:#df0e27;
+								font-size:13px;
+								font-weight:bold;
+								}
+							.caja-carrito TR.total TD span.gastos-iva{
+								font-size:10px;
+								color:#808080;
+								}
+							.caja-carrito TR.total TD.importe{
+								font-size:17px;
+								}
+					.caja-carrito TR.enlaces TD{
+						padding-right:0;						
+						line-height:normal;
+						padding-top:5px;
+						padding-bottom:2px;
+						}
+						.caja-carrito TR TD .finalizar{
+							text-align:right;
+							clear:both;
+							width:auto;
+							padding-bottom:5px;
+							line-height:normal;
+							}
+							.caja-carrito TR TD .finalizar A{
+								color:#fff;
+								font-size:10px;
+								font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+								text-transform:uppercase;
+								background:url(../../../Public/Home/img/bg_finalizar_compra.gif) no-repeat left top;
+								padding:7px 24px 7px 6px;
+								float:right;
+								}
+						.caja-carrito TR TD .modificar{
+							text-align:right;
+							clear:both;
+							width:auto;			
+							line-height:normal;			
+							}
+							.caja-carrito TR TD .modificar A{
+								color:#333333;
+								font-size:11px;		
+								background:url(../../../Public/Home/img/bg_modificar_carrito.gif) no-repeat left top;			
+								float:right;			
+								padding:4px 25px 6px 5px							
+								}
+					.caja-carrito TR TD.producto{	
+						padding-top:5px;
+						}
+					.caja-carrito TR TD.cantidad{
+						width:34px;
+						}
+	.buscador{
+		float:left;
+		width:100%;
+		clear:both;
+		margin-bottom:10px;
+		}
+		.buscador_contents .esq-top-izq{
+			float:left;
+			width:208px;
+			padding:6px;
+			clear:both;
+			background:url(../../../Public/Home/img/bg_buscador_carrito.gif) no-repeat left top;	
+			margin:0;
+			}
+			.buscador_contents .esq-top-der{
+				
+				float:left;
+				width:100%;
+				background:url(../../../Public/Home/img/bg_caja_formulario.gif) no-repeat left bottom;
+				}
+				.buscador_contents .esq-bottom-der{
+					background:url(../../../Public/Home/img/bg_titulo_buscador.gif) no-repeat left top;
+					float:left;
+					}
+			.buscador_contents .esq-bottom-izq{
+				background:none;
+				margin:0;
+				}
+				.buscador_contents .caja-formulario{
+					margin:0;
+					background:none;
+					color:#bfbec0;
+					float:left;
+					width:192px;
+					padding:8px 7px 8px 9px;
+					line-height:16px;
+					}
+					.buscador_contents .caja-formulario h3.titulo-buscador{
+						background:none;
+						color:#fff;
+						font-size:12px;
+						font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+						margin:0;
+						padding:0 0 20px;
+						letter-spacing:normal;
+						font-weight:normal;
+						line-height:23px;
+						}
+						.buscador .buscador_contents form .buscador-noticias div.texto label{
+							display:none;
+							} 
+						.buscador .buscador-noticias SELECT{
+							padding:4px;
+							width:192px;
+							}
+						.buscador .buscador-noticias .texto INPUT{
+							width:180px;
+							}
+						#content .buscador .buscador-noticias div.content-botones .botones{
+							margin:0;
+							}
+		.enlace-rss{
+			/*float:left;
+			
+			margin:20px 0 0 8px;*/
+			margin:10px 0 0;
+			line-height:normal;
+			float:left;
+			width:100%;
+			clear:both;
+			}
+			.enlace-rss A{
+				/*color:#cdcdcd;
+				font-size:11px;
+				text-transform:uppercase;
+				font-family:"Trajan Pro",Arial, Helvetica, sans-serif;
+				text-decoration:none;
+				background:url(../../../Public/Home/img/bg_rss.gif) no-repeat left top;
+				padding:11px 22px 11px 35px;
+				letter-spacing:-0.5px;*/
+				background:url(../../../Public/Home/img/bg_enlace_rss_noticias.gif) no-repeat left top;
+				padding:16px 19px 18px 47px;
+				float:left;
+				font-size:11px;
+				text-transform:uppercase;
+				font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+				text-decoration:none;
+				letter-spacing:-0.5px;
+				color:#cdcdcd;
+				width:130px;
+				}
+	.contenido-derecha.buscador_contents .esq-top-izq {
+		background:url("../../../Public/Home/img/bg_buscador_noticias.png") no-repeat scroll left top;
+		width:220px;
+		padding:0;
+		}
+		.contenido-derecha.buscador_contents .esq-top-der{
+			background:url("../../../Public/Home/img/bg_buscador_noticias_bottom.gif") no-repeat scroll left bottom;
+			width:208px;
+			padding:6px 6px 7px;
+			}
+			.contenido-derecha.buscador_contents .esq-bottom-der{
+				background:url("../../../Public/Home/img/bg_caja_formulario.gif") no-repeat scroll left bottom transparent;
+							
+				}
+				.contenido-derecha.buscador_contents .esq-bottom-izq{
+					background:url("../../../Public/Home/img/bg_titulo_buscador_noticias.gif") no-repeat scroll left top transparent;	
+					}
+		.contenido-derecha .enlace-rss{
+			margin:10px 0 10px;
+			line-height:normal;
+			float:left;
+			width:100%;
+			}
+			.contenido-derecha .enlace-rss A{
+				background:url(../../../Public/Home/img/bg_enlace_rss_noticias.gif) no-repeat left top;
+				padding:16px 19px 18px 47px;
+				float:left;
+				
+				}
+/************* ficha producto tienda***********/
+
+.caja-titulo-ficha-producto H2{
+	font-size:16px;
+	font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+	text-transform:uppercase;
+	background:url(../../../Public/Home/img/bg_titulo_ficha_producto.png) no-repeat left top;
+	float:left;
+	width:680px;
+	padding:10px 10px 15px;
+	margin-bottom:5px;
+	color:#fff;
+	font-weight:bold;
+	letter-spacing:normal;
+	}
+.ficha-producto{
+	float:left;
+	width:100%;
+	padding:0px;
+	clear:both;
+	background:url(../../../Public/Home/img/bg_ficha_producto_top.png) no-repeat left top;
+	margin-bottom:13px;
+	}
+	.content-ficha-producto{
+		float:left;
+		width:686px;
+		padding:7px;
+		background:url(../../../Public/Home/img/bg_ficha_producto_bottom.gif) no-repeat left bottom;
+		}
+		.content-ficha-producto .caja-blanca{
+			float:left;
+			width:678px;
+			background:url(../../../Public/Home/img/bg_caja_blanca_ficha.gif) repeat-x left bottom #fff;
+			border:4px solid #fff;
+			clear:both;
+			color:#302a31;
+			padding-bottom:30px;
+			}
+		.ficha-producto .enlaces-redes{
+			float:left;
+			clear:both;
+			background:url(../../../Public/Home/img/bg_enlaces_redes.gif) repeat-x left bottom;
+			width:662px;
+			padding:7px 8px;
+			margin-bottom:15px;
+			}
+			.enlaces-redes .referencia-producto{
+				float:right;
+				color:#919091;
+				font-size:11px;
+				}
+		.ficha-producto .imagen-producto{
+			float:left;
+			width:283px;
+			text-align:center;
+			}
+		.ficha-producto .info-producto{
+			float:left;
+			width:370px;
+			padding-top:10px;
+			}
+			.ficha-producto .info-producto .categorias{
+				}
+				.ficha-producto .info-producto .categorias A{
+					color:#cf031c;
+					font-size:11px;
+					font-weight:bold;
+					text-decoration:none;
+					}
+					.ficha-producto .info-producto .categorias A.alimentacion{
+						background:url(../../../Public/Home/img/bg_categorias.gif) no-repeat right center;
+						padding-right:7px;
+						margin-right:4px;
+						}
+			.ficha-producto .info-producto H2{
+				font-size:17px;
+				color:#302a31;
+				font-weight:bold;
+				letter-spacing:normal;
+				padding-bottom:14px;
+				margin:0;
+				line-height:22px;
+				background:none;
+				text-transform:none;
+				font-family:Arial, Helvetica, sans-serif;
+				}
+			.ficha-producto .info-producto div.descripcion{
+				border-bottom:1px solid #dfdfdf;
+				padding-bottom:13px;
+				margin-bottom:13px;
+				clear:both;
+				line-height:17px;
+				}
+			.ficha-producto .info-producto p.peso{
+				color:#4f4c50;
+				clear:both;
+				padding-bottom:18px;
+				}
+				.ficha-producto .info-producto p.peso span{
+					color:#393636;
+					font-size:10px;
+					}
+			.ficha-producto .info-producto .datos-precio{
+				float:left;
+				clear:both;
+				padding:18px 0px 12px 12px;
+				background:url(../../../Public/Home/img/bg_caja_valoraciones.gif) repeat-x left top #ffffff;
+				margin-top:0px;
+				width:96.8%;
+				}
+				.ficha-producto .info-producto .datos-precio .informacion-producto{
+					float:left;
+					line-height:normal;
+					margin-top:-5px;
+					}
+					.ficha-producto .info-producto .datos-precio span.precio{
+						color:#d0011a;
+						font-size:37px;
+						font-weight:bold;
+						}
+					.ficha-producto .info-producto .datos-precio span.precio-anterior{
+						color:#9c9c9c;	
+						font-size:17px;
+						text-decoration:line-through;
+						}
+					.ficha-producto .info-producto .datos-precio span.iva{
+						color:#808080;
+						display:block;
+						font-family:Arial,Helvetica,sans-serif;
+						font-size:10px;
+						}
+				.ficha-producto A.comprar{
+					background:url("../../../Public/Home/img/bg_comprar_ficha.gif") no-repeat scroll left center transparent;
+					color:#FFFFFF;
+					float:right;
+					font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+					font-size:14px;		
+					font-weight:bold;			
+					padding:10px 48px 10px 10px;
+					text-decoration:none;
+					text-transform:uppercase;
+									
+					}
+/***************** genericos **************/	
+	
+.bloque-superior{
+	float:left;
+	clear:both;
+	width:100%;
+	padding-bottom:35px;
+	}
+	.bloque-superior .imagen-izquierda{
+		margin:0 8px 5px 5px;
+		}
+.tres-bloques{
+	float:left;
+	width:100%;
+	clear:both;
+	background:url(../../../Public/Home/img/bg_tres_bloques.gif) repeat-x left bottom;
+	padding-bottom:14px;
+	margin-bottom:5px;
+	}
+	.tres-bloques .bloque{
+		width:224px;
+		float:left;
+		padding:0 0 0 13px;
+		background:url(../../../Public/Home/img/bg_bloque_editable.gif) no-repeat left top;
+		}
+		.tres-bloques .bloque H3{
+			font-size:12px;
+			text-transform:uppercase;
+			font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+			font-weight:normal;
+			padding:5px 0 15px;
+			}
+	.tres-bloques UL{
+		padding:0 0 0 8px;
+		}
+		.tres-bloques UL LI{
+			padding:3px 0 3px 16px;
+			background:url("../../../Public/Home/img/icono_listas.gif") no-repeat scroll 0 9px transparent;
+			}
+			.tres-bloques UL LI A{
+				text-decoration:none;
+				color:#333333;
+				}
+
+	
+/************************************************************/
+/*						MAPA WEB							*/
+/************************************************************/
+#mapa-web{
+	float:left;
+	width:97%;
+	clear:both;
+	background:url(../../../Public/Home/img/bg_mapa_web.gif) repeat-x left bottom #fff;
+	border:5px solid #ffffff;
+	}
+	
+#mapa-web UL{
+	padding:0;
+	float:left;
+	width:100%;
+	}
+	#mapa-web UL LI{
+		float:left;
+		width:100%;
+		clear:both;	
+		border-bottom:0.05em solid #fff;
+		background:none;
+		padding:0;
+		}
+		#mapa-web UL LI A{
+			font-size:15px;
+			font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+			color:#ce041c;
+			text-transform:uppercase;
+			float:left;
+			background:url(../../../Public/Home/img/bg_mapa_web.gif) repeat-x left bottom #fff;
+			padding:17px 10px 16px 10px;
+			width:97.6%;
+			font-weight:bolder;
+			text-decoration:none;
+			}
+			#mapa-web UL LI UL{
+				padding:0;
+				}
+				#mapa-web ul li ul li {
+					background:url(../../../Public/Home/img/bg_ul_li_ul_li.gif) repeat-x left top;
+					padding:0;
+					}
+					#mapa-web ul li ul li a{
+						width:auto;
+						background:none;
+						color:#2063b6;
+						font-size:12px;
+						font-weight:bolder;
+						padding:10px 10px 10px 25px;
+						color:#333333;
+						font-family:Arial, Helvetica, sans-serif;
+						text-transform:none;
+						}
+						#mapa-web ul li ul li a span{
+							background:url("../../../Public/Home/img/bg_span.gif") no-repeat scroll 0 1px;
+							padding:0 0 0 22px;
+							}
+						#mapa-web ul li ul li ul{
+							
+							}
+							#mapa-web ul li ul li ul li{
+								background:none;
+								border-bottom:1px solid #e7e7e7;
+								}
+								#mapa-web ul li ul li ul li a{
+									color:#333333;
+									font-weight:normal;
+									padding:15px 10px 15px 67px;
+									background:none;
+									font-size:12px;
+									}
+									#mapa-web ul li ul li ul li a span{
+										background:url("../../../Public/Home/img/bg_span_hijo.gif") no-repeat scroll 0 1px;
+										padding:0 0 0 22px;
+										}
+										#mapa-web ul li ul li ul{
+							
+										}
+							#mapa-web ul li ul li ul li ul li{
+								background:none;
+								border-bottom:1px solid #e7e7e7;
+								}
+								#mapa-web ul li ul li ul li ul li a{
+									color:#2063b6;
+									font-weight:normal;
+									padding:15px 10px 15px 67px;
+									background:none;
+									}
+									#mapa-web ul li ul li ul li ul li a span{
+										background:url("../../../Public/Home/img/bg_span_hijo.gif") no-repeat scroll 0 1px;
+										padding:0 0 0 22px;
+										}
+
+/**************** formulario pedido ********************/
+.bloque-pedido{
+	float:left;
+	width:700px;
+	background:url(../../../Public/Home/img/bg_bloque_pedido.gif) no-repeat left top;
+	}
+	.content-bloque-pedido{
+		float:left;
+		width:685px;
+		background:url(../../../Public/Home/img/bg_bloque_pedido_bottom.gif) no-repeat left bottom;
+		padding:7px 8px 8px 7px;
+		}
+		.bloque-pedido #login-clientes{
+			float:left;
+			clear:both;
+			width:100%;
+			}
+			.bloque-pedido .formulario{
+				margin:0;
+				}
+			.bloque-pedido  .caja-login-derecha,
+			.bloque-pedido  .caja-login-izquierda{
+				float:right;
+				width:335px;
+				margin-left:15px;
+				padding-bottom:10px;
+				}
+				.bloque-pedido .caja-login-derecha{
+					margin:0;
+					float:left;
+					}
+					 .content-caja-izq .formulario{
+						margin:0;
+						}
+				.bloque-pedido  .caja-login-derecha H2,
+				.bloque-pedido  .caja-login-izquierda H2{
+					font-size:12px;
+					color:#fff;
+					background:url(../../../Public/Home/img/bg_titulo_pedido.gif) no-repeat left top;
+					font-weight:normal;
+					padding:12px 10px 9px;
+					}
+				.bloque-pedido .content-caja-izq{
+					float:left;
+					background:url(../../../Public/Home/img/bg_pedido_cafe.gif) no-repeat right bottom #fff;
+					border:5px solid #fff;
+					padding:5px 8px 10px;
+					width:309px;
+					}
+					.content-caja-izq .formulario div{
+						margin:0 0 11px;
+						}
+					.content-caja-izq .formulario label{
+						float:left;
+						width:79px;
+						padding:2px 0 0 10px;
+						}
+					.content-caja-izq .formulario input{
+						width:195px;
+						}
+					.content-caja-izq .formulario div.login{
+						margin:0;
+						line-height:16px;
+						}
+						.content-caja-izq .formulario div.login .content-login{
+							margin:0;
+							padding:15px 0 0;
+							}
+							.content-caja-izq .formulario .content-login{
+								margin:0;
+								}
+					.content-caja-izq .formulario div.content-botones{
+						margin:0;
+						padding:5px 0 14px;
+						}
+						.content-caja-izq .formulario div.content-botones A{
+							font-size:11px;
+							color:#333333;
+							padding-left:8px;
+							}
+					.content-caja-izq .formulario div.datos-usuario{
+						margin:0;
+						padding:14px  0 0;
+						}
+					.content-caja-izq .formulario div.botones{
+						background:none;
+						padding:0;
+						width:auto;
+						}
+						.content-caja-izq .formulario div.botones input{
+							width:auto;
+							background:url(../../../Public/Home/img/bg_botones_login.gif) no-repeat left top;
+							font-size:10px;
+							padding:6px 35px 5px 10px;
+							}
+					.content-caja-izq .formulario div.aceptaprivacidad{
+						padding:7px 0 0 10px;
+						margin:0;
+						background:none;
+						}
+						.content-caja-izq .formulario div.aceptaprivacidad input{
+							width:auto;
+							border:0;
+							background:none;
+							margin:0.05em 4px 0 0;
+							}
+						.content-caja-izq .formulario div.aceptaprivacidad label{
+							width:auto;
+							font-size:11px;
+							padding:0 0 0 0;
+							line-height:13px;
+							}
+					.content-caja-izq .formulario div.confirmar-contrasena label{
+						padding:0 0 0 10px;
+						line-height:13px;
+						}
+					
+.content-forms-datos{
+	float:left;
+	width:100%;
+	clear:both;
+	}
+	.bloque-pedido .content-forms-datos{
+		
+		}
+	.content-forms-datos .formulario div{	
+		width:100%;
+		}
+		.content-forms-datos .formulario div.content-titulo-datos{
+			padding-bottom:15px;
+			margin:0;
+			}
+	.content-forms-datos .titulo-factura{
+		margin:0;
+		width:100%;
+			}
+		.content-forms-datos .titulo-factura H2{
+			background:url(../../../Public/Home/img/bg_titulo_datos_cliente.png) no-repeat left top;
+			padding:12px 10px 9px;
+			font-size:12px;
+			color:#fff;
+			font-weight:normal;
+			}
+	.formulario div.caja-formulario-carrito{
+		border:5px solid #fff;
+		background:#fff;		
+		width:675px;
+		padding:9px 0 0;
+		margin:0;
+		}
+		 .content-forms-datos .caja-formulario-carrito div {
+			clear:none;
+			float:left;
+			margin:0 0 14px 0;
+			padding:0;
+			position:relative;
+			width:50%;
+			}
+			.content-forms-datos .caja-formulario-carrito div#datos_de_envio{
+				width:100%;
+				clear:both;
+				margin:0;
+				}
+			 .formulario .caja-formulario-carrito div.separador{
+				background:url(../../../Public/Home/img/bg_datos_envio.gif) repeat-x left bottom;
+				clear:both;
+				float:left;
+				margin:0 0 20px;
+				padding:0 6px 10px;
+				width:663px;
+				}
+				.formulario .caja-formulario-carrito div.separador.preferencias div{
+					width:100%;
+					padding:0 0 10px;
+					margin:0;
+					}
+					.formulario .caja-formulario-carrito div.separador.preferencias label{
+						width:140px;
+						}
+				.formulario .caja-formulario-carrito div.separador.marcar-envios{
+					background:none;
+					margin:0;
+					padding:0 0px 10px 12px;
+					}
+					.formulario .caja-formulario-carrito div.separador.marcar-envios div{
+						width:100%;
+						padding:0 0 10px;
+						margin:0;
+						}
+						.formulario .caja-formulario-carrito div.separador.marcar-envios div input{
+							width:auto;
+							float:left;
+							margin:4px 4px 0 0;
+							border:0;
+							background:none;
+							}
+						.formulario .caja-formulario-carrito div.separador.marcar-envios div label{
+							float:left;						
+							width:auto;
+							padding:0;
+							}
+				.formulario .caja-formulario-carrito div.separador.ultimo{
+					margin-bottom:0;
+					padding-bottom:0;
+					}
+				 .formulario .caja-formulario-carrito div.numero, 
+				 .formulario .caja-formulario-carrito div.piso {
+					width:20%;
+					}
+					.formulario .caja-formulario-carrito div.numero input, 
+					.formulario .caja-formulario-carrito div.piso input{
+						width:30px;
+						}
+						.formulario .caja-formulario-carrito div.numero label, 
+						.formulario .caja-formulario-carrito div.piso label{
+							width:57px;
+							}
+							.formulario .caja-formulario-carrito div.piso label{
+								width:35px;
+								}
+				.content-forms-datos .caja-formulario-carrito div.codigo-postal input{
+					width:80px;
+					}
+				.content-forms-datos .caja-formulario-carrito div select{
+					width:220px;
+					color:#666666;
+					padding:4px;
+					}
+					
+			.content-forms-datos .caja-formulario-carrito label{
+				float:left;
+				width:87px;
+				}
+			.content-forms-datos .caja-formulario-carrito input{
+				width:210px;
+				}
+			.formulario .caja-formulario-carrito h2{
+				clear:both;
+				font-size:12px;
+				background:url(../../../Public/Home/img/bg_datos_envio.gif) repeat-x left bottom;
+				font-weight:normal;
+				padding-bottom:10px;
+				margin-bottom:12px;
+				}
+		.content-forms-datos .caja-formulario-carrito.formulario-modo-pago{
+			background:url(../../../Public/Home/img/bg_datos_envio.gif) repeat-x left bottom #fff;
+			padding:9px 8px 0;
+			width:659px;
+			}
+		.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div{
+			width:100%;
+			margin:0 0 13px;
+			clear:both;
+			}
+			.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.modo-pago label{
+				width:190px;
+				}
+			.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.tipos-pago{
+				background:url(../../../Public/Home/img/bg_tipos_pago.gif) no-repeat right top #fdf3c4;
+				font-size:11px;
+				padding:15px 90px 7px 15px;
+				width:551px;
+				}
+				.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.tipos-pago p{
+					padding-bottom:8px;
+					}
+		.content-forms-datos .caja-formulario-carrito div.separador-forma-pago{
+			background:url(../../../Public/Home/img/bg_datos_envio.gif) repeat-x left bottom;
+			margin:0 0 12px;
+			width:100%;
+			clear:both;
+			padding:0 0 4px;
+			}
+		.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.observaciones label{
+			width:91px;
+			}
+		.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.observaciones textarea{
+			width:83.5%;
+			}
+		.content-forms-datos .bono-regalo-pedido .caja-formulario-carrito.formulario-modo-pago{
+			background:url(../../../Public/Home/img/fondo_descuento.gif) no-repeat right bottom #fff;
+			padding-bottom:0px;
+			}
+			.content-forms-datos .bono-regalo-pedido .caja-formulario-carrito.formulario-modo-pago #caja-bono{
+				width:80%;
+				}
+				.content-forms-datos .bono-regalo-pedido .caja-formulario-carrito.formulario-modo-pago #caja-bono p{
+					font-weight:bolder;
+					line-height:18px;
+					padding-bottom:15px;
+					}
+					.content-forms-datos .bono-regalo-pedido .caja-formulario-carrito.formulario-modo-pago #caja-bono p.error{
+						color:#CF031C;
+						padding-top:10px;
+						}
+			.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.bloque-bono{
+				margin:0;			
+				}
+				.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.bloque-bono label{
+					width:100px;
+					}
+					.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.bloque-bono A{												
+						text-decoration:none;
+						color:#fff;
+						font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+						text-transform:uppercase;
+						font-size:10px;						
+						padding:7px 38px 7px 14px;
+						margin-left:5px;
+						background:url(../../../Public/Home/img/bg_utilizar_bono_descuento.gif) no-repeat left top;
+						}
+			.content-forms-datos .caja-formulario-carrito.formulario-modo-pago div.mensaje-error{
+				margin:0;
+				}			
+.formulario div.caja-formulario-carrito-tabla{
+	padding:0px 8px 30px;
+	width:663px;
+	margin:0;
+	background:url(../../../Public/Home/img/bg_tabla_carrito.gif) repeat-x left bottom;
+	}
+	.content-forms-datos .caja-formulario-carrito div.privacidad-compra-carrito,
+	.content-forms-datos .caja-formulario-carrito div.privacidad-compra-carrito div,
+	.content-forms-datos .caja-formulario-carrito div.caja-total,
+	.content-forms-datos .caja-formulario-carrito div.caja-gastos-envio{
+		width:100%;
+		clear:both;
+		margin:0;
+		}
+	.content-forms-datos .caja-formulario-carrito div.caja-gastos-envio{
+		background:url(../../../Public/Home/img/bg_gastos_envio.gif) repeat-x left top #f7f6f6;
+		padding:3px 0;
+		}
+		.content-forms-datos .caja-formulario-carrito div.caja-gastos-envio tr td{
+			font-size:11px;
+			color:#6e6e6e;
+			line-height:14px;
+			background:none;
+			padding:5px 13px;
+			}
+			.content-forms-datos .caja-formulario-carrito div.caja-gastos-envio tr td.precio-total{
+				font-size:13px;
+				font-weight:bold;
+				text-align:center;
+				}
+		
+	.content-forms-datos .caja-formulario-carrito div.caja-total{
+		background:url(../../../Public/Home/img/bg_td_importe_total.gif) no-repeat right top;
+		padding:16px 0;
+		}
+		.content-forms-datos .caja-formulario-carrito div.caja-total tr td{
+			background:none;
+			padding:5px 13px;
+			}
+			.content-forms-datos .caja-formulario-carrito div.caja-total tr td{
+				font-weight:bold;
+				color:#df0e27;
+				font-size:15px;
+				line-height:16px;
+				text-align:right;
+				}
+				.content-forms-datos .caja-formulario-carrito div.caja-total tr td.importe-total{	
+					width:500px;
+					}
+			.content-forms-datos .caja-formulario-carrito div.caja-total tr td span.iva{
+				display:block;
+				font-size:11px;
+				color:#808080;
+				font-weight:normal;
+				}
+			.content-forms-datos .caja-formulario-carrito div.caja-total tr td.precio-total{
+				text-align:center;
+				font-size:21px;
+				color:#df0e27;
+				font-weight:bold;				
+				float:right;
+				padding:7px 13px 5px 0;
+				}
+ div.caja-formulario-carrito table{
+		margin:0;
+		}
+	 div.caja-formulario-carrito table tr th{
+		background:url(../../../Public/Home/img/bg_td.gif) repeat-x left top;
+		border-right:2px solid #a90b1e;
+		padding:5px 13px;
+		}
+		 div.caja-formulario-carrito table tr th.primero{
+			background:url(../../../Public/Home/img/td_primero.gif) no-repeat left top;
+			}
+	 div.caja-formulario-carrito table tr th.ultimo{
+			background:url(../../../Public/Home/img/td_ultimo.gif) no-repeat right top;
+			border:0;
+			}
+	 div.caja-formulario-carrito table tr td{
+		background:url(../../../Public/Home/img/bg_td_carrito.gif) repeat-x left bottom #fff;
+		}
+		 div.caja-formulario-carrito table tr td.primero{
+			font-size:11px;
+			text-align:center;
+			font-weight:bold;
+			}
+	 div.caja-formulario-carrito table tr td.num-articulo{
+			background:url(../../../Public/Home/img/bg_td_num_articulo.gif) repeat-x left bottom;
+			text-align:center;
+			font-size:11px;
+			font-weight:bold;
+			}
+	 div.caja-formulario-carrito table tr td.precio{
+			text-align:center;
+			font-weight:bold;
+			background:url(../../../Public/Home/img/bg_td_num_articulo.gif) repeat-x left bottom;
+			font-size:13px;
+			}
+		 div.caja-formulario-carrito table tr td.articulo A{
+			text-decoration:none;
+			color:#333333;
+			}
+		 div.caja-formulario-carrito table tr td.articulo A:hover{
+				text-decoration:underline;
+				}
+.content-forms-datos .caja-formulario-carrito div.caja-borde{
+	border:4px solid #ededed;
+	width:100%;
+	clear:both;
+	margin:0;
+	width:98%;
+	margin-bottom:16px;
+	}
+.content-forms-datos .caja-formulario-carrito-tabla  div.aceptaprivacidad{
+		background:none;
+		padding:0;
+		}
+	.content-forms-datos .caja-formulario-carrito-tabla  div.aceptaprivacidad input{
+			width:auto;
+			margin-left:157px;
+			}
+	.content-forms-datos .caja-formulario-carrito-tabla  div.aceptaprivacidad label{
+		width:auto;
+		}
+.content-forms-datos .caja-formulario-carrito-tabla  div.privacidad{
+	padding-bottom:14px;
+	}
+	.content-forms-datos .caja-formulario-carrito-tabla  div.privacidad label{
+		width:150px;
+		
+		}
+		.content-forms-datos .caja-formulario-carrito-tabla  div.privacidad textarea{
+			width:74%;
+			min-height:80px;
+			}
+.formulario div.caja-formulario-carrito-tabla P{
+	padding-bottom:12px;
+	line-height:16px;
+	}
+
+.formulario div.enlaces-pedidos{
+	margin:0px;
+	padding:0px 0 8px;
+	}
+	.content-forms-datos .formulario .enlaces-pedidos .modificar{
+		float:left;
+		width:auto;
+		margin:6px 0 0;
+		clear:none;
+		}
+		.enlaces-pedidos .modificar A{
+			color:#fff;
+			font-size:11px;
+			text-decoration:none;
+			background:url(../../../Public/Home/img/bg_modificar_negro.gif) no-repeat left top;
+			padding:4px 25px 4px 10px;
+			}
+.content-forms-datos .formulario .enlaces-pedidos .botones{
+	float:right;
+	width:auto;
+	clear:none;
+	background:none;
+	margin:0;
+	}
+	.enlaces-pedidos .botones input{
+		background:url(../../../Public/Home/img/bg_aceptar.gif) no-repeat left top;
+		padding:6px 28px 5px 6px;
+		}
+#content #content-informacion .contenido-derecha.columna-derecha.contenido-derecha-trabaja-nosotros{
+	background:url(../../../Public/Home/img/bg_pedido_derecha.png) no-repeat left top;
+	padding:116px 0 0 ;
+	}
+#content #content-informacion .contenido-derecha.contenido-derecha-nueva-receta{
+	background:url(../../../Public/Home/img/bg_nueva_receta.png) no-repeat left top;
+	padding:149px 0 0 ;
+	}
+/**************** ultimos boletines *****************************/
+.formulario div.bloque-intereses{
+	width:98%;
+	padding:6px 0 26px 10px;
+	margin:0;
+	}
+	.formulario div.bloque-intereses p.label{
+		font-weight:bold;
+		padding:10px 0;
+		}
+.formulario div.bloque-intereses UL LI{
+	float:left;
+	clear:none;
+	width:31.5%;
+	padding-left:9px;
+	margin:0;
+	padding:0 7px 6px 0px;
+	background:none;
+	}
+.formulario div.checkbox{
+	float:left;
+	clear:none;
+	width:31.5%;
+	padding-left:9px;
+	margin:0;
+	padding:0 0 6px 9px;
+	}
+	.formulario div.bloque-intereses UL LI input,
+	.formulario div.checkbox input{
+		float:left;
+		border:0;
+		background:none;
+		margin:3px 4px 0 0;
+		padding:0;
+		width:auto;
+		}
+	.formulario div.bloque-intereses UL LI label,
+	.formulario div.checkbox label{
+		float:left;
+		font-weight:normal;
+		width:175px;
+		}
+	.formulario div.checkbox-grupo{
+		padding:0 0 6px 0px;	
+		}	
+		.formulario div.checkbox-grupo label{
+			width:auto;		
+			font-weight:bolder;
+			}
+#content #content-informacion .contenido-derecha.contenido-derecha-boletin .caja-blanca-derecha{
+	padding:3px 0 5px;
+	width:200px;
+	}
+#content #content-informacion .contenido-derecha.contenido-derecha-boletin UL{
+	padding:0;
+	}
+#content #content-informacion .contenido-derecha.contenido-derecha-boletin .ultimos-boletines UL LI{
+	float:left;
+	width:96%;
+	clear:both;
+	background:url(../../../Public/Home/img/bg_ultimo_boletin.gif) repeat-x left bottom;
+	padding:0 4px 10px;
+	margin:0 0 10px;	
+	}
+	#content #content-informacion .contenido-derecha.contenido-derecha-boletin .ultimos-boletines UL LI.ultimo{
+		background:none;
+		margin:0;
+		padding:0;
+		}
+	.contenido-derecha.contenido-derecha-boletin .ultimos-boletines UL LI h2{
+		text-transform:none;
+		font-family:Arial, Helvetica, sans-serif;
+		font-weight:normal;
+		font-size:12px;
+		line-height:16px;
+		padding-bottom:3px;
+		}
+		.contenido-derecha.contenido-derecha-boletin .ultimos-boletines UL LI h2 A{
+			font-size:12px;
+			}
+	.contenido-derecha.contenido-derecha-boletin .ultimos-boletines UL LI p.fecha{
+		font-style:italic;
+		font-size:12px;
+		color:#cf021b;
+		font-family:"Times New Roman", Times, serif;
+		}
+.formulario div#captcha{
+	width:98%;
+	padding:0 0 10px 9px;
+	}
+.formulario div#captcha span{
+	display:block;
+	font-size:11px;
+	color:#717171;
+	padding-bottom:5px;
+	}
+.formulario div#captcha img{
+	border:1px solid #e1e1e1;
+	float:left;
+	
+	}
+.formulario div#captcha .captcha-derecha{
+	float:left;
+	width:200px;
+	clear:none;
+	margin:0;
+	padding:0px 0 0 15px;
+	}	
+	.formulario div#captcha .captcha-derecha label{
+
+		}
+	.formulario div#captcha .captcha-derecha input{
+		width:75px;
+		display:block;
+		}
+#content #content-informacion .contenido-derecha-boletin{
+	background:url("../../../Public/Home/img/bg_newsletter_derecha.png") no-repeat scroll left top transparent;
+	padding:186px 0 0;
+	}
+.formulario div.personas select,
+.formulario div.categoria_receta select{
+	width:200px;
+	}
+.formulario div.descripcion,
+.formulario div.ingredientes,
+.formulario div.elaboracion,
+.formulario div.imagen{
+	width:99%;
+	padding-left:9px;
+	}
+	.formulario div.descripcion textarea,
+	.formulario div.ingredientes textarea,
+	.formulario div.elaboracion textarea,
+	.formulario div.imagen textarea{
+		width:96%;
+		}
+.formulario div.content-txt{
+	width:100%;
+	padding:0;
+	clear:both;
+	}
+.formulario div.content-imagen{
+	float:left;
+	width:100%;
+	clear:both;
+	}
+/************* programacion nieves *****************/
+
+.content-modulo-ampliada .meta-info{
+	float:left;
+	clear:both;	
+	}
+	.content-modulo-ampliada .meta-info .meta-title{
+		float:left;
+		clear:both;
+		width:100%;
+		padding:0;
+		}
+		.content-modulo-ampliada .meta-info .meta-title label{
+			float:left;
+			}
+		.content-modulo-ampliada .meta-info .meta-title input{
+			font-family:Arial, Helvetica, sans-serif;
+			}
+.multisite{
+	float:left;
+	width:100%;
+	clear:both;	
+	padding:0 0 15px;
+	}
+	.multisite UL{
+		padding:0;
+		}
+		.multisite UL LI{
+			background:none;
+			padding:0 15px 0 0;
+			float:left;
+			width:auto;
+			clear:none;	
+			color:#fff;
+			}
+			.multisite UL LI input{
+				border:0;
+				background:none;
+				margin:0 5px 0 0;
+				padding:0;
+				font-family:Arial, Helvetica, sans-serif;
+				}
+.content-modulo-ampliada  .selector_traducciones{
+	float:left;
+	width:100%;
+	clear:both;
+	padding:0 0 10px;	
+	}
+	.content-modulo-ampliada  .contenedor-noticia-ampliada .selector_traducciones{
+		padding:0;
+		}
+.content-modulo-ampliada  .selector_traducciones span.current{
+	font-weight:bolder;
+	padding:0 10px 0 0;
+	color:#fff;
+	}
+	.content-modulo-ampliada  .selector_traducciones span{
+		color:#fff;
+		}
+.content-modulo-ampliada .contenedor-noticia-ampliada .selector_traducciones span.current{
+	font-weight:bolder;
+	padding:0 10px 0 0;
+	color:#0b0b0b;
+	}
+	.content-modulo-ampliada .contenedor-noticia-ampliada .selector_traducciones span{
+		padding:0 10px 0 0px;	
+		color:#333333;
+		}
+.content-modulo-ampliada .fecha A span,
+.content-modulo-ampliada .fecha span.separator_date{
+	background:none;
+	padding:0;
+	margin:0;
+	}
+/************ ficha producto ***************/
+.listado-productos-tienda .multisite UL LI{
+	color:#333333;
+	}	
+.listado-productos-tienda .txt,
+.listado-productos-tienda #related_buyproducts,
+.listado-productos-tienda #caja-buyproduct{
+	float:left;
+	width:100%;
+	clear:both;
+	padding-bottom:10px;
+	}
+	.listado-productos-tienda #caja-buyproduct .tambien-compraron,
+	.listado-productos-tienda #caja-buyproduct .admin{	
+		float:left;
+		width:100%;
+		clear:both;
+		padding:15px 0 0;
+		}
+		.listado-productos-tienda .txt div{
+			float:left;
+			width:100%;
+			clear:both;
+			padding-bottom:5px;
+			}
+			.listado-productos-tienda .txt div.comprable input{
+				width:auto;
+				border:0;
+				padding:0;
+				background:none;
+				}
+			.listado-productos-tienda .txt div.comprable label{
+				padding:7px 0 0 4px;
+				}
+			.listado-productos-tienda .txt div.meta-title label{
+				float:left;
+				}
+/******** pagina-error ************/
+
+.pagina-error P{	
+ 	padding:0 0 5px;
+  }
+
+/********** enlace subir receta ***********/
+.compartir-receta{
+	float:left;
+	clear:both;
+	width:165px;
+	padding:9px 46px 15px 10px;
+	clear:both;
+	background:url("../../../Public/Home/img/bg_subir_receta.gif") no-repeat scroll left top transparent;
+	}
+	.compartir-receta h2 A,
+	.compartir-receta h2{
+		font-size:12px;
+		font-weight:normal;
+		padding:0;
+		color:#CF031C;
+		font-family:"trajan-pro-1","trajan-pro-2",sans-serif;
+		text-decoration:none;
+		text-transform:uppercase;
+		}
+	.compartir-receta A{
+		color:#646464;
+		text-decoration:none;
+		}
+		.compartir-receta A:hover{
+			text-decoration:underline;
+			}
+
+.contenido-izquierda .contenedor-categoria{
+	float:left;
+	width:100%;
+	clear:both;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	background:url("../../../Public/Home/img/bg_obligatorios.gif") repeat-x scroll left bottom transparent;
+	}
+
+.banner-ampliada .txt .imagen .edicion_imagen{
+	margin:10px 10px 10px 0;
+	}
+
+.banner-ampliada .txt  .entradilla{
+	margin-top:10px;
+	}
+
+/************ mi carrito ***************/
+#content #content-informacion .fondo-total-carrito .contenido-izquierda{
+	margin:7px 7px 10px;
+	}
+.content-forms-datos.content-forms-carrito{
+	padding:0;
+	}
+.content-forms-datos.content-forms-carrito .caja-formulario-carrito div.bloque-editable-carrito{
+	width:98%;
+	clear:both;
+	padding:5px 8px;
+	}
+.content-forms-datos.content-forms-carrito .caja-formulario-carrito div.caja-borde{
+	border:3px solid #ffffff;
+	width:99%;
+	}
+.fondo-total-carrito .content-forms-carrito div.caja-formulario-carrito table tr td A{
+	text-decoration:none;
+	font-weight:normal;
+	color:#333333;
+	font-size:13px;
+	}
+	.fondo-total-carrito .content-forms-carrito div.caja-formulario-carrito table tr td A:hover{
+		text-decoration:underline;
+		}
+.fondo-total-carrito .content-forms-carrito div.caja-formulario-carrito table tr td.articulo,
+.fondo-total-carrito .content-forms-carrito div.caja-formulario-carrito table tr th.articulo{
+	text-align:center;
+	width:70px;
+	}	
+.fondo-total-carrito .content-forms-carrito div.caja-formulario-carrito table tr td.primero{
+	text-align:left;
+	}
+.fondo-total-carrito .content-forms-carrito	div.caja-formulario-carrito table tr th.ultimo{
+		text-align:center;
+		width:90px;
+		}
+.fondo-total-carrito .content-forms-carrito div.caja-formulario-carrito table tr td.precio{
+	background:url("../../../Public/Home/img/bg_td_carrito.gif") repeat-x scroll left bottom #FFFFFF;
+	}
+.fondo-total-carrito .content-forms-carrito .caja-formulario-carrito div.caja-total{
+	padding:13px 0;
+	}
+	.fondo-total-carrito .content-forms-carrito .caja-formulario-carrito div.caja-total tr td span.iva{
+		font-size:10px;
+		line-height:12px;
+		}
+.fondo-total-carrito .content-forms-carrito div.caja-total tr td.precio-total{
+	padding:17px 13px 5px 0;
+	}
+.content-forms-datos .caja-formulario-carrito .enlaces-carrito{
+	float:left;
+	width:100%;
+	clear:both;
+	padding:10px 0 25px;
+	margin:0 0 15px;
+	background:url(../../../Public/Home/img/bg_enlaces_carrito.gif) repeat-x left bottom;
+	}
+	.content-forms-datos .caja-formulario-carrito .enlaces-carrito div{
+		width:auto;
+		margin:0;
+		padding:0 4px 0 0;
+		}
+		.enlaces-carrito div span{
+			background:url("../../../Public/Home/img/bg_enlaces_carrito_izq.gif") no-repeat scroll left top transparent;
+			float:left;
+			padding-left:6px;
+			}
+		.enlaces-carrito div A{
+			background:url("../../../Public/Home/img/bg_modificar_der.gif") no-repeat scroll right top transparent;
+			border:0 none;
+			color:#FFFFFF;
+			display:inline;
+			float:left;
+			font-family:Arial,Helvetica,sans serif;
+			font-size:11px;
+			font-weight:normal;
+			margin:0;
+			padding:2px 22px 2px 0;
+			text-decoration:none;
+			width:auto;
+			}
+			.enlaces-carrito div.modificar A{
+				background:url("../../../Public/Home/img/bg_modificar_carrito_der.gif") no-repeat scroll right top transparent;
+				}
+			.enlaces-carrito div.vaciar A{
+				background:url("../../../Public/Home/img/bg_vaciar_der.gif") no-repeat scroll right top transparent;
+				}
+		.content-forms-datos .caja-formulario-carrito .enlaces-carrito div.finalizar{
+			float:right;
+			padding:0;
+			}
+			.content-forms-datos .caja-formulario-carrito .enlaces-carrito div.finalizar span{
+				background:url("../../../Public/Home/img/botones_izq_formulario.gif") no-repeat scroll left top transparent;
+				float:right;
+				padding-left:4px;
+				width:auto;
+				}
+				.content-forms-datos .caja-formulario-carrito .enlaces-carrito div.finalizar span A{
+					background:url("../../../Public/Home/img/botones_der_formulario.gif") no-repeat scroll right top transparent;
+					border:0 none;
+					color:#FFFFFF;
+					display:inline;
+					font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
+					font-size:10px;
+					font-weight:normal;
+					margin:0;
+					padding:4px 29px 3px 5px;
+					text-transform:uppercase;
+					width:auto;
+					}
+#content #content-informacion .contenido-derecha-mi-carrito{
+	background:url("../../../Public/Home/img/bg_mi_carrito.png") no-repeat scroll left top transparent;
+	padding:213px 0 0;
+	}
+/**************** listado de pedidos parte privada *****************/
+
+#cms .content-listado-orders table.listado-cms{
+	float:left;
+	}
+#content #content-informacion .fondo-total .buscador-orders .contenido-derecha{
+	width:100%;
+	clear:both;
+	margin:0;
+	}
+	.buscador-orders .contenido-derecha .esq-top-izq,
+	.buscador-orders .contenido-derecha .esq-top-der,
+	.buscador-orders .contenido-derecha .esq-bottom-der,
+	.buscador-orders .contenido-derecha .esq-bottom-izq{
+		background:none;
+		padding:0;
+		width:100%;
+		}
+		.buscador-orders .contenido-derecha .esq-top-izq{
+			border:1px solid #E1E1E1;
+			margin-top:10px;
+			padding:6px 0 5px;
+			width:99.7%;
+			background:none;
+			}
+		.buscador-orders .contenido-derecha .buscador-noticias{
+			margin:0;
+			}
+		.buscador-orders .contenido-derecha .caja-formulario h3.titulo-buscador{
+			color:#333333;
+			padding:0;
+			font-size:18px;
+			font-family:Arial, Helvetica, sans-serif;
+			text-transform:none;
+			font-weight:bold;
+			}
+		.buscador-orders  .contenido-derecha .caja-formulario{
+			width:98%;
+			}
+			.buscador-orders  .contenido-derecha form .buscador-noticias div{
+				float:left;
+				padding-right:6px;
+				}
+				.buscador-orders  .contenido-derecha form .buscador-noticias div.pagado{
+					padding:0;
+					}
+				.buscador-orders  .contenido-derecha form .buscador-noticias div div{
+					margin:0;
+					}
+
+					.buscador-orders .contenido-derecha form .buscador-noticias label{
+						color:#333;
+						}
+					.buscador-orders .contenido-derecha form .buscador-noticias select,
+					.buscador-orders .contenido-derecha form .buscador-noticias  input{
+						border:1px solid #E1E1E1;
+						}
+						.buscador-orders .contenido-derecha form .buscador-noticias .botones input{
+							border:0;
+							}
+					.buscador-orders .contenido-derecha form .buscador-noticias div.texto label{
+						display:block;
+						}
+				 .buscador-orders  .contenido-derecha form .buscador-noticias div div.botones{
+					background:url("../../../Public/Home/img/botones_izq_formulario.gif") no-repeat scroll left top transparent;
+					float:right;
+					padding-left:4px;
+					width:auto;
+					}		
+					.buscador-orders  .contenido-derecha form .buscador-noticias div div.botones input{
+						background:url("../../../Public/Home/img/botones_der_formulario.gif") no-repeat scroll right top transparent;
+						border:0 none;
+						color:#FFFFFF;
+						display:inline;
+						font-family:"trajan-pro-1","trajan-pro-2",sans-serif;
+						font-size:10px;
+						font-weight:normal;
+						margin:0;
+						padding:6px 27px 5px 4px;
+						text-transform:uppercase;
+						}			
+						
+#cms table.listado-cms{
+	margin:10px 0;
+	}
+
+.content-datos-pedido div{
+	float:left;
+	clear:both;
+	width:100%;
+	padding-bottom:15px;
+	}
+	.content-datos-pedido div H2{
+		padding-bottom:7px;
+		}
+	.content-datos-pedido div p{
+		float:left;
+		width:48%;
+		padding:0 10px 3px 0;
+		}
+.fondo-total-contacto.fondo-total-trabaja-nosotros .contenido-izquierda .esq-top-izq{
+	float:none;
+	}
+
+.content-forms-datos.content-forms-carrito .caja-formulario-carrito div.bloque-editable-carrito div{
+	width:100%;
+	}
+
+
+
+.caja-realizar-pedido-español,
+.caja-realizar-pedido-ingles,
+.caja-ver-carrito-español,
+.caja-ver-carrito-ingles{
+	float: right;
+	}
+.formulario-boletin{
+	float:left;
+	width:97.3%;
+	clear:both;
+	border:1px solid #E1E1E1;
+	padding:10px;
+	}
+	.formulario-boletin input{
+		width:755px;
+		}
+		.formulario-boletin .botones input{
+			width:auto;
+			}
+.formulario div.categoria li{
+	float:left;
+	width:30%;
+	clear:none;
+	padding:0 0 5px 0;
+		list-style:none;
+		background:none;
+	}
+.formulario div.categoria li input{
+	border:0;
+	background:none;
+	width:auto;
+	margin:0 3px 0 0;
+
+	}
+	
+	
+	
+.formulario div.categoria.finalizar-pedido{
+	float:left;
+	padding-left: 40px;
+	}
+	.formulario div.categoria.finalizar-pedido label{
+		width:30%;
+		clear:none;
+		padding:0 0 5px 0;
+			list-style:none;
+			background:none;
+		}
+		
+	.formulario div.categoria.finalizar-pedido input{
+		float:left;
+		border:0;
+		background:none;
+		width:auto;
+		margin:0 3px 0 0;
+		}
+
+SPAN.seleccion-intereses-finalizar-pedido{
+    float: left;
+    padding-bottom: 10px;
+    padding: 10px 0 10px 30px;
+    width: 90%;
+	}
+
+.formulario-transferencia{
+	color: #FFFFFF;
+	}
+.caja-titulo-ficha-producto{
+	
+	}
+SPAN.buscador-fecha-desde,	
+SPAN.buscador-fecha-hasta{
+	width:42px;
+	padding-top:4px;
+	float:left;
+	font-weight:bolder;
+	color:#fff;
+	}
+
+.listado-productos-tienda .txt div{
+	border-bottom:1px solid #E1E1E1;
+	margin-bottom:10px;
+	}
+	.listado-productos-tienda .txt div div{
+		border:0;
+		margin:0;
+		}
+		.listado-productos-tienda .txt div div div{
+			border:0;
+			margin:0;
+			}
+.listado-productos-tienda  div.selector_traducciones{
+	text-transform:uppercase;
+	}
+.gmap{
+		float:left;
+		clear:both;
+		width:100%;
+		padding:0;
+		margin:15px 0;
+		}	
+.banner-ampliada{
+	float:left;
+	width:100%;
+	clear:both;
+	padding-bottom:15px;
+	min-height:230px;
+	}
+	.banner-ampliada ul.desplegable_vorago{
+		float:left;
+		width:51px;
+		}
+	.banner-ampliada ul.desplegable_vorago li{
+		float:left;
+		}	 
+.banner-ampliada .txt div.enlace input{
+	margin:6px 0;
+	clear:none;
+	float:none;
+	}
+
+#header #menu.menu-ingles{
+	margin:35px 0 0;
+	}
+.listado-productos-tienda div.selector_traducciones span{
+	padding-right:10px;	
+	
+	}
+	.listado-productos-tienda div.selector_traducciones span.current{
+		font-weight:bolder;
+		text-decoration:underline;
+		}
+
+.content-paginacion-Order .multimedia-paginacion{
+	background:none;
+	}
+	#content .content-paginacion-Order .multimedia-paginacion .buttons a.next_page,
+	 #content .content-paginacion-Order .multimedia-paginacion .buttons span.next_page{
+		background:none;
+		color:#333333;
+		}
+	#content .content-paginacion-Order .multimedia-paginacion .buttons a.prev_page, 
+	#content .content-paginacion-Order .multimedia-paginacion .buttons span.prev_page{
+		background:none;
+		color:#333333;
+		}
+	
+.content-paginacion-Group .multimedia-paginacion{
+	background:none;
+	}
+	#content .content-paginacion-Group .multimedia-paginacion .buttons a.next_page,
+	 #content .content-paginacion-Group .multimedia-paginacion .buttons span.next_page{
+		background:none;
+		color:#333333;
+		}
+	#content .content-paginacion-Group .multimedia-paginacion .buttons a.prev_page, 
+	#content .content-paginacion-Group .multimedia-paginacion .buttons span.prev_page{
+		background:none;
+		color:#333333;
+		}
+		
+.content-paginacion-Role .multimedia-paginacion{
+	background:none;
+	}
+	#content .content-paginacion-Role .multimedia-paginacion .buttons a.next_page,
+	 #content .content-paginacion-Role .multimedia-paginacion .buttons span.next_page{
+		background:none;
+		color:#333333;
+		}
+	#content .content-paginacion-Role .multimedia-paginacion .buttons a.prev_page, 
+	#content .content-paginacion-Role .multimedia-paginacion .buttons span.prev_page{
+		background:none;
+		color:#333333;
+		}
+.content-paginacion-Boletin .multimedia-paginacion{
+	background:none;
+	}
+	#content .content-paginacion-Boletin .multimedia-paginacion .buttons a.next_page,
+	 #content .content-paginacion-Boletin .multimedia-paginacion .buttons span.next_page{
+		background:none;
+		color:#333333;
+		}
+	#content .content-paginacion-Boletin .multimedia-paginacion .buttons a.prev_page, 
+	#content .content-paginacion-Boletin .multimedia-paginacion .buttons span.prev_page{
+		background:none;
+		color:#333333;
+		}
+
+.content-paginacion-Suscription .multimedia-paginacion{
+	background:none;
+	}
+	#content .content-paginacion-Suscription .multimedia-paginacion .buttons a.next_page,
+	 #content .content-paginacion-Suscription .multimedia-paginacion .buttons span.next_page{
+		background:none;
+		color:#333333;
+		}
+	#content .content-paginacion-Suscription .multimedia-paginacion .buttons a.prev_page, 
+	#content .content-paginacion-Suscription .multimedia-paginacion .buttons span.prev_page{
+		background:none;
+		color:#333333;
+		}
+
+.content-paginacion-Pais .multimedia-paginacion{
+	background:none;
+	}
+	#content .content-paginacion-Pais .multimedia-paginacion .buttons a.next_page,
+	 #content .content-paginacion-Pais .multimedia-paginacion .buttons span.next_page{
+		background:none;
+		color:#333333;
+		}
+	#content .content-paginacion-Pais .multimedia-paginacion .buttons a.prev_page, 
+	#content .content-paginacion-Pais .multimedia-paginacion .buttons span.prev_page{
+		background:none;
+		color:#333333;
+		}
+
+
+
+
+#content .content-paginacion-Order .multimedia-paginacion UL LI A{
+	color:#333333;
+	}
+	
+.banner-ampliada .banner-ampliada .txt div{
+	
+	}
+
+
+/********************PARA EL BONO REGALO*********************/
+form.buscador-bono DIV.fecha-activacion H3,
+form.buscador-bono DIV.fecha-caducidad H3{
+            font-size: 12px;
+            padding: 0 0 5px 0;
+			display:none;
+            }
+        form.buscador-bono DIV.fecha-activacion,
+		form.buscador-bono DIV.fecha-caducidad{
+            margin:10px 0;
+			float:left;
+			width:33%;
+			clear:none;
+            }
+		form.buscador-bono DIV.fecha-activacion SPAN.fecha-activacion,
+		form.buscador-bono DIV.fecha-caducidad SPAN.fecha-caducidad{
+			padding-top:2px;
+			width:100%;
+			clear:both;
+			font-size:12px;
+			font-weight:bold;
+			color:#333333;
+			float:left;
+			}
+            form DIV.fecha-activacion LABEL{
+                
+                }
+            form.buscador-bono DIV.fecha-activacion LABEL.label_date,
+			form.buscador-bono DIV.fecha-caducidad LABEL.label_date{
+                display:none;
+                }
+				form.buscador-bono DIV.texto INPUT{
+					width: 150px;
+					}
+				form.buscador-bono DIV.pagado SELECT{
+					width: 150px;
+					}
+		.fecha-activacion INPUT,
+		.fecha-caducidad INPUT {
+			border:1px solid #e1e1e1;
+			padding:5px;
+			width:178px;
+			}
+            .fecha-activacion INPUT.input_day,
+			.fecha-caducidad INPUT.input_day {
+                width:18px;
+                }
+            .fecha-activacion INPUT.input_month,
+			.fecha-caducidad INPUT.input_month {
+                width:18px;
+                }
+            .fecha-activacion INPUT.input_year,
+			.fecha-caducidad INPUT.input_year {
+                width:28px;
+                }
+
+.encabezado-derecha-bonos{
+	float:right;
+	}
+	.encabezado-derecha-bonos select{
+	    border: 1px solid #655E5E;
+	    color: #666666;
+	    font-family: Arial,Helvetica,sans-serif;
+	    font-size: 12px;
+	    font-style: italic;
+	    font-weight: normal;
+	    line-height: 12px;
+	    padding: 5px;
+	    width: 60px;
+	 	border: 1px solid #E1E1E1;
+	}
+
+
+.formulario .formulario-perfiles DIV.bloque-3 {
+	float:left;
+	clear:both;
+	width: 100%;
+	}
+	form.formulario-bono DIV.porcentaje{
+		float:left;
+		width:33%;
+		clear:none;
+		}
+		form.formulario-bono DIV.porcentaje INPUT{
+			width:80px;
+			}
+		form.formulario-bono DIV.cadena INPUT{
+			width: 280px;
+			}
+		form.formulario-bono DIV.usos-totales INPUT{
+			width: 225px;
+			}
+	form.formulario-bono DIV.cadena,
+	form.formulario-bono DIV.usos-totales{
+		float:left;
+		width:50%;
+		clear:none;
+		}
+form.formulario-bono SPAN.usos-explicacion,
+form.formulario-bono SPAN.cadena-explicacion{
+	display: block;
+    font-size: 11px;
+    line-height: 15px;
+    padding: 5px 0 0 0px;
+	}
+.content-botones-cms .botones-cms.factura input, .content-botones-cms .botones-cms.factura a  {
+    background: url("../../../Public/Home/img/bg_factura.gif") no-repeat scroll left center transparent;
+	}
+#cms table.listado-cms TD.porcentaje-bono,
+#cms table.listado-cms TD.usos-totales-bono,
+#cms table.listado-cms TD.usos-parciales-bono{
+	text-align:center;
+	}
+	
+form.formulario-bono DIV.fecha-activacion H3,
+form.formulario-bono DIV.fecha-caducidad H3{
+            font-size: 12px;
+            padding: 0 0 5px 0;
+			display:none;
+            }
+        form.formulario-bono DIV.fecha-activacion,
+		form.formulario-bono DIV.fecha-caducidad{
+            margin:10px 0;
+			float:left;
+			width:33%;
+			clear:none;
+            }
+		form.formulario-bono DIV.fecha-activacion SPAN.fecha-activacion,
+		form.formulario-bono DIV.fecha-caducidad SPAN.fecha-caducidad{
+			padding-top:2px;
+			width:100%;
+			clear:both;
+			font-size:12px;
+			font-weight:bold;
+			color:#333333;
+			float:left;
+			}
+            form DIV.fecha-activacion LABEL{
+                
+                }
+            form.formulario-bono DIV.fecha-activacion LABEL.label_date,
+			form.formulario-bono DIV.fecha-caducidad LABEL.label_date{
+                display:none;
+                }
+				form.formulario-bono DIV.texto INPUT{
+					width: 150px;
+					}
+				form.formulario-bono DIV.pagado SELECT{
+					width: 150px;
+					}	
+	
+/*********************** PARA LOS PAGINADORES DE BONOS Y USERS *************/
+.content-paginacion-BonoRegalo .multimedia-paginacion,
+.content-paginacion-User .multimedia-paginacion{
+	background:none;
+	}
+	#content .content-paginacion-BonoRegalo .multimedia-paginacion .buttons a.next_page,
+	 #content .content-paginacion-BonoRegalo .multimedia-paginacion .buttons span.next_page,
+	 #content .content-paginacion-User .multimedia-paginacion .buttons a.next_page,
+	 #content .content-paginacion-User .multimedia-paginacion .buttons span.next_page{
+		background:none;
+		color:#333333;
+		}
+	#content .content-paginacion-BonoRegalo .multimedia-paginacion .buttons a.prev_page, 
+	#content .content-paginacion-BonoRegalo .multimedia-paginacion .buttons span.prev_page,
+	#content .content-paginacion-User .multimedia-paginacion .buttons a.prev_page, 
+	#content .content-paginacion-User .multimedia-paginacion .buttons span.prev_page{
+		background:none;
+		color:#333333;
+		}
+#content .content-paginacion-BonoRegalo .multimedia-paginacion UL LI A,
+#content .content-paginacion-User .multimedia-paginacion UL LI A{
+	color:#333333;
+	}
+	
+.buscador-orders .contenido-derecha form.buscador-bono  div.fecha{
+	width:435px;
+	padding:0 0 0 30px;
+	margin:0;
+	}
+	.buscador-orders .contenido-derecha form.buscador-bono  div.fecha .fecha-caducidad,
+	.buscador-orders .contenido-derecha form.buscador-bono  div.fecha .fecha-activacion{
+		width:200px;
+		}
+		
+.buscador-orders .contenido-derecha form.buscador-bono div.texto,
+.buscador-orders .contenido-derecha form.buscador-bono div.pagado{
+	padding-top: 4px;
+	}
+.generar-bonos-regalos{
+	float:left;
+	width:100%;
+	padding:5px 0;
+	}	
+	.generar-bonos-regalos span.descuento-bono{
+		padding-left:10px;
+		}
+	.generar-bonos-regalos A{
+		float:right;
+		}
+.generar-bonos-regalos-izquierda A{
+	float:left;
+	}	
+	
+	
+.listado-bonos-regalo #form-bonos TABLE TR.caducado,
+.listado-bonos-regalo #form-bonos TABLE TR.sin-usos{
+	background: #FED9CB;
+	}
+.formulario-transferencia p{
+	margin-bottom:10px;
+	
+	}
+.formulario-transferencia .botones{
+	float:left;
+	}
+.formulario-transferencia .botones{
+	background:none;
+	padding:0;
+	}
+.formulario-transferencia .botones a{
+	 background: url("../../../Public/Home/img/bg_aceptar.gif") no-repeat scroll left top transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    display: inline;
+    font-family: "trajan-pro-1","trajan-pro-2",sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0;
+    padding: 8px 37px 5px 8px;
+    text-transform: uppercase;
+    width: auto;
+	text-decoration:none;
+	}
+	
+/******************************** PARA EL BANNER *********************************/
+.deshabilitar-fondo {
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	position:absolute;
+	opacity:0.3;
+	filter: alpha(opacity=30);
+	background:#404040;
+}
+.cerrar {
+ /*   border: 1px solid red;*/
+/*    height: 29px;
+    margin-left: 785px;
+    margin-top: 225px;*/
+    position: absolute;
+    width: 100%;
+    z-index: 2000;
+}
+#aviso{
+/*    height: 317px;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -158px;*/
+    height: 100%;
+    position: absolute;
+    width: 100%;
+/*    top: 50%;
+    width: 466px;*/
+    z-index: 2000;
+}
+.imagen-mensaje{
+/*    background: url('/images/css/home/mensajePaypal.jpg') no-repeat;*/
+    float: left;
+/*    height: 317px;*/
+/*    position: relative;*/
+/*    width: 466px;*/
+}
+.imagen-mensaje IMG{
+/*    left: 424px;*/
+    position: absolute;
+/*    top: 4px;*/
+    cursor: pointer;
+    width: 940px;
+    left: 50%;
+    margin-left: -470px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.imagen-mensaje IMG.imagen-cerrar{
+/*    left: 424px;*/
+    position: absolute;
+/*    top: 4px;*/
+    cursor: pointer;
+    width: auto;
+    left: 50%;
+    margin-left:430px;
+    margin-top: 20px;
+}
+
+/* POLITICA DE COOKIES */
+/* PALETA 
+	@politica_cookies_fondo: #BEBEB3;
+	@politica_cookies_texto: #504B4A;
+*/
+#partial-cookies {
+  background-color: #BEBEB3;
+  color: #504B4A;
+  padding: 6px 5px 5px;
+  font-size: 12px;
+  text-align: center;
+
+  display: none;
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  z-index: 9099;
+}
+  
+#partial-cookies  A{
+    color: #504B4A;
+    text-decoration: underline; 
+  }
+  
+#partial-cookies  .boton-ver-mas{
+    float: right;
+    background-color: #BEBEB3;
+    }
+#partial-cookies  .boton-ver-mas A{
+      margin: 0px 3px 3px;
+      width: 15px;
+      height: 15px;
+      display: block;
+      overflow: hidden;
+      background-image: url("../../../Public/Home/img/cerrar-cookies.png");
+      text-indent: -9999px;
+    }
+
+/* This is a very basic stylesheet for the date-picker. Feel free to create your own. */
+
+/* The wrapper div */
+        /* Change the font-size to suit your design's CSS. The following line is for the demo that has a 12px font-size defined on the body tag */
+        /* For Example: If using the YUI font CSS, uncomment the following line to get a 10px font-size within the datePicker */
+        /* font:900 77%/77% Verdana; */
+        /* Mozilla & Webkit extensions to stop text-selection. Remove if you wish to validate the CSS */
+
+div.datePicker
+        {
+        position:absolute;
+        min-width:18em;
+        width:18em;
+        z-index:9999;
+        text-align:center;
+
+
+        font:900 0.8em/0.8em Verdana, Sans-Serif;
+        
+
+        background:transparent;
+
+        }
+/* Styles for the static datePickers */
+div.staticDP
+        {
+        position:relative;
+        top:0;
+        left:0;
+        }
+/* The iframe hack to cover selectlists in Internet Explorer <= v6 */
+iframe.iehack
+        {
+        position:absolute;
+        background:#fff;
+        z-index:9998;
+        padding:0;
+        border:0;
+        display:none;
+        margin:0;
+        }
+/* The "button" created beside each input for non-static datePickers */
+        /*position:relative;*/
+        /* Moz & FF */
+a.date-picker-control:link,
+a.date-picker-control:visited,
+a.date-picker-control:hover,
+a.date-picker-control:active,
+a.date-picker-control:focus
+        {
+        border:0 none;
+        padding:0;
+        margin:0 0 0 0.3em;
+        background:transparent url(../../../Public/Home/img/cal.gif) no-repeat 50% 50%;
+        min-width:1.5em;
+        line-height:normal;
+        visibility:visible;
+        text-decoration:none;
+        vertical-align:middle;
+        }
+/* Feed IE6 the following rule, IE7 should handle the min-width declared above */
+* html a.date-picker-control
+        {
+        width:1.5em;
+        }
+/* IE, Safari & Opera. Seperate CSS rule seems to be required. */
+a.date-picker-control
+        {
+        display:inline-block;
+        }
+a.date-picker-control span
+        {
+        display:block;
+        width:1.5em;
+        height:1.5em;
+        margin:auto 0;
+        }
+/* The next & previous buttons */
+div.datePicker th span
+        {
+        display:inline;
+        padding:0;
+        margin:0;
+        color:#000;
+        text-align:center;
+        line-height:1em;
+        border-width:0;
+        font-family: georgia, times new roman, palatino, times, bookman, serif;
+        background:transparent;
+        font-weight:bold;
+        }
+div.datePicker th span.month-display,
+div.datePicker th span.year-display
+        {
+        text-transform:uppercase;
+        letter-spacing:0;
+        font:bold 1.2em Verdana, Sans-Serif;
+        }
+div.datePicker th span.prev-but,
+div.datePicker th span.next-but
+        {
+        font-size:1.3em;
+        }
+
+div.datePicker th span.today-but
+        {
+        text-align:center;
+        margin:0 auto;
+        font:normal 1em Verdana, Sans-Serif;
+        width:100%;
+        text-decoration:none;
+        line-height:1.6em;
+        text-transform:uppercase;
+        }
+div.datePicker thead th span.fd-disabled
+        {
+        color:#aaa;
+        }
+/* The mon, tue, wed etc day buttons */
+div.datePicker th span.fd-day-header
+        {
+        text-align:center;
+        margin:0 auto;
+        font:900 1em Verdana, Sans-Serif;
+        height:1.4em;
+        width:2em;
+        text-decoration:none;
+        text-transform:lowercase;
+        line-height:1.4em;
+        }
+/* The table */
+div.datePicker table
+        {
+        position:relative;
+        margin:0;
+        padding:0;
+        border:0.1em solid #ccc;
+        background:#f5f5f5;
+        text-align:center;
+        width:100%;
+        border-spacing:0.2em;
+
+        table-layout:fixed;
+        border-collapse:separate;
+        }
+/* Common TD & TH styling */
+div.datePicker table td
+        {
+        border:0.1em solid #ccc;
+        padding:0;
+        text-align:center;
+        vertical-align:middle;
+        line-height:1.5em;
+        background:#fafafa;
+        width:100%;
+        height:1.5em !important;
+        height:1.5em;
+        outline:none;
+		font-family:Tahoma;
+		font-size:0.93em;
+		color:#222222;
+        }
+div.datePicker table th{
+	font-family:Tahoma;
+    border:0 none;
+	font-size:0.93em;
+    padding:0;
+    line-height:1em;
+    font-weight:bold;
+    color:#222;
+	background:#EEEEEE;
+    text-align:center;
+    vertical-align:middle;
+    }
+div.datePicker table td.date-picker-unused
+        {
+        background:url(../../../Public/Home/img/backstripes.gif) #fff ;
+        border-color:#dcdcdc;
+        padding:0;
+		}
+div.datePicker table thead th.date-picker-title
+        {
+        width:auto;
+        height:auto;
+        padding:0.4em 0;
+        }
+/* The "mon tue wed etc" day header button styles */
+div.datePicker table th.date-picker-day-header
+        {
+        text-transform:lowercase;
+        width:3em;
+		font-size:1.1em;
+        }
+div.datePicker table th.date-picker-day-header span
+        {
+        display:block;
+        }
+/* The "todays date" style */
+div.datePicker table td.date-picker-today
+        {
+        background:#fff url(../../../Public/Home/img/bullet2.gif) no-repeat 0 0;
+        color:rgb(100,100,100) !important;
+        }
+/* The "selected date" style */
+div.datePicker table td.date-picker-selected-date
+        {
+        color:#333 !important;
+        border-color:#333 !important;
+        }
+/* the "highlight days" style */
+td.date-picker-highlight
+        {
+        color:#a86666;
+        }
+/* The date "out of range" style */
+div.datePicker table td.out-of-range
+        {
+        color:#ccc !important;
+        font-style:oblique;
+        background:#fcfcfc !important;
+        }
+/* The "disabled days" style */
+div.datePicker table td.day-disabled
+        {
+        color:#aaa !important;
+        background:transparent !important;
+        }
+/* The "active cursor" style */
+div.datePicker table tbody td.date-picker-hover
+        {
+        background:#fff url(../../../Public/Home/img/bg_header.jpg) no-repeat 0 0;
+        border-color:rgb(100,130,170);
+        color:rgb(100,130,170);
+        }
+/*
+   Quirksmode necessity?
+   ---------------------
+
+   If your HTML document renders in quirksmode (i.e. has no doctype declaration)
+   then uncomment the following CSS rule to set a less drastic font-size in IE
+
+div.datePicker table th,
+div.datePicker table td
+        {
+        font-size:100%;
+        }
+*/
+
+/* Remove the images for Internet Explorer <= v6 using the "* html" hack */
+/*
+* html div.datePicker table td
+        {
+        background-image:none;
+        }
+* html div.datePicker table td.date-picker-unused
+        {
+        background:#f2f2f2;
+        }
+*/
