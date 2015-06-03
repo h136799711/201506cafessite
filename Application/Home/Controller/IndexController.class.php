@@ -102,6 +102,14 @@ class IndexController extends HomeController {
 		$this->display();
 	} 
 	
+	public function distributor(){
+		$this->display();
+	}
+	
+	public function products(){
+		$this->display();
+	}
+	
 //	public function cate(){
 //		$cateid = I('get.cateid',0);
 //		$map = array('post_category'=>$cateid,'post_status'=>'publish');

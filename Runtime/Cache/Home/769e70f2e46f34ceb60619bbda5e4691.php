@@ -96,7 +96,7 @@
 								</ul>
                             </div>
                             <div id="utils">
-                            	 <a title="Go to Home" href="/pages/index/home">首页</a> <a title="Go to Distributors" href="/pages/index/distribution-and-delegations">经销商</a> <a href="/formcontacts/show/contact" title="联系我们">联系我们</a> <a href="http://www.facebook.com/Cafesoquendo" title="Go to www.facebook.com/Cafesoquendo" rel="external"><img src="/github/201506cafessite/Public/Home/img/16x16_facebook.png" alt="Facebook Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16"/></a> <a href="http://www.twitter.com/CafesOquendo" title="Go to www.twitter.com/CafesOquendo" rel="external"><img src="/github/201506cafessite/Public/Home/img/16x16_twitter.png" alt="Twitter Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16"/></a><a href="http://www.pinterest.com/cafesoquendo/" title="Go to http://www.pinterest.com/cafesoquendo/" rel="external"><img src="/github/201506cafessite/Public/Home/img/16x16_pinterest.png" alt="Pinterest Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16"/></a><a href="https://plus.google.com/photos/117079850138242504271/albums?banner=pwa" title="Go to https://plus.google.com/photos/117079850138242504271/albums?banner=pwa" rel="external"><img src="/github/201506cafessite/Public/Home/img/16x16_picasa.png" alt="Picasa Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16"/></a> 
+                            	 <a title="Go to Home" href="/pages/index/home">首页</a> <a title="Go to Distributors" href="<?php echo U('Home/Index/distributor');?>">经销商</a> <a href="/formcontacts/show/contact" title="联系我们">联系我们</a> <a href="http://www.facebook.com/Cafesoquendo" title="Go to www.facebook.com/Cafesoquendo" rel="external"><img src="/github/201506cafessite/Public/Home/img/16x16_facebook.png" alt="Facebook Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16"/></a> <a href="http://www.twitter.com/CafesOquendo" title="Go to www.twitter.com/CafesOquendo" rel="external"><img src="/github/201506cafessite/Public/Home/img/16x16_twitter.png" alt="Twitter Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16"/></a><a href="http://www.pinterest.com/cafesoquendo/" title="Go to http://www.pinterest.com/cafesoquendo/" rel="external"><img src="/github/201506cafessite/Public/Home/img/16x16_pinterest.png" alt="Pinterest Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16"/></a><a href="https://plus.google.com/photos/117079850138242504271/albums?banner=pwa" title="Go to https://plus.google.com/photos/117079850138242504271/albums?banner=pwa" rel="external"><img src="/github/201506cafessite/Public/Home/img/16x16_picasa.png" alt="Picasa Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16"/></a> 
                         </div>
                         <div id="menu" class="menu-ingles">
                             <div class="navigator">
@@ -113,7 +113,7 @@
 	                            		<a href="http://en.cafesoquendo.com/pages/index/home-3" title="首页"><span>首页</span></a>
 	    							</li>
 	          					    <li>
-	                           	       <a href="http://en.cafesoquendo.com/pages/index/business-presentation" title="我们的产品"><span>我们的产品</span></a>
+	                           	       <a href="<?php echo U('Home/Index/products');?>" title="我们的产品"><span>我们的产品</span></a>
 	    							</li>
 	           						 <li>
 	                           			 <a href="http://en.cafesoquendo.com/productos" title="产品展示"><span>产品展示</span></a>

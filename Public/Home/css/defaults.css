@@ -3,7 +3,6 @@
 	padding:0;
 }
 BODY {
-	font-family: "微软雅黑";
 	font-size:80%;
 	width:100%;
 	}
@@ -1729,7 +1728,7 @@ span.destacado-telefono{
 					}				
 				#menu-principal UL LI A{
 					float:left;
-					background:url(.../../../Public/Home/img/bg_li_menu_der.gif) no-repeat right top;
+					background:url(../../../Public/Home/img/bg_li_menu_der.gif) no-repeat right top;
 					color:#ffffff;
 					font-size:12px;
 					font-weight:normal;
@@ -2166,12 +2165,12 @@ span.destacado-telefono{
 					line-height:19px;
 					}
 			.tres-bloques .ver-todos{
+				background-color: #D10E26;
 				float:left;
-				background:url(../../../Public/Home/img/ver_todos_izq.gif) no-repeat left top;
-				height: 25.1px;
-				background-color: #D10D25;
+				
 				}
 				.tres-bloques .ver-todos .content-ver-todos{
+					height: 19px;
 					float:left;
 					background:url(../../../Public/Home/img/ver_todos_der.gif) no-repeat right top;					
 					padding:3px 28px 3px 10px;
@@ -2570,9 +2569,8 @@ span.destacado-telefono{
 
 		.formulario .botones,
 		.formulario-newsletter FORM .botones{
-			background:url(../../../Public/Home/img/botones_izq_formulario.gif) no-repeat top left;
+			background-color: #D10E26;
 			padding-left:4px;
-			background-color:#D10D25 ;
 			float:right;
 			width:auto;
 			}
@@ -2582,14 +2580,12 @@ span.destacado-telefono{
 				font-size:10px;
 				font-weight:normal;
 				text-transform:uppercase;
-				
-				width: 70px;
 				color:#FFFFFF;
 				border:0;
 				margin:0;
 				display:inline;
 				background:url(../../../Public/Home/img/botones_der_formulario.gif) no-repeat top right;
-		
+				width:auto;
 				font-family:"trajan-pro-1","trajan-pro-2", sans-serif;
 				}
 		.formulario div.name,
@@ -4029,6 +4025,7 @@ UL.filter-boletines {
 /***************** genericos **************/	
 	
 .bloque-superior{
+	padding: 10px;
 	float:left;
 	clear:both;
 	width:100%;
@@ -4038,6 +4035,7 @@ UL.filter-boletines {
 		margin:0 8px 5px 5px;
 		}
 .tres-bloques{
+	background-color: #000000;
 	float:left;
 	width:100%;
 	clear:both;
