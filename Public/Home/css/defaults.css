@@ -2367,6 +2367,7 @@ span.destacado-telefono{
 		color:#333333;
 		}
 		#content #content-informacion .fondo-total .contenido-izquierda{
+			padding: 10px;
 			float:left;
 			margin:25px 20px 10px;
 			clear:left;

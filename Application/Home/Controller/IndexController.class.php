@@ -125,6 +125,17 @@ class IndexController extends HomeController {
 		$this->display();
 	}
 	
+	public function details(){
+		$this->display();
+	}
+	
+	public function community(){
+		$this->display();
+	}
+	
+	public function business(){
+		$this->display();
+	}
 //	public function cate(){
 //		$cateid = I('get.cateid',0);
 //		$map = array('post_category'=>$cateid,'post_status'=>'publish');

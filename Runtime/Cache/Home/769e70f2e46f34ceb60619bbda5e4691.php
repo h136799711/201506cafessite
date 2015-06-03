@@ -41,19 +41,6 @@
 <meta name="keywords" content=""> 
 <title>Home</title>
 
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22941897-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
       </head>
 <body>
     <div class="navigator">
@@ -110,16 +97,16 @@
                              <div id="menu-principal">    
 								<ul id="nav">
 				           			 <li class="primero sel">
-	                            		<a href="http://en.cafesoquendo.com/pages/index/home-3" title="首页"><span>首页</span></a>
+	                            		<a href="<?php echo U('Home/Index/index');?>" title="首页"><span>首页</span></a>
 	    							</li>
 	          					    <li>
-	                           	       <a href="<?php echo U('Home/Index/products');?>" title="我们的产品"><span>我们的产品</span></a>
+	                           	       <a href="<?php echo U('Home/Index/business');?>" title="我们的产品"><span>公司简介</span></a>
 	    							</li>
 	           						 <li>
-	                           			 <a href="http://en.cafesoquendo.com/productos" title="产品展示"><span>产品展示</span></a>
+	                           			 <a href="<?php echo U('Home/Index/products');?>" title="产品展示"><span>产品展示</span></a>
 	    							</li>
 	           						 <li>
-	                            		<a href="http://en.cafesoquendo.com/pages/index/origin" title="社区论坛"><span>社区论坛</span></a>
+	                            		<a href="<?php echo U('Home/Index/community');?>" title="社区论坛"><span>社区论坛</span></a>
 	   								 </li>
 	          						 <li>
 	                           			 <a href="http://en.cafesoquendo.com/noticias" title="新闻"><span>新闻</span></a>
