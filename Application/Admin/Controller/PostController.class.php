@@ -11,27 +11,21 @@ namespace Admin\Controller;
 class PostController extends  AdminController{
 	
 	public function index(){
-		//get.startdatetime
-		$startdatetime = I('startdatetime',date('Y/m/d H:i',time()-24*3600),'urldecode');
-		$enddatetime = I('enddatetime',date('Y/m/d H:i',time()+24*3600),'urldecode');
+		$name = I('name','');
 		
-		//分页时带参数get参数
-		$params = array(
-			'startdatetime'=>$startdatetime,
-			'enddatetime'=>$enddatetime
-		);
-		
-		$startdatetime = strtotime($startdatetime);
-		$enddatetime = strtotime($enddatetime);
-				
-		if($startdatetime === FALSE || $enddatetime === FALSE){
-			LogRecord('INFO:'.$result['info'],'[FILE] '.__FILE__.' [LINE] '.__LINE__);
-			$this->error(L('ERR_DATE_INVALID'));
-		}
 		
 		$map = array();
 		
-		$map['post_modified'] = array(array('EGT',$startdatetime),array('elt',$enddatetime),'and'); 
+		if(!empty($name)){
+			//分页时带参数get参数
+			$params = array(
+				'name'=>$name,
+			);
+			
+			$map['name'] = array('like','%'.$name.'%');
+			
+		}
+		
 		
 		$page = array('curpage' => I('get.p', 0), 'size' => C('LIST_ROWS'));
 		$order = " post_modified desc ";
