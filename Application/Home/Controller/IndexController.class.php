@@ -13,6 +13,36 @@ use Think\Storage;
  */
 class IndexController extends HomeController {
 	
+		public function index(){
+		$this->display();
+	}
+	
+	public function distributor(){
+		$this->display();
+	}
+	
+	public function products(){
+		$this->display();
+	}
+	
+	public function details(){
+		$this->display();
+	}
+	
+	public function community(){
+		$this->display();
+	}
+	
+	public function business(){
+		$this->display();
+	}
+	
+	public function news(){
+		$this->display();
+	}
+	public function faqs(){
+		$this->display();
+	}
 //	private $allow_domain = array(
 //		"localhost",
 //		"127.0.0.1",
@@ -113,29 +143,7 @@ class IndexController extends HomeController {
 //		$this->assign("cates",$cates['info']);
 //		$this->display();
 //	} 
-	public function index(){
-		$this->display();
-	}
-	
-	public function distributor(){
-		$this->display();
-	}
-	
-	public function products(){
-		$this->display();
-	}
-	
-	public function details(){
-		$this->display();
-	}
-	
-	public function community(){
-		$this->display();
-	}
-	
-	public function business(){
-		$this->display();
-	}
+
 //	public function cate(){
 //		$cateid = I('get.cateid',0);
 //		$map = array('post_category'=>$cateid,'post_status'=>'publish');

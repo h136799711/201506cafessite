@@ -1,0 +1,156 @@
+FORM IMG{
+	cursor:pointer;
+	}
+	.botones INPUT{
+			cursor:pointer;
+			}
+.calendar{
+	cursor: default;
+	}
+.calendar .combo,
+.calendar table{
+	cursor: default;
+	}
+.colorpicker_color{
+		cursor: crosshair;
+	}
+.colorpicker_field span,
+.colorpicker_hue{
+		cursor: n-resize;
+	}
+/***********datepicker**************/
+
+div.datePicker table tbody td.date-picker-hover,
+div.datePicker table td,
+div.datePicker th span,
+a.date-picker-control:visited,
+a.date-picker-control:hover,
+a.date-picker-control:active,
+a.date-picker-control:focus{
+	cursor:pointer;
+	}
+div.datePicker th span.month-display,
+div.datePicker th span.year-display
+        {
+       	cursor:default;
+        }
+div.datePicker table td.date-picker-unused,
+div.datePicker th span.today-but,		
+div.datePicker th span.prev-but,
+div.datePicker th span.next-but{
+	cursor:pointer !important;
+	}
+	
+div.datePicker table td.day-disabled,	
+div.datePicker table td.out-of-range,
+div.datePicker thead th span.fd-disabled{
+	cursor:default !important;
+	}
+
+/*************** private *********/a:focus
+#menu_admin A IMG{
+	cursor:pointer!important;
+	}
+.bloques-layout UL LI,
+.elementos-bloques-layouts UL LI,	
+#popup_container.popup_container_message A.popup_close,	
+#popup_container.popup_container_info A.popup_close,
+#popup_content.prompt #popup_panel INPUT#popup_cancel,
+#popup_content.confirm #popup_panel INPUT#popup_cancel,
+#popup_panel INPUT,	
+#popup_content.prompt #popup_panel INPUT#popup_ok,
+#popup_content.confirm #popup_panel INPUT#popup_cancel,	
+.campo_desplegable,
+UL.noticias_categorias LI UL LI SPAN.subseccion_nombre,
+#cms .listado-cms A,
+#cms A SPAN{
+	cursor:pointer;
+}
+
+UL.gestion-menu IMG{
+	cursor:pointer!important;
+	}
+.content-botones-cms .botones-cms INPUT,
+UL.gestion-menu-enlaces LI SPAN{
+	cursor:pointer;
+	}
+#cms TABLE.listado-cms .actions A IMG,
+#cms TABLE.listado-cms TD A IMG,
+#cms TABLE.listado-cms TH A IMG,	
+.content-botones-cms .botones-cms A SPAN,
+.content-botones-cms .botones-cms A,
+.content-botones-cms .botones-cms SPAN{
+	cursor:pointer!important;
+	}
+.asmListSortable .asmListItemLabel {
+	cursor: move; 
+}
+
+
+.simpleTree .active,
+.simpleTree .text,
+#popup_title,
+div.popup  {
+	cursor:default;
+	}
+#preview_folder_multimedia UL LI,
+.simpleTree .trigger,
+#popup_container A.popup_close{
+	cursor:pointer;
+	}
+#TB_window #preview  .rotate-left,	
+#TB_window #preview  .rotate-right,	
+#TB_window .nueva_imagen P#TB_toggle_new,
+#content-home .bloque-derecha .suscribete-boletin INPUT.boton{
+	cursor:pointer;
+	}
+#TB_window FORM#form_link .formulario DIV.link_type A IMG,
+					#TB_window #preview  .rotate-right IMG,
+					#TB_window #preview  .rotate-left IMG{
+						cursor:pointer!important;
+						}
+
+.icono-guardar A IMG{
+	cursor:pointer;
+	}
+.content-galerias .galeria .slideshow a.advance-link,
+.contenedor-demo .demo A,
+.contenedor-demo .demo A:hover{
+	cursor:pointer;
+	}
+.multimedia-content a.videoplayer,
+#lightbox-image-details-currentNumber a {
+    cursor: pointer;
+}
+.icono-guardar A IMG,
+.formulario .botones input{
+	cursor:pointer;
+	}
+
+		.contenedor-demo .demo A,
+		.contenedor-demo .demo A:hover{
+			cursor:pointer;
+			}
+.listado-productos-tienda .pestanyas ul li a,
+.buscador-noticias .botones input,
+#menu-principal ul li a{
+	cursor:pointer;
+	}
+
+.listado-productos-tienda div.selector_traducciones span{
+	cursor:pointer;	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
