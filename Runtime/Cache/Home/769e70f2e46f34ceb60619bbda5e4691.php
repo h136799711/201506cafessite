@@ -97,6 +97,7 @@
                              <div id="menu-principal">    
 								<ul id="nav">
 				           			 <li class="primero sel">
+<<<<<<< HEAD
 	                            		<a href="<?php echo U('Home/Index/index');?>" title="首页"><span>首页</span></a>
 	    							</li>
 	          					    <li>
@@ -107,6 +108,18 @@
 	    							</li>
 	           						 <li>
 	                            		<a href="<?php echo U('Home/Index/community');?>" title="社区论坛"><span>社区论坛</span></a>
+=======
+	                            		<a href="http://en.cafesoquendo.com/pages/index/home-3" title="首页"><span>首页</span></a>
+	    							</li>
+	          					    <li>
+	                           	       <a href="<?php echo U('Home/Index/products');?>" title="我们的产品"><span>我们的产品</span></a>
+	    							</li>
+	           						 <li>
+	                           			 <a href="http://en.cafesoquendo.com/productos" title="产品展示"><span>产品展示</span></a>
+	    							</li>
+	           						 <li>
+	                            		<a href="http://en.cafesoquendo.com/pages/index/origin" title="社区论坛"><span>社区论坛</span></a>
+>>>>>>> branch 'master' of git@github.com:h136799711/201506cafessite.git
 	   								 </li>
 	          						 <li>
 	                           			 <a href="http://en.cafesoquendo.com/noticias" title="新闻"><span>新闻</span></a>
