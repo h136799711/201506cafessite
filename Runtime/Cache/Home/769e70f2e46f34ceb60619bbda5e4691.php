@@ -39,7 +39,7 @@
 
 <meta name="description" content="Home"> 
 <meta name="keywords" content=""> 
-<title>Home</title>
+<title>首页</title>
 
       </head>
 <body>
@@ -378,14 +378,7 @@
         </div>
 </div></div>
 
-<script type="text/javascript">
-$(window).load(function(){  
-  if(VoragoCMS.Cookie.instance.get("privacy_policy_accepted")!='1'){
-    $("#partial-cookies").load("/pages/cookie_privacy");
-    $("#partial-cookies").show();
-  }
-});
-</script>
+
 
 
   
