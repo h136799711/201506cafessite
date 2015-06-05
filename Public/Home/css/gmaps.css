@@ -3,6 +3,7 @@
 /**************************************************************************/
 HTML,BODY{
 	border:0!important;
+	font-family: "微软雅黑";
 }
 .gmap img {
     background-color: transparent;

@@ -13,7 +13,11 @@ use Think\Storage;
  */
 class IndexController extends HomeController {
 	
-		public function index(){
+	public function index(){
+		$where = " post_category=22";
+		$list=M('post')-> where($where)->order('id desc')->limit(3)->select();
+		$this->assign('list',$list);
+//		dump($list);
 		$this->display();
 	}
 	
@@ -22,10 +26,77 @@ class IndexController extends HomeController {
 	}
 	
 	public function products(){
-		$this->display();
+		
+		$type=I('get.type',"");
+		$text=I('post.text',"");
+		$typee=I('post.typee',"");
+//		dump($text);
+//		dump($typee);
+		if($type!=""){
+			$where="parentid=33";
+			$where1="post_category='$type'";
+//			dump($where);
+			$types=M('datatree','common_')->where($where)->select();
+			$goods=M('post')->where($where1)->select();
+//			
+//			dump($types);
+//			dump($goods);
+			$this->assign('types',$types);
+			$this->assign('goods',$goods);
+			$this->display();
+		}else if($text!="" || $typee!=""){
+			if($typee=="all"){
+				$where="parentid=33";
+				$types=M('datatree','common_')->where($where)->select();
+				$we="post_title like '%$text%'";
+				
+				$goods=M('post')->where($we)->select();
+				
+				$this->assign('types',$types);
+				$this->assign('goods',$goods);
+	//			dump($types);
+	//			dump($goods);
+				$this->display();
+			}else{
+				$where="parentid=33";
+				$types=M('datatree','common_')->where($where)->select();
+				$we="post_title like '%$text%' and  post_category='$typee'";
+//				dump($we);
+				$goods=M('post')->where($we)->select();
+				
+				$this->assign('types',$types);
+				$this->assign('goods',$goods);
+	//			dump($types);
+	//			dump($goods);
+				$this->display();
+			}
+		}else if($type==""){
+			
+			$where="parentid=33";
+			$types=M('datatree','common_')->where($where)->select();
+			$goods=M('post')->select();
+			
+			$this->assign('types',$types);
+			$this->assign('goods',$goods);
+//			dump($types);
+//			dump($goods);
+			$this->display();
+		
+		}
+		
 	}
 	
 	public function details(){
+		$id=I('get.id');
+		$where="parentid=33";
+		$types=M('datatree','common_')->where($where)->select();			
+		$this->assign('types',$types);
+		$result=M('post')->where('id='.$id)->select();
+		$list=M('post')->where('id!='.$id)->order('id desc')->limit(3)->select();
+//		dump($result);
+//		dump($list);
+		$this->assign("good",$result);
+		$this->assign('goods',$list);
 		$this->display();
 	}
 	
@@ -38,6 +109,9 @@ class IndexController extends HomeController {
 	}
 	
 	public function news(){
+		$list=M('post')->where('post_category=22')->order('id desc')->select();
+		$this->assign('list',$list);
+//		dump($list);
 		$this->display();
 	}
 	public function faqs(){
@@ -75,7 +149,7 @@ class IndexController extends HomeController {
 //		echo $asset;
 //		exit();
 //	}
-//	
+	
 //	
 //	/**
 //	 * 注销/退出系统

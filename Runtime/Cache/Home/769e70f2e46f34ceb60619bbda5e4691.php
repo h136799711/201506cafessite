@@ -239,45 +239,18 @@
                                                         </div>
                                                         <div class="listado-noticias">                                                            	      
                                                                  
-			<ul>
-		
-	        <li>
-	            
-	            	<a href="http://en.cafesoquendo.com/noticias/show/50-de-la-cafeteria-bariloche-2" title=""><img alt="Golden Jubilee of Bariloche´s coffee shop" src="/github/201506cafessite/Public/Home/img/c64x53_oquendo_05.jpg" title="Golden Jubilee of Bariloche´s coffee shop"></a>
-				
-	            <div class="con-imagen">
-	                <h3><a href="http://en.cafesoquendo.com/noticias/show/50-de-la-cafeteria-bariloche-2" title="Golden Jubilee of Bariloche´s coffee shop">Golden Jubilee of Bariloche´s coffee shop</a></h3>
-	                <div class="fecha">
-	                    <span>18.05.2015</span>
-	                </div>
-	            </div>
-	        </li> 
-		
-	        <li>
-	            
-	            	<a href="http://en.cafesoquendo.com/noticias/show/cafes-oquendo-con-el-mejor-estudiante-de-bachillerato-2" title=""><img alt="Award to the Best High School Student by Oquendo" src="/github/201506cafessite/Public/Home/img/c64x53_oquendo_web_02.jpg" title="Award to the Best High School Student by Oquendo"></a>
-				
-	            <div class="con-imagen">
-	                <h3><a href="http://en.cafesoquendo.com/noticias/show/cafes-oquendo-con-el-mejor-estudiante-de-bachillerato-2" title="Award to the Best High School Student by Oquendo">Award to the Best High School Student by Oquendo</a></h3>
-	                <div class="fecha">
-	                    <span>11.05.2015</span>
-	                </div>
-	            </div>
-	        </li> 
-		
-	        <li>
-	            
-	            	<a href="http://en.cafesoquendo.com/noticias/show/cafes-oquendo-en-sial-china" title=""><img alt="Cafés Oquendo at Sial China" src="/github/201506cafessite/Public/Home/img/c64x53_fullsizerender.jpg" title="Cafés Oquendo at Sial China"></a>
-				
-	            <div class="con-imagen">
-	                <h3><a href="http://en.cafesoquendo.com/noticias/show/cafes-oquendo-en-sial-china" title="Cafés Oquendo at Sial China">Cafés Oquendo at Sial China</a></h3>
-	                <div class="fecha">
-	                    <span>06.05.2015</span>
-	                </div>
-	            </div>
-	        </li> 
-		
-	</ul>
+											<ul>
+											<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+									            	<a href="<?php echo U('Home/Index/details',array('id'=>$vo['id']));?>" title="点击详情"><img alt="" src="<?php echo ($vo["main_img"]); ?>" title="<?php echo ($vo["post_title"]); ?>"></a>
+												
+									            <div class="con-imagen">
+									                <h3><a href="<?php echo U('Home/Index/details',array('id'=>$vo['id']));?>" title="<?php echo ($vo["post_title"]); ?>"><?php echo ($vo["post_title"]); ?></a></h3>
+									                <div class="fecha">
+									                    <span><?php echo (date('Y-m-d H:i:s',$vo["post_date"])); ?></span>
+									                </div>
+									            </div>
+									        </li><?php endforeach; endif; else: echo "" ;endif; ?>
+									</ul>
                                                             <div class="ver-todos">
                                                             <div class="content-ver-todos">
                   <a class="q1" title="Go to Noticias" href="http://en.cafesoquendo.com/noticias">全部</a> 
