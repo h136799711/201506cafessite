@@ -90,19 +90,16 @@
                             </div>
                   <div id="idiomas">
                                       	<ul id="menu-desplegable">
-	    <li>
-	    	<a href="http://en.cafesoquendo.com/" title="English"><img alt="English" src="__PUBLIC__/Home/img/en.png"><span>English</span></a>
-			
-		        <div class="referencia">
-		            <ul class="secundario">
+	     <li>
+							    	<a href="{:U('Home/Index/index')}" title="English"><img alt="English" src="__PUBLIC__/Home/img/en.png"><span>English</span></a>
+									
+								        <div class="referencia">
+								            <ul class="secundario">
 						
 							
 				                <li>
-									<a href="http://www.cafesoquendo.com/" title="Español"><img alt="Español" src="__PUBLIC__/Home/img/es.png">Español</a>
+									<a href="{:U('Home/Index/index')}" title="Español"><img alt="Español" src="__PUBLIC__/Home/img/es.png">Español</a>
 				                </li>
-							
-						
-							
 						
 		            </ul>
 		        </div>
@@ -180,15 +177,15 @@
         		
    							 </li>
            					 <li>
-                            <a href="http://en.cafesoquendo.com/formcontacts/show/work-with-us" title="Work with us"><span>和我们一起工作</span></a>
+                            <a href="{:U('Home/Index/contact')}" title="Work with us"><span>和我们一起工作</span></a>
         		
    						 	</li>
            					 <li>
-                            <a href="http://en.cafesoquendo.com/noticias" title="News"><span>新闻</span></a>
+                            <a href="{:U('Home/Index/news')}" title="News"><span>新闻</span></a>
         		
     						</li>
            					 <li class="ultimo ">
-                            <a href="http://en.cafesoquendo.com/pages/index/quality" title="Quality"><span>质量</span></a>
+                            <a href="{:U('Home/Index/quality')}" title="Quality"><span>质量</span></a>
         		
    							 </li>
 
@@ -263,8 +260,8 @@
 	<div class="centrar-contenido">
 	    <div class="titulo-suscripcion">
 	    	<img src="__PUBLIC__/Home/img/bg_newsletter_pie.png" alt="Suscríbete a nuestra newsletter"> 
-	        <h2>Subscribe to our newsletter</h2>
-			<span>We will keep you updated with all our news and projects</span>
+	        <h2>订阅我们</h2>
+			<span>我们会将所有动态第一时间通知您</span>
 	    </div>
 	    <div class="formulario-newsletter">
 			<form method="post" action="http://capsulasoquendo.us6.list-manage.com/subscribe/post?u=b742572b396b6cef0c9714299&id=333ff8774f" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
@@ -276,7 +273,7 @@
 	                <div class="aceptaprivacidad">
 	                	<input name="suscription[legal_check]" type="hidden" value="0"><input class="avisoLegal" id="aviso_legal_pie" name="suscription[legal_check]" type="checkbox" value="1">
 	                    <label for="aviso_legal_pie" class="automatico">
-	                        我接受 <a href=""> 隐私政策</a>
+	                       	                  		     我接受<a href="{:U('Home/Index/yscl')}">隐私策略</a>
 	                    </label>
 	                </div>
 	            </div>
@@ -287,50 +284,41 @@
 
                     </div>
 
-                    <div id="footer">
+                   <div id="footer">
         
                         <div class="navigator">
-                            <a href="http://en.cafesoquendo.com/pages/index/business-presentation#content" title="Ir a Contenido">
+                            <a href="http://en.cafesoquendo.com/#content" title="Ir a Contenido">
                                 <img alt="arriba" src="__PUBLIC__/Home/img/arriba.png">Ir al contenido
-                            </a> <a href="http://en.cafesoquendo.com/pages/index/business-presentation#menu" title="Ir a menú">
+                            </a> <a href="http://en.cafesoquendo.com/#menu" title="Ir a menú">
                                 <img alt="arriba" src="__PUBLIC__/Home/img/arriba.png">Ir al menú
                             </a>
-                        </div>
 
+                        </div>
         
                         <div class="centrar-contenido"> 
                             <div class="primera">
-                            	      	
-                  <p><span style="FONT-WEIGHT: bold">2011 © Cafés Oquendo</span> All rights reserved<br>Polígono de Silvota - Calle Peña Salón, parcela 46 - 33192 Llanera Asturias </p>
-<p>T: (+34) 985 260 046/047 - F: (+34) 985 263 122 - E-mail: disfruta@cafesoquendo.com </p>
-              
+                  <p><span style="FONT-WEIGHT: bold">2014 © 杭州博也科技版权所有</span>  </p>
                             </div>
+
                            
                             <div class="tercera">
-
                             	<div class="texto-superior">
                                 	<div class="enlaces-editables">
-                                		      	
-                  <a title="Go to Legal Text" href="http://en.cafesoquendo.com/pages/index/aviso-legal-2">Legal Text</a> <a title="Go to Site map" href="http://en.cafesoquendo.com/mapa_web">Site map</a> <a title="Go to Contact" href="http://en.cafesoquendo.com/formcontacts/show/contact">Contact</a> 
               
+                  <a title="Go to Legal Text" href="http://en.cafesoquendo.com/pages/index/aviso-legal-2">法律文本</a> <a title="Go to Site map" href="{:U('Home/Index/map')}">站点地图</a> <a title="Go to Contact" href="{:U('Home/Index/contact')}">联系我们</a> 
                                     </div>
                                      <div class="facebook">
-                                     	      	
                   <a title="Go to www.facebook.com/CafesOquendo" href="http://www.facebook.com/CafesOquendo">Oquendo facebook</a> 
-              
                                     </div>
                                 </div>
                                <div class="texto-inferior">
-                               	      	
-                  <a title="Go to www.vorago.es" href="http://www.vorago.es/">Designed by Vorago</a> 
-              
-  
+                  <a title="博也科技" href="http://www.vorago.es/">杭州博也科技提供技术支持</a> 
                                </div>
                                 
                             </div>
                         </div>
                         
-                    </div> <!--footer-->
+                    </div><!--footer-->
 
         
         		</div>

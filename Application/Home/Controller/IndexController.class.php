@@ -117,6 +117,16 @@ class IndexController extends HomeController {
 	public function faqs(){
 		$this->display();
 	}
+	
+	public function yscl(){
+		$this->display();
+	}
+	public function map(){
+		$this->display();
+	}
+	public function quality(){
+		$this->display();
+	}
 //	private $allow_domain = array(
 //		"localhost",
 //		"127.0.0.1",

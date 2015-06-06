@@ -67,15 +67,16 @@
                          
                             <div id="idiomas">
                                 <ul id="menu-desplegable">
-	  							  <li>
-	    							<a href="/github/201506cafessite/Public/Home/img/Home.html" title="English"><img alt="English" src="/github/201506cafessite/Public/Home/img/en.png"><span>English</span></a>
-			
-		       						 <div class="referencia">
-		           						 <ul class="secundario">
+	  							    <li>
+							    	<a href="<?php echo U('Home/Index/index');?>" title="English"><img alt="English" src="/github/201506cafessite/Public/Home/img/en.png"><span>English</span></a>
+									
+								        <div class="referencia">
+								            <ul class="secundario">
 						
-				               				 <li>
-												<a href="http://www.cafesoquendo.com/" title="Español"><img alt="Español" src="/github/201506cafessite/Public/Home/img/es.png">Español</a>
-				               				 </li>
+							
+				                <li>
+									<a href="<?php echo U('Home/Index/index');?>" title="Español"><img alt="Español" src="/github/201506cafessite/Public/Home/img/es.png">Español</a>
+				                </li>
 							
 		         					   </ul>
 		        					</div>
@@ -287,7 +288,7 @@
 	                <div class="aceptaprivacidad">
 	                	<input name="suscription[legal_check]" type="hidden" value="0"><input class="avisoLegal" id="aviso_legal_pie" name="suscription[legal_check]" type="checkbox" value="1">
 	                    <label for="aviso_legal_pie" class="automatico">
-	                  		     我接受<a href="#">隐私策略</a>
+	                  		     我接受<a href="<?php echo U('Home/Index/yscl');?>">隐私策略</a>
 	                    </label>
 	                </div>
 	            </div>
@@ -310,8 +311,7 @@
         
                         <div class="centrar-contenido"> 
                             <div class="primera">
-                  <p><span style="FONT-WEIGHT: bold">2011 © Cafés Oquendo</span> All rights reserved<br>Polígono de Silvota - Calle Peña Salón, parcela 46 - 33192 Llanera Asturias </p>
-<p>T: (+34) 985 260 046/047 - F: (+34) 985 263 122 - E-mail: disfruta@cafesoquendo.com </p>
+                  <p><span style="FONT-WEIGHT: bold">2014 © 杭州博也科技版权所有</span>  </p>
                             </div>
 
                            
@@ -319,14 +319,14 @@
                             	<div class="texto-superior">
                                 	<div class="enlaces-editables">
               
-                  <a title="Go to Legal Text" href="http://en.cafesoquendo.com/pages/index/aviso-legal-2">Legal Text</a> <a title="Go to Site map" href="http://en.cafesoquendo.com/mapa_web">Site map</a> <a title="Go to Contact" href="http://en.cafesoquendo.com/formcontacts/show/contact">Contact</a> 
+                  <a title="Go to Legal Text" href="http://en.cafesoquendo.com/pages/index/aviso-legal-2">法律文本</a> <a title="Go to Site map" href="<?php echo U('Home/Index/map');?>">站点地图</a> <a title="Go to Contact" href="<?php echo U('Home/Index/contact');?>">联系我们</a> 
                                     </div>
                                      <div class="facebook">
                   <a title="Go to www.facebook.com/CafesOquendo" href="http://www.facebook.com/CafesOquendo">Oquendo facebook</a> 
                                     </div>
                                 </div>
                                <div class="texto-inferior">
-                  <a title="Go to www.vorago.es" href="http://www.vorago.es/">Designed by Vorago</a> 
+                  <a title="博也科技" href="http://www.vorago.es/">杭州博也科技提供技术支持</a> 
                                </div>
                                 
                             </div>
@@ -346,7 +346,7 @@
                 Like most websites, we use cookies.
                 By continuing to browse the site you are agreeing to our use of cookies. Find out more <a href="http://en.cafesoquendo.com/pages/index/cookies-policy" target="_blank">here</a>.
                 <div class="boton-ver-mas">
-                        <a href="http://en.cafesoquendo.com/#" onclick="hide_politica_cookies(); return false;" title="Accept"><aceptar>Accept</aceptar></a>
+                        <a href="www.itboye.com" onclick="hide_politica_cookies(); return false;" title="Accept"><aceptar>博也</aceptar></a>
                 </div>
         </div>
 </div></div>
