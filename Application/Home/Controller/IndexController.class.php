@@ -14,354 +14,156 @@ use Think\Storage;
 class IndexController extends HomeController {
 	
 	public function index(){
-		$where = " post_category=22";
-		$list=M('post')-> where($where)->order('id desc')->limit(3)->select();
+		
+		$where['post_category'] = getDatatree("NEWS_NOTICE");
+		
+		$list = D('Post')-> where($where)->order('id desc')->limit(3)->select();
+		
 		$this->assign('list',$list);
-//		dump($list);
+		$position = getDatatree("BANNERS_POS_INDEX");
+		$page = array("curpage"=>0,'size'=>5);
+		$order= " sort desc ";
+		$banners = apiCall("BoyeBase/Banners/queryWithPosition", array($position,$page,$order));
+		
+		if(!$banners['status']){
+			$this->error($banners['info']);
+		}
+		
+		$this->assign("banners",$banners['info']);
 		$this->display();
 	}
 	
 	public function distributor(){
+		
 		$this->display();
 	}
 	
+	/**
+	 * 商品
+	 */
 	public function products(){
+		//获取产品类型
+		$map = array();
 		
-		$type=I('get.type',"");
-		$text=I('post.text',"");
-		$typee=I('post.typee',"");
-//		dump($text);
-//		dump($typee);
-		if($type!=""){
-			$where="parentid=33";
-			$where1="post_category='$type'";
-//			dump($where);
-			$types=M('datatree','common_')->where($where)->select();
-			$goods=M('post')->where($where1)->select();
-//			
-//			dump($types);
-//			dump($goods);
-			$this->assign('types',$types);
-			$this->assign('goods',$goods);
-			$this->display();
-		}else if($text!="" || $typee!=""){
-			if($typee=="all"){
-				$where="parentid=33";
-				$types=M('datatree','common_')->where($where)->select();
-				$we="post_title like '%$text%'";
-				
-				$goods=M('post')->where($we)->select();
-				
-				$this->assign('types',$types);
-				$this->assign('goods',$goods);
-	//			dump($types);
-	//			dump($goods);
-				$this->display();
-			}else{
-				$where="parentid=33";
-				$types=M('datatree','common_')->where($where)->select();
-				$we="post_title like '%$text%' and  post_category='$typee'";
-//				dump($we);
-				$goods=M('post')->where($we)->select();
-				
-				$this->assign('types',$types);
-				$this->assign('goods',$goods);
-	//			dump($types);
-	//			dump($goods);
-				$this->display();
-			}
-		}else if($type==""){
-			
-			$where="parentid=33";
-			$types=M('datatree','common_')->where($where)->select();
-			$goods=M('post')->select();
-			
-			$this->assign('types',$types);
-			$this->assign('goods',$goods);
-//			dump($types);
-//			dump($goods);
-			$this->display();
+		$map['parentid'] = getDatatree("PRODUCT_CATE");
 		
+		$type_list = apiCall("Admin/Datatree/queryNoPaging", array($map,"sort desc"));
+		
+		if(!$type_list['status']){
+			$this->error($type_list['info']);
 		}
 		
+		$this->assign("type_list",$type_list['info']);
+		$all_type = array();
+		
+		foreach($type_list['info'] as $vo){
+			array_push($all_type,$vo['id']);
+		}
+		
+		//获取产品列表
+		$type =  I('get.type',-1);
+		$map = array();
+		$params = array();
+		
+		if($type === -1){
+			$map['post_category'] = array('in',$all_type);
+		}else{
+			$map['post_category'] = $type;
+			$params['type'] = $type;
+		}
+		$order=  " post_date desc ";
+		$page = array('curpage'=>I('get.p',0),'size'=>9);
+		$result = apiCall("Admin/Post/query", array($map,$page,$order,$params));	
+		
+		if(!$result['status']){
+			$this->error($result['info']);
+		}
+		$this->assign("type",$type);
+		$this->assign("list",$result['info']['list']);
+		$this->assign("show",$result['info']['show']);
+		$this->display();
 	}
+	
 	
 	public function details(){
 		$id=I('get.id');
-		$where="parentid=33";
-		$types=M('datatree','common_')->where($where)->select();			
-		$this->assign('types',$types);
-		$result=M('post')->where('id='.$id)->select();
-		$list=M('post')->where('id!='.$id)->order('id desc')->limit(3)->select();
-//		dump($result);
-//		dump($list);
-		$this->assign("good",$result);
-		$this->assign('goods',$list);
+		$where["id"] = $id;
+		
+		$result = apiCall("Admin/Post/getInfo",array($where));
+		if(!$result['status']){
+			$this->error($result['info']);
+		}
+		
+		$this->assign("entity",$result['info']);
+		$map = array();
+		
+		$map['post_category'] = $result['info']['post_category'];
+		$map['id'] = array("neq",$id);
+		$order=  " rand()  ";
+		$page = array('curpage'=>0,'size'=>3);
+		$result = apiCall("Admin/Post/query", array($map,$page,$order));	
+		
+		if(!$result['status']){
+			$this->error($result['info']);
+		}
+		$this->assign("goods",$result['info']['list']);
 		$this->display();
 	}
+	
 	
 	public function community(){
+		
+		$this->assign("meta_title","咖啡知识");
 		$this->display();
 	}
 	
-	public function business(){
+	public function aboutus(){
+		$this->assign("meta_title","关于我们");
 		$this->display();
 	}
 	
 	public function news(){
+		$this->assign("meta_title","企业新闻");
 		$list=M('post')->where('post_category=22')->order('id desc')->select();
 		$this->assign('list',$list);
-//		dump($list);
 		$this->display();
 	}
-	public function faqs(){
-		$this->display();
-	}
-//	private $allow_domain = array(
-//		"localhost",
-//		"127.0.0.1",
-//		"192.168.0.102",
-//		"20150505.itboye.com",
-//	);
-//	
-//	/**
-//	 * 跨域资源访问控制
-//	 */
-//	public function asset(){
-//		$referer = I('server.HTTP_REFERER','');
-//		//TODO: 判断path不能以.或/开头
-//		$path = I("get.path",'');
-//		//TODO: 去数据库中查询$referer 是否被允许访问
-////		dump($referer);
-//		$str = preg_replace("/http:\/\/|https:\/\//u","",$referer);  //去掉http://
-////		dump($str);
-//		$strdomain = explode("/",$str);               // 以“/”分开成数组
-//		$domain    = $strdomain[0];
-////		dump($domain);
-//		if(!in_array($domain, $this->allow_domain)){
-//			echo "NOT ALLOWED!";
-//			exit();
-//		}
-//		
-//		header("Access-Control-Allow-Origin:".$domain);
-////		Storage::read("./Public/".$path);
-//		$asset = Storage::read("./Public/".$path);
-//		echo $asset;
-//		exit();
-//	}
 	
-//	
-//	/**
-//	 * 注销/退出系统
-//	 */
-//	public function logout(){
-//		session('[destroy]');
-//		$this->success("退出成功!",U("Home/Index/index"));
-//	}
-//	
-//	/**
-//	 * 登录地址
-//	 */
-//	public function login(){
-//		if(IS_GET){
-//			$this->theme($this->theme)->display();
-//		}else{
-//			//检测用户
-//			$verify = I('post.verify', '', 'trim');
-//			if (!$this -> check_verify($verify, 1)) {
-//				$this -> error("验证码错误!");
-//			}
-//			
-//			$username = I('post.username', '', 'trim');
-//			$password = I('post.password', '', 'trim');
-//			
-//			$result = apiCall('Uclient/User/login', array('username' => $username, 'password' => $password));
-////			dump($result);
-//			//调用成功
-//			if ($result['status']) {
-//				$uid = $result['info'];
-//				$userinfo = array();
-//				$result = apiCall('Uclient/User/getInfo', array($uid));
-//				
-//				if ($result['status'] && is_array($result['info'])) {
-//					
-//					$this->setUserinfo($result['info']);
-//					
-//					
-//					$this -> success("登录成功！", U('Home/TestSys/index'));
-//
-//				} else {
-//					LogRecord($result['info'], __FILE__.__LINE__);
-//					$this -> error("登录失败!");
-//				}
-//
-//			} else {
-//				$this -> error($result['info']);
-//			}
-//		}
-//	}
-//	
-//  public function index(){
-//  	$map = array('parentid'=>getDatatree("POST_CATEGORY"));
-//		$cates = apiCall("Home/Datatree/queryNoPaging",array($map));
-//		if(!$cates['status']){
-//			$this->error($cates['info']);
-//		}
-//		$com=M('Post');
-//		$list = $com->select();
-//		$this->assign('list',$list);
-//		$user=M('member','common_');
-//		$users=$user->select();		
-//		
-//		$this->assign("users",$users);
-//		$this->assign("cates",$cates['info']);
-//		$this->display();
-//	} 
-
-//	public function cate(){
-//		$cateid = I('get.cateid',0);
-//		$map = array('post_category'=>$cateid,'post_status'=>'publish');
-//		
-//		$result = apiCall("Home/Datatree/getInfo", array(array('id'=>$cateid)));
-//		
-//		if(!$result['status']){
-//			$this->error($result['info']);
-//		}
-//		
-//		if(is_null($result['info'])){
-//			$this->error("该分类不存在!");
-//		}
-//		
-//		$this->assign("title",$result['info']['name']);
-//		$page = array('curpage'=>I('get.p',0),'size'=>6);
-//		
-//		$result = apiCall("Home/Post/query", array($map,$page));
-////		dump($result);
-//		if(!$result['status']){
-//			$this->error($result['info']);
-//		}
-//		$map = array('parentid'=>getDatatree("POST_CATEGORY"));
-//		$cates = apiCall("Home/Datatree/queryNoPaging",array($map));
-//		if(!$cates['status']){
-//			$this->error($cates['info']);
-//		}
-//		$user=M('member','common_');
-//		$users=$user->select();		
-//		$this->assign("cateid",$cateid);
-//		$this->assign("users",$users);
-//		$this->assign("cates",$cates['info']);
-//		
-//		$this->assign("list",$result['info']['list']);
-//		$this->assign("show",$result['info']['show']);
-//		$this->theme($this->theme)->display("list");
-//		
-//	}
-//	
-//	public function view(){
-//		$cateid = I('get.cateid',0);
-//		$id = I('get.id',0);
-//		$map = array('id'=>$id);
-//		$result = apiCall("Home/Post/getInfo", array($map));
-//		if(!$result['status']){
-//			$this->error($result['info']);
-//		}
-//		$map = array('parentid'=>getDatatree("POST_CATEGORY"));
-//		$cates = apiCall("Home/Datatree/queryNoPaging",array($map));
-//		if(!$cates['status']){
-//			$this->error($cates['info']);
-//		}
-//		$this->assign("cateid",$cateid);
-//		$this->assign("cates",$cates['info']);
-//		$com=M('Post');
-//		$list = $com->where ('id='.$id)->select();
-//		$this->assign('lists',$list);
-//		$content = htmlspecialchars_decode($result['info']['post_content']);
-//		$user=M('member','common_');
-//		$users=$user->select();		
-//		
-//		$this->assign("users",$users);
-//		$title = $result['info']['post_title'];
-//		$this->assign("post",$result['info']);
-//		$this->assign("title",$title);
-//		$this->assign("content",$content);
-//		
-//		$this->theme($this->theme)->display();
-//	}
-//	
-//	/*
-//	 * 搜索
-//	 * */
-//	public function search (){
-//		$text=I('post.text');
-//		$where ="post_title like '%$text%'";
-////		dump($where);
-//		$list=M('post')->where($where)->select();
-//		
-//		$page = array('curpage'=>I('get.p',0),'size'=>6);
-//		
-//		$list = apiCall("Home/Post/query", array($where,$page));
-////		dump($list);
-//		$map = array('parentid'=>getDatatree("POST_CATEGORY"));
-//		$cates = apiCall("Home/Datatree/queryNoPaging",array($map));
-//		if(!$cates['status']){
-//			$this->error($cates['info']);
-//		}
-////		$this->assign("list",$list['info']['list']);
-//$date=array();
-//		$this->assign("list",$date);
-//		$this->assign("cates",$cates['info']);
-//		$this->display();
-//	}	
-//	
-//	
-//	/**
-//	 * 校验验证码是否正确
-//	 * @return Boolean
-//	 */
-//	public function check_verify($code, $id = 1) {
-//
-//		$config = array('fontSize' => 22, // 验证码字体大小
-//		'length' => 4, // 验证码位数
-//		'useNoise' => false, // 关闭验证码杂点
-//		'useCurve'=>false,//
-//		);
-//		$Verify = new \Think\Verify($config);
-//		return $Verify -> check($code, $id);
-//	}
-//
-//	/**
-//	 * 获取验证码
-//	 */
-//	public function verify() {
-//		$config = array('fontSize' => 22, // 验证码字体大小
-//		'length' => 4, // 验证码位数
-//		'useNoise' => false, // 关闭验证码杂点
-//		'useCurve'=>false,//
-//		'imageW' => '240', 'imageH' => '40');
-//		$Verify = new \Think\Verify($config);
-//		$Verify -> entry(1);
-//	}
-//	
-//	
-//	private function setUserinfo($userinfo){
-//		
-//		$result = apiCall("Admin/Member/getInfo", array(array('uid'=>$userinfo['id'])));
-//		
-//		if($result['status'] && is_array($result['info'])){
-//			foreach($result['info'] as $key=>$vo){
-//				$userinfo['member_'.$key] = $vo;
-//			}
-////			$userinfo = array_merge($userinfo,$result['info']);	
-//		}
-//		
-//		//存入 session
-//		session('global_user_sign', data_auth_sign($userinfo));
-//		session('global_user', $userinfo);
-//		session("uid", $userinfo['id']);
-//		//登录模块
-//		session("LOGIN_MOD", MODULE_NAME);
-//				
-//	}
+	
+	public function faqs(){
+		$this->assign("meta_title","常见问题解答");
+		$this->display();
+	}
+	
+	
+	public function contact(){
+		if(IS_GET){
+			$this->assign("meta_title","联系我们");
+			$this->display();
+		}else{
+			
+			$formcontact = I("post.formcontact","");
+			$entity = array(
+				'email'=>$formcontact['email'],
+				'IP'=> ip2long(get_client_ip()),
+				'name'=>$formcontact['surname'],
+				'text'=>$formcontact['comments'],
+				'tel'=>$formcontact['phone'],
+				'create_time'=>time(),
+				
+			);
+	
+			$result = apiCall("BoyeBase/Suggest/add",array($entity));
+			
+			if(!$result['status']){
+				
+				$this->error($result['info']);
+			}
+			
+			$this->success("成功提交信息!");
+			
+		}
+	}
 	
 }
 

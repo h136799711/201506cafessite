@@ -15,15 +15,15 @@ return array(
 	
 	//唯一管理员用户配置	
    'USER_ADMINISTRATOR' => 1, //管理员用户ID
-   'MODULE_DENY_LIST'      =>  array('Common','Runtime','Ucenter','Uclient'),
+   'MODULE_DENY_LIST'      =>  array('Common','Runtime','Ucenter','Uclient','SysBase'),
    'URL_CASE_INSENSITIVE' =>false,
 	// 程序版本
 	// DONE:移到数据库中
 	// 显示运行时间
-	'SHOW_RUN_TIME'=>true,
+	'SHOW_RUN_TIME'=>false,
 //	'SHOW_ADV_TIME'=>true,
 	// 显示数据库操作次数
-	'SHOW_DB_TIMES'=>true,
+	'SHOW_DB_TIMES'=>false,
 	// 显示操作缓存次数
 //	'SHOW_CACHE_TIMES'=>true,
 	// 显示使用内存

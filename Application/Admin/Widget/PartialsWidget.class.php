@@ -29,7 +29,7 @@ class PartialsWidget extends AdminController{
 	/**
 	 * 数据字典
 	 */
-	public function datatree($parent,$hasChildren=false,$checkedID=0){
+	public function datatree($parent,$hasChildren=false,$checkedID=0,$showHiddenValue=0){
 		if($hasChildren){
 			$map['parents'] = array('like','%'.$parent.',%');
 			$result = apiCall('Admin/Datatree/queryNoPaging',array($map));
@@ -44,6 +44,7 @@ class PartialsWidget extends AdminController{
 			}
 		}
 		if($result['status']){
+			$this->assign("showHiddenValue",$showHiddenValue);
 			$this->assign("checkedID",$checkedID);
 			$this->assign("list",$list);
 			echo $this->fetch("Widget/datatree");

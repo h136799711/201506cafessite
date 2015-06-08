@@ -12,7 +12,21 @@ class PostController extends  AdminController{
 	
 	public function index(){
 		$name = I('name','');
+		$cate_list = apiCall("Admin/Datatree/queryNoPaging", array(array("parentid"=>getDatatree("POST_CATEGORY"))));
+		if(!$cate_list['status']){
+			$this->error($cate_list['info']);
+		}
+		if(is_null($cate_list['info'])){
+			$this->error("请先添加相关产品分类!",U("Admin/Datatree/index"));
+		}
 		
+		$map = array();
+		$cate_ids = array();
+		foreach($cate_list['info'] as $vo){
+			array_push($cate_ids,$vo['id']);
+		}
+		
+		$map['post_category'] = array('in',$cate_ids);
 		
 		$map = array();
 		

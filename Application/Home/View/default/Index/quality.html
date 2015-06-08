@@ -1,0 +1,141 @@
+<extend name="template/base_index" />
+
+<block name="area_header">
+	<style type="text/css">
+		#content #menu-interior #menu-secundario{
+			  background: url(__IMG__/bg_menu_top.gif) no-repeat left top;
+		}
+	</style>
+</block>
+
+<block name="area_body">
+	<div id="all">
+		<div id="general">
+
+			<div class="content-all">
+				<div class="contenedor-content-all">
+
+					<div id="header">
+
+						<include file="default/partials/header" active="2" />
+
+					</div>
+
+					<div class="contenedor-interior">
+						<div class="contenedor-content">
+							<div class="fondo-abajo">
+								<div class="fondo-arriba">
+									<div class="centrar-contenido">
+										<div id="content">
+											<div class="con-menu">
+												<div id="menu-interior">
+
+													<div id="menu-secundario">
+														<ul>
+															<li class="primero sel">
+																<a href="{:U('Home/Index/aboutus')}" title="Business presentation"><span>公司产品</span></a>
+															</li>
+															<li>
+																<a href="{:U('Home/Index/distributor')}" title="Distribution and delegations"><span>总部和供应商</span></a>
+
+															</li>
+															<!--<li>
+																<a href="http://en.cafesoquendo.com/formcontacts/show/work-with-us" title="Work with us"><span>和我们一起工作</span></a>
+
+															</li>-->
+															<li>
+																<a href="{:U('Home/Index/news')}" title="News"><span>新闻</span></a>
+															</li>
+
+															<li class="ultimo sel">
+																<a href="{:U('Home/Index/quality')}" title="Quality"><span>质量</span></a>
+															</li>
+
+														</ul>
+													</div>
+
+												</div>
+
+												<div id="content-informacion" class="block">
+
+													<div class="migas">
+														<p>
+															<span>你正在浏览：</span>
+															<a href="" title="Our company">公司简介</a> &gt; 品质保证
+														</p>
+													</div>
+													<h1><span class="titulo">品质保证</span></h1>
+
+													<div class="fondo-total block">
+														<div class="content-fondo-total">
+															<div class="esq-top-izq">
+
+																<div class="esq-top-der">
+																	<div class="esq-bottom-der">
+																		<div class="esq-bottom-izq">
+
+																			<div class="block contenido-izquierda">
+																				我们维持最高的质量标准的要求，不仅在西班牙，而且在国际上一直广受好评的。
+																				<br>
+																				我们的产品和生产过程的质量把控都有不同的认证单位进行认证。
+																				<br>
+																				<div style="text-align: center;">
+																					<img src="__IMG__/certificado_iso_9001.jpg" alt="CALIDAD ISO ENGLISH" class="nicedit_sin-alinear" width="500" height="700">
+																					<br>
+																				</div>
+																				<br>
+																				<div style="text-align: center;">
+																					<img src="__IMG__/certificado_iso_9002.jpg" alt="IFO ENGLISH" class="nicedit_sin-alinear" width="500" height="700">
+																					<br>
+																				</div>
+																				<br>
+																				<br>
+																				<div style="text-align: center;"></div>
+																				<br>
+
+																			</div>
+																			<!--contenido-izquierda-->
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+
+													<!---fondo-total-->
+
+												</div>
+											</div>
+										</div>
+										<!--content-->
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--contenedor-interior-->
+					
+					<div class="newsletter-pie">
+						<include file="default/partials/newsletter" />
+					</div>
+
+					<div id="footer">
+
+						<include file="default/partials/footer" />
+
+					</div>
+					<!--footer-->
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</block>
+
+<block name="area_footer">
+
+</block>

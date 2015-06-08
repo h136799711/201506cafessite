@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh">
+
+<html class="wf-trajanpro1trajanpro2-n4-active wf-trajanpro1trajanpro2-n7-active wf-goudybookletter19111goudybookletter19112-n4-active wf-active">
 
 	<head>
-		<meta charset="utf-8">
-		<title>{:C('WEBSITE_TITLE')}</title>
-		<meta name="keywords" content="{$seo.keywords|default=" "}" />
-		<meta name="description" content="{$seo.description|default=" "}" />
-		<meta name="author" content="{$cfg.owner|default=" ITBOYE "}" />
-	    <meta content="yes" name="apple-mobile-web-app-capable" />
-	    <meta content="yes" name="apple-touch-fullscreen" />
-	    <meta content="telephone=no,email=no" name="format-detection" />
-	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+
+		<link href="__PUBLIC__/Home/css/cursor.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Home/css/defaults.css" media="screen, print" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Home/css/public.css" media="screen" rel="stylesheet" type="text/css">
+		<!--[if IE 6]>
+<link href="/stylesheets/ie.css?1423072512" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+		<!--[if IE 7]>
+<link href="/stylesheets/ie7.css?1423072512" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+		<!--[if IE 8]>
+<link href="/stylesheets/ie8.css?1423072512" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+		<link href="__PUBLIC__/Home/css/gmaps.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Home/css/print.css" media="print" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Home/css/fixitboye.css?v=__APP_VERSION__" rel="stylesheet" type="text/css">
 		
-		<!-- 系统基本样式 -->
-		<link type="text/css" rel="stylesheet" href="__CDN__/amazeui/2.3.0/css/amazeui.min.css" />
+		<script src="__CDN__/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+		<script src="__PUBLIC__/Home/js/jquery-ui.js" type="text/javascript"></script>
+		<script src="__PUBLIC__/Home/js/jquery.simple.tree.js" type="text/javascript"></script>
 		
-		<link type="text/css" rel="stylesheet" href="__CSS__/home.css?v=__APP_VERSION__" />
-		
-		<!-- 脚本 -->
-		<script type="text/javascript" src="__CDN__/jquery/2.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="__CDN__/amazeui/2.3.0/js/amazeui.min.js"></script>
-		<script type="text/javascript" src="__CDN__/common/mobile.js?v=__APP_VERSION__"></script>
-		
+		<title>{$meta_title}</title>
+		<meta name="resource-type" content="document">
+		<meta name="robots" content="all">
+		<meta name="revisit-after" content="30 days">
+	
 
 		<block name="area_header">
 			<!--顶部区域 -->
@@ -34,25 +45,10 @@
 		<block name="area_body">
 			<!--内容区域 -->
 		</block>
+		
 		<block name="area_footer">
 			<!--底部区域 -->
 		</block>
-		
-		
-		<footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
-			<div class="am-footer-switch">
-			</div>
-			<div class="am-footer-miscs ">
-				<p>{__RUNTIME__}</p>
-			</div>
-		</footer>
-		
-		<div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
-		  <a href="#top" title="回到顶部">
-		    <span class="am-gotop-title">顶部</span>
-		    <i class="am-gotop-icon am-icon-chevron-up"></i>
-		  </a>
-		</div>
 		
 	</body>
 

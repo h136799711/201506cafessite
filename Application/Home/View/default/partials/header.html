@@ -1,38 +1,89 @@
-<div class="admin-header">
+<assign name="active" value="[active]" />
+
+<div class="centrar-contenido clearfix">
+	<div class="logo">
+		<a href="{:U('Home/Index/index')}" accesskey="0" class="logotipo" title="Cafés Oquendo - Return to home page">
+			<img alt="Cafés Oquendo - Logo" src="__PUBLIC__/Home/img/oquendo.png">
+		</a>
+	</div>
+	<div id="idiomas">
+		<ul id="menu-desplegable">
+
+			<li>
+				<a href="{:C('SITE_URL')}" title="English">
+					<img alt="中文" src="__PUBLIC__/Home/img/zh.png"><span>中文</span>
+				</a>
+
+				<div class="referencia">
+					<ul class="secundario">
+
+						<li>
+							<a href="http://en.cafesoquendo.com/" title="English">
+								<img alt="English" src="__PUBLIC__/Home/img/en.png"><span>English</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.cafesoquendo.com/" title="Español">
+								<img alt="Español" src="__PUBLIC__/Home/img/es.png">Español</a>
+						</li>
+
+					</ul>
+				</div>
+
+			</li>
+		</ul>
+
+	</div>
+
+	<div id="utils">
+		<a title="" href="{:U('Home/Index/index')}">首页</a> <a title="Go to Distributors" href="{:U('Home/Index/distributor')}">经销商</a> <a href="{:U('Home/Index/contact')}" title="联系我们">联系我们</a>
+		<a href="http://www.facebook.com/Cafesoquendo" title="Go to www.facebook.com/Cafesoquendo" rel="external">
+			<img src="__PUBLIC__/Home/img/16x16_facebook.png" alt="Facebook Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16" />
+		</a>
+		<a href="http://www.twitter.com/CafesOquendo" title="Go to www.twitter.com/CafesOquendo" rel="external">
+			<img src="__PUBLIC__/Home/img/16x16_twitter.png" alt="Twitter Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16" />
+		</a>
+		<a href="http://www.pinterest.com/cafesoquendo/" title="Go to http://www.pinterest.com/cafesoquendo/" rel="external">
+			<img src="__PUBLIC__/Home/img/16x16_pinterest.png" alt="Pinterest Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16" />
+		</a>
+		<a href="https://plus.google.com/photos/117079850138242504271/albums?banner=pwa" title="Go to https://plus.google.com/photos/117079850138242504271/albums?banner=pwa" rel="external">
+			<img src="__PUBLIC__/Home/img/16x16_picasa.png" alt="Picasa Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16" />
+		</a>
+	</div>
 	
-	<header class="am-topbar">
-  <h1 class="am-topbar-brand">
-    <a href="{:U('Home/TestSys/index')}">测评系统</a>
-  </h1>
+	<div id="menu" class="menu-ingles">
+		
+		<div id="menu-principal">
+			
+			<ul id="nav">
+				<li <eq name="active" value="1">class="sel"</eq> >
+					<a href="{:U('Home/Index/index')}" title="首页"><span>首页</span></a>
+				</li>
+				
+				<li <eq name="active" value="2">class="sel"</eq> >
+					<a href="{:U('Home/Index/aboutus')}" title="我们的产品"><span>公司简介</span></a>
+				</li>
+				
+				<li <eq name="active" value="3">class="sel"</eq> >
+					<a href="{:U('Home/Index/products')}" title="产品展示"><span>产品展示</span></a>
+				</li>
+				
+				<li <eq name="active" value="4">class="sel"</eq> >
+					<a href="{:U('Home/Index/community')}" title="咖啡知识"><span>咖啡知识</span></a>
+				</li>
+				
+				<li <eq name="active" value="5">class="sel"</eq> >
+					<a href="{:U('Home/Index/news')}" title="新闻"><span>新闻</span></a>
+				</li>
+				
+				<li <eq name="active" value="6">class="sel"</eq> >
+					<a href="{:U('Home/Index/faqs')}" title="问题与帮助"><span>问题与帮助</span></a>
+				</li>
+				
+			</ul>
 
-  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+		</div>
 
-  <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
-    <ul class="am-nav am-nav-pills am-topbar-nav">
-      <li <eq name="$active=0" value="[active]"> class="am-active"</eq> ><a href="{:U('Home/TestSys/index')}">测评中心</a></li>
-      <!--<li <eq name="$active=1" value="[active]"> class="am-active"</eq> ><a href="{:U('Home/Index/index')}">返回网站</a></li>-->
-    </ul>
-	
-    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-    		<li class="am-dropdown" data-am-dropdown>
-      	<a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
-          <span class="am-icon-users"></span> {$login_userinfo['username']}  <span class="am-icon-caret-down"></span>
-        </a>
-        <ul class="am-dropdown-content">
-          <li><a href="{:U('Home/TestSys/modifyPwd')}"><i class="am-icon-key am-margin-right-sm"></i>修改密码</a></li>
-          <li><a class="ajax-get" href="{:U('Home/Index/logout')}"><i class=" am-icon-power-off am-margin-right-sm"></i>退出系统</a></li>
-        </ul>
-    		
-    		</li>
-    </ul>
-
-    <div class="am-topbar-right">
-      <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
-      </div>
-    </div>
-
-  </div>
-</header>
-
-	
+	</div>
+	<!-- menu -->
 </div>

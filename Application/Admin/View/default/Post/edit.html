@@ -89,8 +89,8 @@
 					<div class="form-group">
 						<label for="inputpost_excerpt" class="col-md-2 col-lg-2 control-label">文章分类</label>
 						<div class="col-md-10 col-lg-10">
-							<select name="post_category" >
-								{:W("Partials/datatree",array(getDatatree('POST_CATEGORY'),true,$vo['post_category']))}
+							<select name="post_category" class="form-control" >
+								{:W("Partials/datatree",array(getDatatree('POST_CATEGORY'),true,$vo['post_category'],0))}
 							</select>
 							<div class="help-block">(请选择文章分类)</div>
 						</div>
@@ -129,7 +129,7 @@
         ]
     ]});
     ue.ready(function(){
-    		var cont =  "{:htmlspecialchars_decode($vo['post_content'])}";
+    		var cont =  '{:htmlspecialchars_decode($vo['post_content'])}';
     		ue.setContent(cont);
     });
 	</script>

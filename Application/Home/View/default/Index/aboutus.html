@@ -1,0 +1,152 @@
+<extend name="template/base_index" />
+
+<block name="area_header">
+	<style type="text/css">
+	#content #menu-interior #menu-secundario{
+		  background: url(__IMG__/bg_menu_top.gif) no-repeat left top;
+	}
+	</style>
+</block>
+
+<block name="area_body">
+	<div id="all">
+		<div id="general">
+
+			<div class="content-all">
+				<div class="contenedor-content-all">
+
+					<div id="header">
+						
+						<include file="default/partials/header" active="2"  />
+						
+					</div>
+
+					<div class="contenedor-interior">
+						<div class="contenedor-content">
+							<div class="fondo-abajo">
+								<div class="fondo-arriba">
+									<div class="centrar-contenido">
+										<div id="content">
+											<div class="con-menu">
+												<div id="menu-interior">
+
+													<div id="menu-secundario">
+														<ul>
+															<li class="primero sel">
+																<a href="{:U('Home/Index/aboutus')}" title="Business presentation"><span>公司产品</span></a>
+															</li>
+															<li>
+																<a href="{:U('Home/Index/distributor')}" title="Distribution and delegations"><span>总部和供应商</span></a>
+
+															</li>
+															<!--<li>
+																<a href="http://en.cafesoquendo.com/formcontacts/show/work-with-us" title="Work with us"><span>和我们一起工作</span></a>
+
+															</li>-->
+															<li>
+																<a href="{:U('Home/Index/news')}" title="News"><span>新闻</span></a>
+															</li>
+															
+															<li class="ultimo ">
+																<a href="{:U('Home/Index/quality')}" title="Quality"><span>质量</span></a>
+															</li>
+
+														</ul>
+													</div>
+
+												</div>
+
+												<div id="content-informacion" class="block">
+
+													<div class="migas">
+														<p>
+															<span>你正在浏览：</span>
+
+															<a href="" title="Our company">我的公司</a> &gt; 业务演示
+														</p>
+													</div>
+													<h1><span class="titulo">    业务演示</span></h1>
+
+													<div class="fondo-total block">
+														<div class="content-fondo-total">
+															<div class="esq-top-izq">
+
+																<div class="esq-top-der">
+																	<div class="esq-bottom-der">
+																		<div class="esq-bottom-izq">
+
+																			<div class="block contenido-izquierda">
+
+																				<p>
+																					<img style="WIDTH: 710px; HEIGHT: 116px" class="nicedit_sin-alinear" alt="pinera" src="__PUBLIC__/Home/img/pinera.jpg">
+																				</p>
+																				<p>&nbsp;</p>
+																				<p>有人喝咖啡吗?</p>
+																				<p>&nbsp;</p>
+																				<p align="justify">我欢迎这个机会告诉你关于我们公司,尽管我相信,毫无疑问你会同意我的观点,一个更好的方法将一杯新鲜冲泡的咖啡。</p>
+																				<p align="justify">&nbsp;</p>
+																				<p align="justify">我认为咖啡是更纯粹的饮料。 它给我们提供了一个机会,与他人互动,并结交新朋友。 咖啡是一个完美的借口去享受休息和充电之旅电池。 这标志着开始一天辛苦的工作,美味的最后一顿饭,开始漫长的一餐后聊天。 咖啡是你的忠实伴侣你翻阅报纸或与朋友在刺激的谈话。</p>
+																				<p align="justify">&nbsp;</p>
+																				<p align="justify">不管什么场合,在咖啡馆Oquendo我们努力生产高质量咖啡的独特的环境下,每个杯咖啡消费和提供的满足其香气,口味和乳脂状。</p>
+																				<p align="justify">&nbsp;</p>
+																				<p align="justify">我们希望这个web页面将帮助你更加熟悉咖啡馆Oquendo,正如我们报价你热烈欢迎我们的世界咖啡。</p>
+																				<p>&nbsp;</p>
+																				<p>拉斐尔·皮涅拉</p>
+																				<p>经理&nbsp;</p>
+																				<p>&nbsp;</p>
+																				<h3>该公司</h3>
+																				<div style="text-align: justify;">公司通过ISO 9001认证,I.F. (国际食品标准)被收购(业务Iniative方向)。 峰会奖2001年,优越品味奖2006年和2006年国际食品和饮料奖。 由于Cofibox西班牙Producto del另奖2005。
+																					<br>
+																				</div>
+																				<div style="text-align: justify;">
+																					<br>
+																				</div>
+																				<div style="text-align: justify;">
+																					<br>
+																				</div>
+
+																			</div>
+																			<!--contenido-izquierda-->
+																		</div>
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+													<!---fondo-total-->
+
+												</div>
+											</div>
+										</div>
+										<!--content-->
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--contenedor-interior-->
+					
+					<div class="newsletter-pie">
+						<include file="default/partials/newsletter" />
+					</div>
+					
+					<div id="footer">
+
+						<include file="default/partials/footer" />
+
+					</div>
+					<!--footer-->
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</block>
+
+<block name="area_footer">
+
+</block>

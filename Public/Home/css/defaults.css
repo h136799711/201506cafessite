@@ -1435,7 +1435,6 @@ span.destacado-telefono{
 /*                                             Cabecera                                                                      */
 /*****************************************************************************************************************************/
 #header{
-	float:left;
 	width:100%;
 	clear:both;
 	margin:0 0 0 0;
@@ -2094,6 +2093,7 @@ span.destacado-telefono{
 			.tres-bloques .bloque .caja-blanca{
 				float:left;
 				width:260px;
+				height: 240px;
 				padding:5px 10px 9px;
 				background:#fff;
 				margin-left:2px;
@@ -2124,7 +2124,7 @@ span.destacado-telefono{
 						width:100%;
 						}
 						.tres-bloques .listado-noticias UL LI IMG{
-							height: 80px;
+							height: 56px;
 							width: 100px;
 							float:left;
 							padding:0 12px 0 8px;						
@@ -2375,6 +2375,7 @@ span.destacado-telefono{
 			padding: 10px;
 			float:left;
 			margin:25px 20px 10px;
+			text-align: center;
 			clear:left;
 			background:#fff;
 			}
@@ -3574,17 +3575,14 @@ UL.filter-boletines {
 		}
 		.listado-productos-tienda .fila-productos .producto{
 			float:left;
-			width:210px;
+			width:220px;
 			padding:0px;
-			background:url(../../../Public/Home/img/carrito_top.png) no-repeat left top;
 			margin:0 20px 0 0;
 			}
 			.listado-productos-tienda .fila-productos .producto .content-producto{
-				/*font-family: "微软雅黑";*/
 				float:left;
 				width:206px;
 				padding:7px 7px 10px;
-				background:url(../../../Public/Home/img/carrito_bottom.gif) no-repeat left bottom;
 				min-height:233px;
 				}			
 			.listado-productos-tienda .fila-productos .producto.ultimo{
@@ -3940,7 +3938,6 @@ UL.filter-boletines {
 		.ficha-producto .enlaces-redes{
 			float:left;
 			clear:both;
-			background:url(../../../Public/Home/img/bg_enlaces_redes.gif) repeat-x left bottom;
 			width:662px;
 			padding:7px 8px;
 			margin-bottom:15px;
@@ -3986,7 +3983,6 @@ UL.filter-boletines {
 				font-family:Arial, Helvetica, sans-serif;
 				}
 			.ficha-producto .info-producto div.descripcion{
-				border-bottom:1px solid #dfdfdf;
 				padding-bottom:13px;
 				margin-bottom:13px;
 				clear:both;
@@ -5537,9 +5533,6 @@ form.formulario-bono SPAN.cadena-explicacion{
     font-size: 11px;
     line-height: 15px;
     padding: 5px 0 0 0px;
-	}
-.content-botones-cms .botones-cms.factura input, .content-botones-cms .botones-cms.factura a  {
-    background: url("../../../Public/Home/img/bg_factura.gif") no-repeat scroll left center transparent;
 	}
 #cms table.listado-cms TD.porcentaje-bono,
 #cms table.listado-cms TD.usos-totales-bono,
