@@ -1,0 +1,37 @@
+html{
+	background: #B4B7B8;
+}
+
+.cafe-topbar{
+	background: #c30e2e;
+}
+
+.cafe-topbar .cafe-topbar-brand{
+	border: 2px solid #1A171B;
+	border-radius: 5px;
+}
+
+.app  .cate-wrp a{
+	color:#c30e2e;
+}
+.app  .cate-wrp{
+	background: #EEEEEE;
+	color:#c30e2e;
+}
+
+.app .cate-wrp .cate-item .item-icon{
+	border: 2px solid #c30e2e;
+}
+.app .list-wrp .list-title{
+	background: #c30e2e;
+	color:#eeeeee;
+}
+
+.app .list-wrp .list-content{
+	background: #eeeeee;
+}
+
+.app .footer{
+	background:#c30e2e;
+	color:#EEEEEE;
+}

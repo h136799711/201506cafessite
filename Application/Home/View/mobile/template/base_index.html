@@ -11,25 +11,26 @@
 	    <meta content="yes" name="apple-touch-fullscreen" />
 	    <meta content="telephone=no,email=no" name="format-detection" />
 	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="__CDN__/common/rem.js"></script>
 		
 		<!-- 系统基本样式 -->
-		<link type="text/css" rel="stylesheet" href="__CDN__/amazeui/2.3.0/css/amazeui.min.css" />
 		
-		<link type="text/css" rel="stylesheet" href="__CSS__/home.css?v=__APP_VERSION__" />
+		<link type="text/css" rel="stylesheet" href="__CDN__/normalize/3.0.3/normalize.css" />
+		<link type="text/css" rel="stylesheet" href="__CDN__/fontawesome/4.3.0/css/font-awesome.min.css" />
+		<link type="text/css" rel="stylesheet" href="__CSS__/layout.css?v=__APP_VERSION__" />
+		
+		<link type="text/css" rel="stylesheet" href="__CSS__/theme-cafe.css?v=__APP_VERSION__" />
 		
 		<!-- 脚本 -->
 		<script type="text/javascript" src="__CDN__/jquery/2.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="__CDN__/amazeui/2.3.0/js/amazeui.min.js"></script>
-		<script type="text/javascript" src="__CDN__/common/mobile.js?v=__APP_VERSION__"></script>
 		
-
 		<block name="area_header">
 			<!--顶部区域 -->
 		</block>
 
 	</head>
 	
-	<body class="theme-default">
+	<body class="theme-default theme-cafe app">
 
 		<block name="area_body">
 			<!--内容区域 -->
@@ -39,21 +40,29 @@
 		</block>
 		
 		
-		<footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
-			<div class="am-footer-switch">
-			</div>
-			<div class="am-footer-miscs ">
-				<p>{__RUNTIME__}</p>
-			</div>
-		</footer>
-		
-		<div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
-		  <a href="#top" title="回到顶部">
-		    <span class="am-gotop-title">顶部</span>
-		    <i class="am-gotop-icon am-icon-chevron-up"></i>
+		<div class="gotop gotop-fixed">
+		  <a href="#" title="回到顶部">
+		    <i class="fa fa-chevron-up"></i>
 		  </a>
 		</div>
-		
+		<script type="text/javascript">
+			$(function(){
+				
+				$(window).bind("scroll",function(ev){
+					if($(window).scrollTop() > 100){
+						$(".gotop").addClass("show");
+					}else{
+						$(".gotop").removeClass("show");
+					}
+					
+					if($(document).scrollTop() + $(window).height()+10 >= $(document).height()){
+						$(".gotop").addClass("arrived_bottom");
+					}else{
+						$(".gotop").removeClass("arrived_bottom");
+					}
+				})
+			})
+		</script>
 	</body>
 
 </html>

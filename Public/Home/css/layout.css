@@ -1,0 +1,184 @@
+/**
+ * 第三方库兼容rem
+ */
+.fa {
+  display: inline-block;
+  font: normal normal normal 0.14rem FontAwesome;
+}
+
+/**
+ * 首页样式
+ */
+body.theme-cafe{
+	max-width: 640px;
+	font-size: 0.14rem;
+	margin: 0 auto;
+}
+
+/**
+ * 顶部样式
+ */
+.app .cafe-topbar{
+	height: 0.88rem;
+	margin-bottom: 0px;	
+	padding-top: 0.08rem;
+}
+.app .cafe-topbar .cafe-topbar-brand{
+	height: 0.73rem;
+	width: 1.8rem;
+	margin: 0 auto;
+}
+.app .cafe-topbar .cafe-topbar-brand a{
+	display:block;
+	height: 0.5rem;
+	padding-top: 0.09rem;
+}
+
+.app .cafe-topbar .cafe-topbar-brand a img{
+	width:1.8rem;
+	height:100%;
+}
+
+/**
+ * 首页Banner
+ */
+
+.app .banner-wrp{
+	height: 2.92rem;
+	width:100%;
+	background: #000000;
+}
+
+/**
+ * 首页分类导航
+ */
+.app  .cate-wrp{
+	width:100%;
+	padding: 0.32rem 0px;
+}
+.app .cate-wrp a{
+	
+	text-decoration: none;
+}
+.app .cate-wrp .cate-item-wrp{
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+.app .cate-wrp .cate-item .item-desc{
+	margin-top: 0.12rem;
+}
+
+
+.app .cate-wrp .cate-item .item-icon{
+	border-radius: 50%;
+	width: 0.8rem;
+	width: font-size: 0.8rem;
+	height: 0.8rem;
+	line-height: 1rem;
+}
+.app .cate-wrp .cate-item .item-icon .fa{
+	font-size: 0.5rem;
+}
+
+.app .cate-wrp .cate-item{
+	width:0.9rem;
+	margin: 0 auto;
+}
+
+/*
+ * 首页列表式展示
+ */
+.app .list-wrp .list-title{
+	height:0.35rem;
+	width:100%;
+	font-size: 0.12rem;
+	line-height: 0.35rem;	
+}
+
+.app .list-wrp .list-title .title-icon{
+	width:0.6rem;
+	color: #EEEEEE;
+	text-align: center;
+	margin-right: 0.07rem;
+}
+.app .list-wrp .list-content{
+	height:4.1rem;
+	width:100%;
+}
+
+
+/**
+ * 顶部布局
+ */
+
+.app .footer a{
+	text-decoration: none;
+	color:#EEEEEE;
+}
+.app .footer{
+	padding: 0.1rem;
+}
+.app .footer p{
+	margin: 0px;
+	line-height: 0.5rem;
+	min-height: 0.5rem;
+}
+
+
+
+/*
+ * 回到顶部样式
+ */
+.gotop{
+	display:none;
+}
+.gotop.show{
+	display:block;
+}
+.gotop.gotop-fixed{
+	position: fixed;
+	bottom: 0.2rem;
+    right: 0.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #BA9C9C;
+    text-align: center;
+    line-height: 0.8rem;
+}
+.gotop.gotop-fixed.arrived_bottom{
+	background: rgba(186, 156, 156, 0.62);
+}
+
+/**
+ * 工具
+ */
+.clearfix {
+  *zoom: 1; 
+} 
+
+.clearfix:before, 
+.clearfix:after { 
+
+  display: table; 
+
+  line-height: 0; 
+
+  content: ""; 
+
+}
+
+.clearfix:after { 
+
+  clear: both; 
+
+} 
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}

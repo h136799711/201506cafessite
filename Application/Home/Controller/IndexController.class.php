@@ -161,10 +161,10 @@ class IndexController extends HomeController {
 		$this->theme($this->theme)->display();
 	}
 	
-<<<<<<< HEAD
-	
 	public function contact(){
+		
 		if(IS_GET){
+			
 			$this->assign("meta_title","联系我们");
 			$this->theme($this->theme)->display();
 		}else{
@@ -177,7 +177,6 @@ class IndexController extends HomeController {
 				'text'=>$formcontact['comments'],
 				'tel'=>$formcontact['phone'],
 				'create_time'=>time(),
-				
 			);
 	
 			$result = apiCall("BoyeBase/Suggest/add",array($entity));
@@ -200,119 +199,7 @@ class IndexController extends HomeController {
 			$this->assign("meta_title","会员登记");
 			$this->theme($this->theme)->display();
 		}else{
-=======
-	public function yscl(){
-		$this->display();
-	}
-	public function map(){
-		$this->display();
-	}
-	public function quality(){
-		$this->display();
-	}
-//	private $allow_domain = array(
-//		"localhost",
-//		"127.0.0.1",
-//		"192.168.0.102",
-//		"20150505.itboye.com",
-//	);
-//	
-//	/**
-//	 * 跨域资源访问控制
-//	 */
-//	public function asset(){
-//		$referer = I('server.HTTP_REFERER','');
-//		//TODO: 判断path不能以.或/开头
-//		$path = I("get.path",'');
-//		//TODO: 去数据库中查询$referer 是否被允许访问
-////		dump($referer);
-//		$str = preg_replace("/http:\/\/|https:\/\//u","",$referer);  //去掉http://
-////		dump($str);
-//		$strdomain = explode("/",$str);               // 以“/”分开成数组
-//		$domain    = $strdomain[0];
-////		dump($domain);
-//		if(!in_array($domain, $this->allow_domain)){
-//			echo "NOT ALLOWED!";
-//			exit();
-//		}
-//		
-//		header("Access-Control-Allow-Origin:".$domain);
-////		Storage::read("./Public/".$path);
-//		$asset = Storage::read("./Public/".$path);
-//		echo $asset;
-//		exit();
-//	}
-	
-//	
-//	/**
-//	 * 注销/退出系统
-//	 */
-//	public function logout(){
-//		session('[destroy]');
-//		$this->success("退出成功!",U("Home/Index/index"));
-//	}
-//	
-//	/**
-//	 * 登录地址
-//	 */
-//	public function login(){
-//		if(IS_GET){
-//			$this->theme($this->theme)->display();
-//		}else{
-//			//检测用户
-//			$verify = I('post.verify', '', 'trim');
-//			if (!$this -> check_verify($verify, 1)) {
-//				$this -> error("验证码错误!");
-//			}
-//			
-//			$username = I('post.username', '', 'trim');
-//			$password = I('post.password', '', 'trim');
-//			
-//			$result = apiCall('Uclient/User/login', array('username' => $username, 'password' => $password));
-////			dump($result);
-//			//调用成功
-//			if ($result['status']) {
-//				$uid = $result['info'];
-//				$userinfo = array();
-//				$result = apiCall('Uclient/User/getInfo', array($uid));
-//				
-//				if ($result['status'] && is_array($result['info'])) {
-//					
-//					$this->setUserinfo($result['info']);
-//					
-//					
-//					$this -> success("登录成功！", U('Home/TestSys/index'));
-//
-//				} else {
-//					LogRecord($result['info'], __FILE__.__LINE__);
-//					$this -> error("登录失败!");
-//				}
-//
-//			} else {
-//				$this -> error($result['info']);
-//			}
-//		}
-//	}
-//	
-//  public function index(){
-//  	$map = array('parentid'=>getDatatree("POST_CATEGORY"));
-//		$cates = apiCall("Home/Datatree/queryNoPaging",array($map));
-//		if(!$cates['status']){
-//			$this->error($cates['info']);
-//		}
-//		$com=M('Post');
-//		$list = $com->select();
-//		$this->assign('list',$list);
-//		$user=M('member','common_');
-//		$users=$user->select();		
-//		
-//		$this->assign("users",$users);
-//		$this->assign("cates",$cates['info']);
-//		$this->display();
-//	} 
->>>>>>> branch 'master' of git@github.com:h136799711/201506cafessite.git
 
-			
 			$formcontact = I("post.formcontact","");
 			
 			$entity = array(

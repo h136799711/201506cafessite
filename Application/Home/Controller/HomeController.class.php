@@ -29,6 +29,7 @@ class HomeController extends  Controller {
 			}
 		}
 		if(isMobile()){
+				C('SHOW_PAGE_TRACE', false);//设置不显示trace
 			$this->theme = "mobile";
 		}
 		
