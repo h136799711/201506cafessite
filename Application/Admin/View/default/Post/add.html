@@ -68,7 +68,7 @@
 						<label for="inputpost_excerpt" class="col-md-2 col-lg-2 control-label">文章分类</label>
 						<div class="col-md-10 col-lg-10">
 							<select name="post_category" class="form-control input-normal " >
-								{:W("Partials/datatree",array(getDatatree('PRODUCT_CATE'),true,0,0))}
+								{:W("Partials/datatree",array(getDatatree('POST_CATEGORY'),true,0,0))}
 							</select>
 							<div class="help-block">(请选择文章分类)</div>
 						</div>
@@ -128,7 +128,7 @@
 <script>
     var ue = UE.getEditor('ueditor',{
     	toolbars:[
-        ['fullscreen', 'source', 'undo', 'redo', 'bold','italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', '|','lineheight'
+        ['fullscreen', 'source', 'undo', 'redo', 'bold','italic', 'underline','|', 'forecolor', 'backcolor','justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|',  'fontborder', 'strikethrough', 'superscript', 'subscript', '|','lineheight'
        , 'fontsize', 'insertimage','emotion','link', 'unlink', 'anchor', '|','map','print', 'preview',  'drafts'
         ]
     ]});

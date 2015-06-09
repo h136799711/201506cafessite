@@ -22,7 +22,7 @@
 <![endif]-->
 		<link href="/github/201506cafessite/Public/Home/css/gmaps.css" media="screen" rel="stylesheet" type="text/css">
 		<link href="/github/201506cafessite/Public/Home/css/print.css" media="print" rel="stylesheet" type="text/css">
-		<link href="/github/201506cafessite/Public/Home/css/fixitboye.css?v=1433772429" rel="stylesheet" type="text/css">
+		<link href="/github/201506cafessite/Public/Home/css/fixitboye.css?v=1433838125" rel="stylesheet" type="text/css">
 		
 		<script src="/github/201506cafessite/Public/cdn/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
 		<script src="/github/201506cafessite/Public/Home/js/jquery-ui.js" type="text/javascript"></script>
@@ -112,6 +112,7 @@
 	</div>
 
 	<div id="utils">
+					<a href="<?php echo U('Home/Index/cafemember');?>" title="会员登记"><span>会员注册登记</span></a>
 		<a title="" href="<?php echo U('Home/Index/index');?>">首页</a> <a title="Go to Distributors" href="<?php echo U('Home/Index/distributor');?>">经销商</a> <a href="<?php echo U('Home/Index/contact');?>" title="联系我们">联系我们</a>
 		<a href="http://www.facebook.com/Cafesoquendo" title="Go to www.facebook.com/Cafesoquendo" rel="external">
 			<img src="/github/201506cafessite/Public/Home/img/16x16_facebook.png" alt="Facebook Cafés Oquendo" class="nicedit_sin-alinear" height="16" width="16" />
@@ -145,7 +146,7 @@
 				</li>
 				
 				<li <?php if(($active) == "4"): ?>class="sel"<?php endif; ?> >
-					<a href="<?php echo U('Home/Index/community');?>" title="咖啡知识"><span>咖啡知识</span></a>
+					<a href="<?php echo U('Home/Index/cafenews_view?id=14');?>" title="咖啡知识"><span>咖啡知识</span></a>
 				</li>
 				
 				<li <?php if(($active) == "5"): ?>class="sel"<?php endif; ?> >
@@ -198,12 +199,12 @@
 																<img src="/github/201506cafessite/Public/Home/img/molinillo.jpg" alt="molinillo" class="imagen-derecha" style="WIDTH: 90px; HEIGHT: 95px">
 															</p>
 															<h3>选择奥肯多</h3>
-															<div style="text-align: justify;">你会发现我们的产品范围广泛，并沉浸我们的咖啡香味和味道之中.</div>
+															<div style="text-align: justify;">你会发现我们的产品是如此多样，并易沉浸我们的咖啡香味和味道之中.</div>
 
 														</div>
 														<div class="ver-todos">
 															<div class="content-ver-todos">
-																访问我们的产品
+																<a href="<?php echo U('Home/Index/products');?>">访问我们的产品</a>
 															</div>
 														</div>
 													</div>
@@ -225,7 +226,9 @@
 														</div>
 														<div class="ver-todos">
 															<div class="content-ver-todos">
-																<h2><span class="texto-peque"><a href="http://en.cafesoquendo.com/pages/index/coffee-chronology" title="Go to Chronology of Coffee">去看看咖啡的大事记</a><br></span></h2>
+																<h2><span class="texto-peque">
+																	
+																	<a href="<?php echo U('Home/Index/cafenews_view?id=14');?>" title="Go to Chronology of Coffee">去看看咖啡的大事记</a><br></span></h2>
 																<h3>                                     		                                    		                                    		                                    		                                    		</h3>
 
 															</div>
@@ -284,9 +287,9 @@
 		<div class="formulario-newsletter">
 			<form method="post" action="http://capsulasoquendo.us6.list-manage.com/subscribe/post?u=b742572b396b6cef0c9714299&id=333ff8774f" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
 				<div class="buscador-pie">
-					<input id="mce-EMAIL" name="EMAIL" onfocus="this.value=&#39;&#39;;" type="text" value="Your e-mail...">
+					<input id="mce-EMAIL" name="email" placeholder="你的邮箱地址"  type="text" >
 					<div class="botones">
-						<input type="submit" class="buscar" name="commit" value="Submit">
+						<input type="submit" class="buscar" name="commit" value="提交">
 					</div>
 					<div class="aceptaprivacidad">
 						<input name="suscription[legal_check]" type="hidden" value="0">

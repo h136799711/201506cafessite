@@ -1,0 +1,268 @@
+<extend name="template/base_index" />
+
+<block name="area_header">
+	<link rel="stylesheet" type="text/css" media="all" href="__CDN__/jquery-datetimepicker/jquery.datetimepicker.css">
+	<script type="text/javascript" src="__CDN__/jquery-datetimepicker/jquery.datetimepicker.js"></script>
+	<style type="text/css">
+		.cafemember .formulario > div{
+			  clear: none;
+		  	  float: left;
+		      width: 48.6%;
+		      padding-left: 9px;
+		        width: 45%;
+  padding-left: 9px;
+  margin: 0 13px;
+  box-sizing: border-box;
+		}
+		.cafemember .formulario > div.title{
+		      width: 100%;
+		      text-align: left;
+		      margin: 10px 0px;
+		      font-size: 16px;
+		      font-weight: bold;
+		      padding-left: 20px;
+		}
+		.cafemember .formulario > div.w100{
+		      width: 100%;
+		      text-align: left;
+		}
+		
+		.cafemember .formulario > div.content-botones{
+  			  width: 100%;
+  			  text-align: center;
+  			  margin: 10px auto;
+		      padding-left: 20px;
+		}
+		.formulario .botones, .formulario-newsletter FORM .botones{
+			float:none;
+			margin: 0 auto;
+		}
+	</style>
+</block>
+
+<block name="area_body">
+
+	<div id="all">
+		<div id="general">
+
+			<div class="content-all">
+				<div class="contenedor-content-all">
+
+					<div id="header">
+						<include file="default/partials/header" />
+					</div>
+					<div class="contenedor-interior">
+						<div class="contenedor-content">
+							<div class="fondo-abajo">
+								<div class="fondo-arriba">
+
+									<div class="centrar-contenido">
+										<div id="content">
+											<div class="con-menu">
+
+												<div id="content-informacion" class="block">
+													<div class="migas">
+														<p>
+															<span>您正在浏览:</span> 奥肯多会员注册
+														</p>
+													</div>
+
+													<h1>正文</h1>
+													<div class="contenido-derecha contenido-derecha-contacto">
+														<div class="titulo-editable-derecha">
+															<h2>奥肯多会员注册</h2>
+														</div>
+														<div class="caja-blanca-derecha">
+															<h3>地址</h3>
+															<p><span class="texto-peque">浙江省杭州市西湖区振华路298号2幢1702室</span>
+															</p>
+															<h3>电话</h3><span class="texto-peque">(+86) 0571-87357577</span>
+															<br>
+															<br>
+															<h3>传真</h3><span class="texto-peque">(+86) 0571-87357573</span>
+															<br>
+															<br>
+															<h3>电子邮箱</h3>
+															<a title="Send email to china@saludbuy.com" href="mailto:china@saludbuy.com">china@saludbuy.com</a>
+															<br>
+															<br>
+														</div>
+
+													</div>
+
+													<div class="fondo-total block fondo-total-contacto">
+														<div class="content-fondo-total">
+															<div class="esq-top-izq">
+																<div class="esq-top-der">
+																	<div class="esq-bottom-der">
+																		<div class="esq-bottom-izq">
+
+																			<div class="block contenido-izquierda">
+
+																				<div class="obligatorios">
+																					<p>
+																						标有 <span class="asterisco">(*)</span> 的是必须填的
+																					</p>
+																				</div>
+																				<div class="esq-top-izq">
+																					<div class="esq-top-der">
+																						<div class="esq-bottom-der">
+																							<div class="esq-bottom-izq">
+																								<div class="caja-formulario">
+
+																									<form action="{:U('Home/Index/cafemember')}" class="cafemember" enctype="multipart/form-data" method="post">
+
+																										<div class="formulario">
+
+																											<div class="surname">
+																												<label for="formcontact_surname"><strong>姓名: </strong></label>
+																												<input id="formcontact_surname" name="formcontact[name]" type="text" value="" style="width: 120px;float: left;"> <label style="display: inline;"><input type="radio" value="1" name="formcontact[sex]" checked="checked" style="width: 32px;" />先生</label> <label style="display: inline;"><input type="radio" name="formcontact[sex]" value="0" style="width: 32px;"/>女士</label>
+																											</div>
+																											<div class="type">
+																												<label for="formcontact_type"><strong>机型:<span class="asterisco">*</span>: </strong>
+																												</label>
+																												<input id="formcontact_type" style="width:120px;float:left;" name="formcontact[machine_type]" type="text" value="">
+																											奶泡机<label style="display: inline;"><input type="radio" value="1" name="formcontact[has_milk_frother]" checked="checked" style="width: 32px;" />有</label> <label style="display: inline;"><input type="radio" name="formcontact[has_milk_frother]" value="0" style="width: 32px;"/>无</label>
+																											</div>
+																											<div class="cafe_club_code ">
+																												<label for="formcontact_cafe_club_code"><strong>奥肯多咖啡会注册卡号: </strong></label><input id="formcontact_cafe_club_code" name="formcontact[cafe_club_code]" type="text" value="">
+																											</div>
+																											<div class="email">
+																												<label for="formcontact_email"><strong>邮箱:<span class="asterisco">*</span>: </strong>
+																												</label>
+
+																												<input id="formcontact_email" name="formcontact[email]" type="text" value="">
+
+																											</div>
+																											
+																											
+
+																											<div class="phone">
+																												<label for="formcontact_phone"><strong>移动电话: </strong>
+																												</label>
+
+																												<input id="formcontact_phone" name="formcontact[phone]" type="text" value="">
+
+																											</div>
+
+																											<div class="birthday">
+																												<label for="formcontact_birthday"><strong>生日:<span class="asterisco">*</span>: </strong>
+																												</label>
+																												<input id="formcontact_birthday" name="formcontact[birthday]" type="text" value="">
+																											</div>
+																											
+																											
+																											<div class="color">
+																												<label for="formcontact_type"><strong>面板颜色:<span class="asterisco">*</span>: </strong>
+																												</label>
+																												<input id="formcontact_type" name="formcontact[color]" type="text" value="">
+																											</div>
+																											
+																											<div class="color">
+																												<label for="formcontact_type"><strong>意愿面板颜色:<span class="asterisco">*</span>: </strong>
+																												</label>
+																												<input id="formcontact_type" name="formcontact[wishcolor]" type="text" value="">
+																											
+																											</div>
+																											<div class="title">
+																												收件地址
+																											</div>
+																											<div class="color">
+																												<label for="formcontact_type"><strong>国家: </strong>
+																												</label>
+																												<input id="formcontact_type" name="formcontact[country]" type="text" value="">
+																											</div>
+																											
+																											<div class="color">
+																												<label for="formcontact_type"><strong>省份: </strong>
+																												</label>
+																												<input id="formcontact_type" name="formcontact[province]" type="text" value="">
+																											</div>
+																											
+																											<div class="color">
+																												<label for="formcontact_type"><strong>区县: </strong>
+																												</label>
+																												<input id="formcontact_type" name="formcontact[district]" type="text" value="">
+																											</div>
+																											<div class="city">
+																												<label for="formcontact_city"><strong>城市: </strong>
+																												</label>
+																												<input id="formcontact_city" name="formcontact[city]" type="text" value="">
+																											</div>
+																											<div class="city">
+																												<label for="formcontact_postcode"><strong>邮编: </strong>
+																												</label>
+																												<input id="formcontact_postcode" name="formcontact[post_code]" type="text" value="">
+																											</div>
+																											<div class="formcontact_address1 w100">
+																												<label for="formcontact_address1"><strong>地址1: </strong>
+																												</label>
+																												<textarea rows="3"  id='formcontact_address1' name="formcontact[address1]"></textarea>
+																											</div>
+																											<div class="formcontact_address2 w100">
+																												<label for="formcontact_address2"><strong>地址2: </strong>
+																												</label>
+																												<textarea rows="3" id='formcontact_address2' name="formcontact[address2]"></textarea>
+																											</div>
+																											<div class="content-botones">
+																												<div class="botones">
+																													<input class="boton" name="commit" title="Submit" type="submit" value="提交">
+																												</div>
+																											</div>
+																										</div>
+																									</form>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<!--contenido-izquierda-->
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!---fondo-total-->
+
+												</div>
+											</div>
+
+										</div>
+										<!--content-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--contenedor-interior-->
+
+					<div class="newsletter-pie">
+						<include file="default/partials/newsletter" />
+					</div>
+
+					<div id="footer">
+
+						<include file="default/partials/footer" />
+
+					</div>
+					<!--footer-->
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</block>
+<block name="area_footer">
+	<script type="text/javascript">
+		$(function() {
+			$('#formcontact_birthday').datetimepicker({
+				lang: 'ch',
+				timepicker:false,
+				format:"Y-m-d",				
+			});
+		})
+	</script>
+</block>

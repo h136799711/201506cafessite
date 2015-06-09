@@ -1,172 +1,164 @@
 <extend name="template/base_index" />
 
 <block name="area_header">
+<style type="text/css">
+	.total-row{
+		color: #838383;
+	}
+	.list_page .pagination{
+		background: url(__IMG__/bg_pag_izq.gif) no-repeat left top;
+	}
+	.list_page .pagination li{
+        float: left;
+		clear: none;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 0 0em 0 0;
+		width: auto;
+		border: 0;
+		margin-right: 3px;
+		background: url(__IMG__/bg_li_paginador.gif) no-repeat right center;
+	}
+	.list_page .pagination li a{
+		color: #838383;
+        font-weight: normal;
+        text-decoration: none;
+        background: none;
+        padding: 5px 8px;
+        font-size: 12px;
 
+	}
+</style>
 </block>
 
 <block name="area_body">
 
-		<div id="all">
-			<div id="general">
-				<div class="content-all">
-					<div class="contenedor-content-all">
-						<div id="header">
-							<include file="default/partials/header" active="5" />
-						</div>
-						
-						<div class="contenedor-interior">
-							<div class="contenedor-content">
-								<div class="fondo-abajo">
-									<div class="fondo-arriba">
-										<div class="navigator">
-											<a href="http://en.cafesoquendo.com/noticias#menu" title="Ir a menú">
-												<img alt="arriba" src="__PUBLIC__/Home/img/arriba.png">Ir al menú</a>
-											<a href="http://en.cafesoquendo.com/noticias#footer" title="Ir a pie">
-												<img alt="abajo" src="__PUBLIC__/Home/img/abajo.png">Ir al pie</a>
-										</div>
-										<div class="centrar-contenido">
-											<div id="content">
-												<div class="con-menu">
-													<div id="content-informacion" class="block">
+	<div id="all">
+		<div id="general">
+			<div class="content-all">
+				<div class="contenedor-content-all">
+					<div id="header">
+						<include file="default/partials/header" active="5" />
+					</div>
 
-														<div class="migas">
-															<p>
-																<span>您正在浏览:</span> 新闻
-															</p>
-														</div>
-														<div class="block contenido-izquierda">
+					<div class="contenedor-interior">
+						<div class="contenedor-content">
+							<div class="fondo-abajo">
+								<div class="fondo-arriba">
+									<div class="centrar-contenido">
+										<div id="content">
+											<div class="con-menu">
+												<div id="content-informacion" class="block">
 
-															<h1> 新闻</h1>
-															<div class="contenido-derecha buscador_contents">
+													<div class="migas">
+														<p>
+															<span>您正在浏览:</span> 新闻
+														</p>
+													</div>
+													<div class="block contenido-izquierda">
 
-																<div class="esq-top-izq">
-																	<div class="esq-top-der">
-																		<div class="esq-bottom-der">
-																			<div class="esq-bottom-izq">
-																				<div class="caja-formulario">
-																					<h3 class="titulo-buscador">浏览器</h3> 您可以使用搜索工具搜索我们的产品的历史新闻短片的产品
-																					<form action="http://en.cafesoquendo.com/noticias/search" method="get">
+														<h1> 新闻</h1>
+														<div class="contenido-derecha buscador_contents">
 
-																						<div class="buscador-noticias">
-																							<div class="texto">
-																								<label for="content_search" class="title">内同</label>
-																								<input type="text" size="24" id="content_search" name="content_search" value="">
-																							</div>
+															<div class="esq-top-izq">
+																<div class="esq-top-der">
+																	<div class="esq-bottom-der">
+																		<div class="esq-bottom-izq">
+																			<div class="caja-formulario">
+																				<h3 class="titulo-buscador">浏览器</h3> 您可以使用搜索工具搜索我们的产品的历史新闻短片的产品
+																				<form action="{:U('Home/Index/news')}" method="post">
 
-																							<div class="fecha entre-fechas">
-																								<h3><span class="translation_missing">en, contents, fecha</span>: </h3>
-																								<div class="fecha-desde">
-																									<span class="buscador-fecha-desde">从</span>
-																									<input type="text" class="input_month" id="fecha_desde-mm" name="fecha_desde(2i)" value="" maxlength="2" size="2">
-																									<label class="label_date" for="fecha_desde-mm">MM</label>
-																									<span class="separator_date">/</span>
-																									<input type="text" class="input_day" id="fecha_desde-dd" name="fecha_desde(3i)" value="" maxlength="2" size="2">
-																									<label class="label_date" for="fecha_desde-dd">DD</label>
-																									<span class="separator_date">/</span>
-																									<input type="text" class="input_year highlight-days-67 split-date" id="fecha_desde" name="fecha_desde(1i)" value="" maxlength="4" size="4"><a href="http://en.cafesoquendo.com/noticias#" class="date-picker-control" title="Show Calendar" id="fd-but-fecha_desde"><span>&nbsp;</span></a>
-																									<label class="label_date" for="fecha_desde">YYYY</label>
+																					<div class="buscador-noticias">
+																						<div class="texto">
+																							<label for="content_search" class="title">内同</label>
+																							<input type="text" size="24" placeholder="标题" id="content_search" name="title" value="{$title}">
+																						</div>
 
-																								</div>
-																								<div class="fecha-hasta">
-																									<span class="buscador-fecha-hasta">到</span>
-																									<input type="text" class="input_month" id="fecha_hasta-mm" name="fecha_hasta(2i)" value="" maxlength="2" size="2">
-																									<label class="label_date" for="fecha_hasta-mm">MM</label>
-																									<span class="separator_date">/</span>
-																									<input type="text" class="input_day" id="fecha_hasta-dd" name="fecha_hasta(3i)" value="" maxlength="2" size="2">
-																									<label class="label_date" for="fecha_hasta-dd">DD</label>
-																									<span class="separator_date">/</span>
-																									<input type="text" class="input_year highlight-days-67 split-date" id="fecha_hasta" name="fecha_hasta(1i)" value="" maxlength="4" size="4"><a href="http://en.cafesoquendo.com/noticias#" class="date-picker-control" title="Show Calendar" id="fd-but-fecha_hasta"><span>&nbsp;</span></a>
-																									<label class="label_date" for="fecha_hasta">YYYY</label>
-
-																								</div>
-																							</div>
-
-																							<div class="content-botones">
-																								<div class="botones">
-																									<input type="submit" value="Search" name="commit" id="buscar" class="boton">
-																								</div>
+																						<div class="content-botones">
+																							<div class="botones">
+																								<input type="submit" value="搜索" name="commit" id="buscar" class="boton">
 																							</div>
 																						</div>
-																					</form>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="enlace-rss">
-																	<a href="http://en.cafesoquendo.com/noticias/rss" class="rss" title="RSS">RSS</a>
-
-																</div>
-															</div>
-															<div class="content-listado-modulo">
-																<div class="interior-listado-modulo">
-
-																	<div class="content-botones-listado">
-																		<div class="content-botones-cms">
-																			<div class="botones-cms nuevo" style="display: none;">
-
-																			</div>
-																		</div>
-																	</div>
-
-																	<div class="contenedor-listado-modulo listado-noticias">
-																		<ul>
-																			<volist name="list" id="vo">
-																				<li class="even">
-																					<p class="fecha">
-																						{$vo.post_date|date='Y-m-d H:i:s',###}
-																					</p>
-																					<div class="con-imagen">
-
-																						<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" title="">
-																							<img alt="" src="{$vo.main_img}" title="{$vo.post_title}">
-																						</a>
-
-																						<h2><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" title="">{$vo.post_title}</a></h2>
-																						<p class="entradilla">
-																							{:htmlspecialchars_decode($vo['post_content'])}
-																						</p>
 																					</div>
-																				</li>
-																			</volist>
-																			<!--	<div class="list_page" style=" height:120px; border: 1px silid #FFFFFF;">{$show}</div>-->
-																		</ul>
-
+																				</form>
+																			</div>
+																		</div>
 																	</div>
-
 																</div>
 															</div>
 
 														</div>
-														<!--contenido-izquierda-->
+														<div class="content-listado-modulo">
+															<div class="interior-listado-modulo">
+
+																<div class="content-botones-listado">
+																	<div class="content-botones-cms">
+																		<div class="botones-cms nuevo" style="display: none;">
+
+																		</div>
+																	</div>
+																</div>
+
+																<div class="contenedor-listado-modulo listado-noticias">
+																	<empty name="list">
+																		<h3>没有相关信息!</h3>
+																	</empty>
+																	<ul>
+																		<volist name="list" id="vo">
+																			<li class="even">
+																				<p class="fecha">
+																					{$vo.post_date|date='Y-m-d H:i:s',###}
+																				</p>
+																				<div class="con-imagen">
+
+																					<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" title="">
+																						<img alt="" src="{$vo.main_img}" title="{$vo.post_title}">
+																					</a>
+
+																					<h2><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" title="">{$vo.post_title}</a></h2>
+																					<p class="entradilla">
+																						{:htmlspecialchars_decode($vo['post_content'])}
+																					</p>
+																				</div>
+																			</li>
+																		</volist>
+																		<div class="list_page" style=" height:120px; border: 1px silid #FFFFFF;">{$show}</div>
+																	</ul>
+
+																</div>
+
+															</div>
+														</div>
+
 													</div>
+													<!--contenido-izquierda-->
 												</div>
 											</div>
-											<!--content-->
 										</div>
+										<!--content-->
 									</div>
 								</div>
 							</div>
 						</div>
-						<!--contenedor-interior-->
-
-						<div class="newsletter-pie">
-							
-								<include file="default/partials/newsletter" />
-
-						</div>
-
-						<div id="footer">							
-							<include file="default/partials/footer" />
-						</div>
-						<!-- FOOTER -->
 					</div>
+					<!--contenedor-interior-->
+
+					<div class="newsletter-pie">
+
+						<include file="default/partials/newsletter" />
+
+					</div>
+
+					<div id="footer">
+						<include file="default/partials/footer" />
+					</div>
+					<!-- FOOTER -->
 				</div>
 			</div>
 		</div>
+	</div>
 </block>
 
 <block name="area_footer">
-	
+
 </block>

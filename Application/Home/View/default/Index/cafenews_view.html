@@ -1,0 +1,85 @@
+<extend name="template/base_index" />
+
+<block name="area_header">
+
+</block>
+
+<block name="area_body">
+
+	<div id="general">
+
+		<div class="content-all">
+			<div class="contenedor-content-all">
+
+				<div id="header">
+					<include file="default/partials/header" active="4" />
+				</div>
+
+				<div class="contenedor-interior">
+					<div class="contenedor-content">
+						<div class="fondo-abajo">
+							<div class="fondo-arriba">
+								<div class="centrar-contenido">
+									<div id="content">
+										<div class="con-menu">
+											<div id="menu-interior">
+
+												<div id="menu-secundario">
+													<include file="default/partials/leftmenu" active="$vo['id']" />
+												</div>
+
+											</div>
+
+											<div id="content-informacion" class="block">
+
+												<div class="migas">
+													<p>
+														<span>您正在浏览:</span>
+
+														<a href="" title="Barista community">咖啡师社区</a> &gt; <a href="" title="History ">历史 </a> &gt; 
+														{$vo['post_title']}
+													</p>
+												</div>
+
+												<h1><span class="titulo">
+														{$vo['post_title']}</span></h1>
+
+												<div class="fondo-total block">
+													<div class="block contenido-izquierda">
+														<p><img src="{$vo['main_img']}" alt="{$vo['post_title']}" /></p>
+														{:htmlspecialchars_decode($vo['post_content'])}
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<!--content-->
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--contenedor-interior-->
+
+					<div class="newsletter-pie">
+						<include file="default/partials/newsletter" />
+					</div>
+
+					<div id="footer">
+
+						<include file="default/partials/footer" />
+
+					</div>
+					<!--footer-->
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</block>
+
+<block name="area_footer">
+
+</block>

@@ -1,0 +1,200 @@
+<extend name="template/base_index" />
+
+<block name="area_header">
+	<link rel="stylesheet" type="text/css" media="all" href="__CDN__/jquery-datetimepicker/jquery.datetimepicker.css">
+	<script type="text/javascript" src="__CDN__/jquery-datetimepicker/jquery.datetimepicker.js"></script>
+	<style type="text/css">
+		.form-horizontal .form-group{
+			height: 80px;
+		}
+	</style>
+</block>
+
+<block name="area_body">
+	{:W('Menus/topbar')}
+	<div class="admin-main container-fluid">
+		{:W('Menus/left')}
+		<div class="admin-main-content">
+			{:W('Menus/breadcrumb')}
+			<div class="table-responsive well">
+
+				<!-- form -->
+				<form class="form-horizontal validateForm">
+					<fieldset>
+						<legend>
+							奥肯多咖啡会员信息表单编辑</legend>
+						<div class="form-group">
+							<label for="btns" class="col-md-4 col-lg-4 control-label">&nbsp;</label>
+							<div class="col-lg-8 col-md-8">
+								<a target-form="validateForm" class="ajax-post btn btn-primary" href="{:U('Admin/'.CONTROLLER_NAME.'/edit',array('id'=>$vo['id']))}" autofocus="autofocus"><i class="fa fa-save"></i> {:L('BTN_SAVE')}</a>
+								<a class="btn btn-default" href="{:U('Admin/'.CONTROLLER_NAME.'/index')}"><i class="fa fa-times-circle"></i>返回</a>
+							</div>
+						</div>
+						<div class="form-group col-lg-6">
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">姓名</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="required form-control input-short" name="name" id="inputtitle" placeholder="请输入会员真实姓名" value="{$vo.name}">
+								<div class="help-block">(输入会员真实姓名)</div>
+							</div>
+						</div>
+						<div class="form-group col-lg-6">
+							<label  class="col-md-2 col-lg-2 control-label">性别</label>
+							<div class="col-md-10 col-lg-10">
+								<label class="radio-inline">
+									<input type="radio" <eq name="vo['sex']" value="1">checked="checked"</eq> name="sex" value="1" />
+									先生
+								</label>
+								<label class="radio-inline">
+									<input type="radio" <eq name="vo['sex']" value="0">checked="checked"</eq> name="sex" value="0" />
+									女士
+								</label>
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-6 pull-left">
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">奥肯多卡号</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="required form-control input-short" name="cafe_club_code" id="inputtitle" placeholder="请输入奥肯多咖啡俱乐部会员卡号" value="{$vo.cafe_club_code}" >
+								<div class="help-block">(请输入奥肯多咖啡俱乐部会员卡号)</div>
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-6">
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">邮箱</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="required form-control input-short" name="email" id="inputtitle" placeholder="请输入邮箱" value="{$vo.email}"  >
+								<div class="help-block">(请输入邮箱)</div>
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-6">
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">电话</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="required form-control input-short" name="phone" id="inputtitle" placeholder="请输入联系电话" value="{$vo.phone}" >
+								<div class="help-block">(请输入联系电话)</div>
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-6">
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">生日</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="required form-control input-short" name="birthday" id="input_birthday" placeholder="请选择生日"  value="{$vo.birthday|date="Y-m-d",###}" >
+								<div class="help-block">(请选择生日)</div>
+							</div>
+						</div>
+						<div class="form-group col-lg-6">
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">面板颜色</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="required form-control input-short" name="color" id="input_birthday" placeholder="请输入购买产品的颜色"  value="{$vo.color}" >
+								<div class="help-block">(请输入购买产品的颜色，例如： 红色、黑色、白色)</div>
+							</div>
+						</div>
+						<div class="form-group col-lg-6">
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">意愿面板颜色</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="required form-control input-short" name="wish_color" id="input_birthday" placeholder="请输入想要产品的颜色"  value="{$vo.wish_color}" >
+								<div class="help-block">(请输入想要产品的颜色，例如： 红色、黑色、白色)</div>
+							</div>
+						</div>
+						<div class="form-group col-lg-6">
+							<label for="inputmachine_type" class="col-md-2 col-lg-2 control-label">机型</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="required form-control input-short" name="machine_type" id="inputmachine_type" placeholder="请输入购买的产品的机型"  value="{$vo.machine_type}" >
+								<div class="help-block">(请输入购买的产品的机型)</div>
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-6">
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">奶泡机Milk Frother</label>
+							<div class="col-md-10 col-lg-10">
+								<label class="radio-inline">
+									<input type="radio" checked="checked" name="has_milk_frother" value="1" />
+									有
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="has_milk_frother" value="0" />
+									无
+								</label>
+								<div class="help-block">(是否带奶泡机Milk Frother)</div>
+							</div>
+						</div>
+						<div class="form-group col-lg-12"> 
+							<h4>收货地址</h4>
+						</div>
+						
+						<div class="form-group col-lg-6">
+							<label class="col-lg-2 col-md-2 control-label">国家</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="form-control"  name="country" value="{$vo.country}" />
+							</div>
+						</div>
+						<div class="form-group col-lg-6">
+							<label class="col-lg-2 col-md-2 control-label">省份</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="form-control"  placeholder="省份" name="province" value="{$vo.province}" />
+							</div>
+						</div>
+						<div class="form-group col-lg-6">
+							<label class="col-lg-2 col-md-2 control-label">城市</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="form-control" placeholder="城市" name="city" value="{$vo.city}" />
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-6">
+							<label class="col-lg-2 col-md-2 control-label">区县</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="form-control" placeholder="区县" name="district" value="{$vo.district}" />
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-6">
+							<label class="col-lg-2 col-md-2 control-label">邮编</label>
+							<div class="col-md-10 col-lg-10">
+								<input type="text" class="form-control" placeholder="邮编" name="post_code" value="{$vo.post_code}" />
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-12">
+							<label class="col-lg-1 col-md-1 control-label">地址1</label>
+							<div class="col-md-11 col-lg-11">
+								<textarea rows="3" name="address1" class="form-control" >{$vo.address1}</textarea>
+							</div>
+						</div>
+						
+						<div class="form-group col-lg-12">
+							<label class="col-lg-1 col-md-1 control-label">地址2</label>
+							<div class="col-md-11 col-lg-11">
+								<textarea rows="3" name="address2" class="form-control" >{$vo.address2}</textarea>
+							</div>
+						</div>
+						
+						
+						<div class="form-group">
+							<label for="btns" class="col-md-4 col-lg-4 control-label">&nbsp;</label>
+							<div class="col-lg-8 col-md-8">
+								<a target-form="validateForm" class="ajax-post btn btn-primary" href="{:U('Admin/'.CONTROLLER_NAME.'/edit',array('id'=>$vo['id']))}" autofocus="autofocus"><i class="fa fa-save"></i> {:L('BTN_SAVE')}</a>
+								<a class="btn btn-default" href="{:U('Admin/'.CONTROLLER_NAME.'/index')}"><i class="fa fa-times-circle"></i>返回</a>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+				<!-- form -->
+
+			</div>
+		</div>
+
+	</div>
+</block>
+
+<block name="area_footer">
+	<script type="text/javascript">
+		$(function() {
+			$('#input_birthday').datetimepicker({
+				lang: 'ch',
+				timepicker:false,
+				format:"Y-m-d",				
+			});
+		})
+	</script>
+</block>

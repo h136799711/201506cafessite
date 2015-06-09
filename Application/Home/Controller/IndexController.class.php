@@ -13,6 +13,8 @@ use Think\Storage;
  */
 class IndexController extends HomeController {
 	
+	
+	
 	public function index(){
 		
 		$where['post_category'] = getDatatree("NEWS_NOTICE");
@@ -30,12 +32,12 @@ class IndexController extends HomeController {
 		}
 		
 		$this->assign("banners",$banners['info']);
-		$this->display();
+		$this->theme($this->theme)->display();
 	}
 	
 	public function distributor(){
 		
-		$this->display();
+		$this->theme($this->theme)->display();
 	}
 	
 	/**
@@ -81,7 +83,7 @@ class IndexController extends HomeController {
 		$this->assign("type",$type);
 		$this->assign("list",$result['info']['list']);
 		$this->assign("show",$result['info']['show']);
-		$this->display();
+		$this->theme($this->theme)->display();
 	}
 	
 	
@@ -107,39 +109,63 @@ class IndexController extends HomeController {
 			$this->error($result['info']);
 		}
 		$this->assign("goods",$result['info']['list']);
-		$this->display();
+		$this->theme($this->theme)->display();
 	}
 	
 	
-	public function community(){
+	public function cafenews_view(){
+		$id = I("get.id",0);
 		
-		$this->assign("meta_title","咖啡知识");
-		$this->display();
+		$result = apiCall("Admin/Post/getInfo", array(array("id"=>$id)));
+		
+		if(!$result['status']){
+			$this->error($result['info']);
+		}
+
+		$this->assign("vo",$result['info']);
+		$this->theme($this->theme)->display();
 	}
 	
 	public function aboutus(){
 		$this->assign("meta_title","关于我们");
-		$this->display();
+		$this->theme($this->theme)->display();
 	}
 	
 	public function news(){
+		$title = I('post.title','');
 		$this->assign("meta_title","企业新闻");
-		$list=M('post')->where('post_category=22')->order('id desc')->select();
-		$this->assign('list',$list);
-		$this->display();
+		$map = array(
+			'post_category'=>getDatatree("NEWS_NOTICE"),
+		);
+		if(!empty($title)){
+			$map['post_title'] = array("like",'%'.$title.'%');
+			$param['title'] = $title;
+		}
+		$order = "post_date desc";
+		$page = array("curpage"=>I('get.p',0),'size'=>10);
+		$result = apiCall("Admin/Post/query", array($map,$page,$order,$param));
+		
+		if(!$result['status']){
+			$this->error($result['info']);
+		}
+		
+		$this->assign('title',$title);
+		$this->assign('list',$result['info']['list']);
+		$this->assign('show',$result['info']['show']);
+		$this->theme($this->theme)->display();
 	}
 	
 	
 	public function faqs(){
 		$this->assign("meta_title","常见问题解答");
-		$this->display();
+		$this->theme($this->theme)->display();
 	}
 	
 	
 	public function contact(){
 		if(IS_GET){
 			$this->assign("meta_title","联系我们");
-			$this->display();
+			$this->theme($this->theme)->display();
 		}else{
 			
 			$formcontact = I("post.formcontact","");
@@ -154,6 +180,46 @@ class IndexController extends HomeController {
 			);
 	
 			$result = apiCall("BoyeBase/Suggest/add",array($entity));
+			
+			if(!$result['status']){
+				
+				$this->error($result['info']);
+			}
+			
+			$this->success("成功提交信息!");
+			
+		}
+	}
+	
+	/**
+	 * 咖啡机会员登记
+	 */
+	public function cafemember(){
+		if(IS_GET){
+			$this->assign("meta_title","会员登记");
+			$this->theme($this->theme)->display();
+		}else{
+
+			
+			$formcontact = I("post.formcontact","");
+			
+			$entity = array(
+				
+				
+				'reg_ip'=> ip2long(get_client_ip()),
+				'openid'=>'',
+				
+			);
+			
+			foreach($formcontact as $key=>$value){
+			
+					$entity[$key] =$value;
+				
+			}
+			
+			
+			
+			$result = apiCall("Admin/Cafemember/add",array($entity));
 			
 			if(!$result['status']){
 				

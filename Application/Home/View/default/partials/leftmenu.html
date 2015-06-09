@@ -1,25 +1,42 @@
-<!-- sidebar start -->
-  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
-    <div class="am-offcanvas-bar admin-offcanvas-bar">
-      <ul class="am-list admin-sidebar-list">
-        <li class="admin-parent">
-          <a href="{:U('Home/TestSys/index')}" class="am-cf" ><span class="am-icon-file"></span> 测评中心<span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-        </li>
-        <li><a href="{:U('Home/TestSys/historyReport')}"><span class="am-icon-table"></span> 测评报告<span class="am-icon-angle-right am-fr am-margin-right"></span></a></li>
-        
-        <li><a href="{:U('Home/Index/logout')}" class="ajax-get"><span class="am-icon-sign-out"></span> 注销</a></li>
-      </ul>
+<assign name="active" value="[active]" />
+<ul>
+	<li class="primero  <in name="active" value="14,15">sel</in> ">
+		<a href="{:U('Home/Index/cafenews_view?id=14')}" class=" con-hijos" title="History "><span>历史 </span></a>
+		
+		<ul  <in name="active" value="16,17,18,19">style="display:none"</in> >
+			<li class="primero <eq name="active" value="14">sel</eq> ">
+				<a href="{:U('Home/Index/cafenews_view?id=14')}" title="咖啡的历史"><span>咖啡的历史</span></a>
 
+			</li>
+			<li class="ultimo <eq name="active" value="15">sel</eq> ">
+				<a href="{:U('Home/Index/cafenews_view?id=15')}" title="Chronology of Coffee"><span>咖啡的大事记</span></a>
 
-      <div class="am-panel am-panel-default admin-sidebar-panel">
-        <div class="am-panel-bd">
-          <p><span class="am-icon-bookmark"></span>最新公告</p>
-          <p>欢迎进入测评中心!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- sidebar end -->
-  	
-  	<a class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
-  
+			</li>
+
+		</ul>
+
+	</li>
+	<li class="ultimo <in name="active" value="16,17,18,19">sel</in> ">
+		<a href="{:U('Home/Index/cafenews_view?id=16')}" class=" con-hijos" title="咖啡的生产流程"><span>咖啡的生产流程</span></a>
+		
+		<ul  <in name="active" value="14,15">style="display:none"</in> >
+			<li class="primero <eq name="active" value="16">sel</eq> ">
+				<a href="{:U('Home/Index/cafenews_view?id=16')}" title="咖啡的栽培"><span>栽培</span></a>
+			</li>
+			<li class="ultimo <eq name="active" value="17">sel</eq> ">
+				<a href="{:U('Home/Index/cafenews_view?id=17')}" title="咖啡的收割"><span>收获</span></a>
+
+			</li>
+			<li class="ultimo <eq name="active" value="18">sel</eq> ">
+				<a href="{:U('Home/Index/cafenews_view?id=18')}" title="咖啡的加工"><span>加工</span></a>
+
+			</li>
+			<li class="ultimo <eq name="active" value="19">sel</eq> ">
+				<a href="{:U('Home/Index/cafenews_view?id=19')}" title="咖啡的烘培"><span>烘培</span></a>
+
+			</li>
+
+		</ul>
+	</li>
+
+</ul>
