@@ -5,16 +5,27 @@
   display: inline-block;
   font: normal normal normal 0.14rem FontAwesome;
 }
-
+ul {
+	-webkit-margin-before: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-padding-start: 0px;  
+	-webkit-margin-after: 0px;
+}
+a{
+	text-decoration: none;
+}
 /**
  * 首页样式
  */
 body.theme-cafe{
 	max-width: 640px;
-	font-size: 0.14rem;
+	font-size: 0.24rem;
 	margin: 0 auto;
+	font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
 }
-
+*{
+	box-sizing: border-box;
+}
 /**
  * 顶部样式
  */
@@ -22,10 +33,13 @@ body.theme-cafe{
 	height: 0.88rem;
 	margin-bottom: 0px;	
 	padding-top: 0.08rem;
+	position: relative;
 }
 .app .cafe-topbar .cafe-topbar-brand{
 	height: 0.73rem;
-	width: 1.8rem;
+    width: 1.9rem;
+    text-align: center;
+
 	margin: 0 auto;
 }
 .app .cafe-topbar .cafe-topbar-brand a{
@@ -38,15 +52,27 @@ body.theme-cafe{
 	width:1.8rem;
 	height:100%;
 }
-
+.app .cafe-topbar .right-menu{
+	position: absolute;
+	right: 0.1rem;
+	top: 0.17rem;
+}
+.app .cafe-topbar .right-menu i{
+	font-size: 0.5rem;
+}
 /**
  * 首页Banner
  */
 
 .app .banner-wrp{
 	height: 2.92rem;
-	width:100%;
+	width: 6.4rem;
 	background: #000000;
+}
+
+.app .banner-wrp img{
+	width: 6.4rem;
+	height: 2.92rem;
 }
 
 /**
@@ -66,11 +92,13 @@ body.theme-cafe{
 	text-align: center;
 }
 .app .cate-wrp .cate-item .item-desc{
+	font-size: 0.24rem;
 	margin-top: 0.12rem;
 }
 
 
 .app .cate-wrp .cate-item .item-icon{
+	margin: auto;
 	border-radius: 50%;
 	width: 0.8rem;
 	width: font-size: 0.8rem;
@@ -78,6 +106,7 @@ body.theme-cafe{
 	line-height: 1rem;
 }
 .app .cate-wrp .cate-item .item-icon .fa{
+  vertical-align: text-bottom;
 	font-size: 0.5rem;
 }
 
@@ -92,7 +121,7 @@ body.theme-cafe{
 .app .list-wrp .list-title{
 	height:0.35rem;
 	width:100%;
-	font-size: 0.12rem;
+	font-size: 0.24rem;
 	line-height: 0.35rem;	
 }
 
@@ -101,12 +130,156 @@ body.theme-cafe{
 	color: #EEEEEE;
 	text-align: center;
 	margin-right: 0.07rem;
+	font-size: 0.24rem;
 }
 .app .list-wrp .list-content{
-	height:4.1rem;
+    min-height: 4.1rem;
 	width:100%;
 }
+.app .list-wrp .list-content img{
+	height:2.5rem;
+	margin-bottom: 0.35rem;
+}
 
+.app .list-wrp .list-content .content-desc{
+	font-size: 0.25rem;
+	padding: 0 0.42rem;
+	line-height: 1.2;
+}
+
+.app .list-wrp .list-content .content-link{
+	text-align: right;
+	padding: 0 0.3rem;
+	color: #C30E2E;
+    padding-top: 0.2rem;
+	padding-bottom: 0.4rem;
+}
+
+.app .list-wrp .list-content .content-link a {
+  color: #C30E2E;
+  text-decoration: none;
+  font-size: 0.26rem;
+  line-height: 0.3rem;
+  display: inline;
+  vertical-align: middle;
+}
+  .app .list-wrp .list-content .content-link a i {
+  margin-left: 0.1rem;
+  border-radius: 50%;
+  font-size: 0.28rem;
+  color: #fff;
+  background: #C30E2E;
+  vertical-align: middle;
+  height: 0.28rem;
+  padding: 0.0rem 0.06rem;
+}
+.app .list-wrp .list-content .content-link a i.fa-chevron-right:before{
+  vertical-align: middle;
+  line-height: 0.26rem;
+  display: inline;
+  font-size: 0.12rem;
+}
+
+.app .list-wrp .list-content .content-news {
+	list-style-type: none;
+	width: 6.4rem;
+}
+
+.app .list-wrp .list-content .content-news li{
+	float:left;
+	width: 6.4rem;
+	height: 1.3rem;
+	padding: 0.3rem 0.3rem 0.17rem 0.3rem;
+	border-bottom: 0.02rem solid #cccccc;
+}
+
+.app .list-wrp .list-content .content-news li img{
+	width:0.96rem;
+	height:0.84rem;
+	margin-right: 0.34rem;
+}
+.app .list-wrp .list-content .content-news .post-title{
+	color:#333333;
+	font-size: 0.24rem;
+	margin-bottom: 0.3rem;
+	width:4.5rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.app .list-wrp .list-content .content-news .post-date{
+	color:#c30e2e;
+	font-size: 0.12rem;
+}
+
+/**
+ * 新闻页面
+ */
+
+
+.app .news-wrp .news {
+	list-style-type: none;
+	width: 6.4rem;
+}
+
+.app .news-wrp .news li{
+	float:left;
+	width: 6.4rem;
+	height: 1.3rem;
+	padding: 0.3rem 0.3rem 0.17rem 0.3rem;
+	border-bottom: 0.02rem solid #cccccc;
+}
+
+.app .news-wrp .news li img{
+	width:0.96rem;
+	height:0.84rem;
+	margin-right: 0.34rem;
+}
+
+.app .news-wrp .news .post-title{
+	font-size: 0.24rem;
+	margin-bottom: 0.3rem;
+	width:4.5rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.app .news-wrp .news .post-date{
+	font-size: 0.12rem;
+}
+
+/**
+ * 分页样式
+ */
+.pager{
+	padding: 0.3rem 0.3rem 0.17rem 0.3rem;
+}
+.pagination{  
+	padding: 0.3rem 0rem 0.17rem 0rem;
+}
+.pagination>li {
+	display: inline-block;
+}
+.pagination>li>a{
+  position: relative;
+  display: block;
+  padding: 0.05rem 0.1rem;
+  text-decoration: none;
+  line-height: 1.2;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  margin-bottom: 0.05rem;
+  margin-right: 0.05rem;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  z-index: 2;
+  color: #fff;
+  background-color: #0e90d2;
+  border-color: #0e90d2;
+  cursor: default;
+}
 
 /**
  * 顶部布局
@@ -143,6 +316,7 @@ body.theme-cafe{
     width: 0.8rem;
     height: 0.8rem;
     background: #BA9C9C;
+	background: rgba(186, 156, 156, 0.62);
     text-align: center;
     line-height: 0.8rem;
 }
@@ -153,6 +327,31 @@ body.theme-cafe{
 /**
  * 工具
  */
+.padding-sm{
+	padding: 0.05rem;
+}
+.padding-bottom-sm{
+	padding-bottom: 0.05rem;
+}
+.padding-top-sm{
+	padding-top: 0.05rem;
+}
+.padding-left-sm{
+	padding-left: 0.05rem;
+}
+.padding-right-sm{
+	padding-right: 0.05rem;
+}
+.pull-left{
+	float:left;
+}
+.pull-right{
+	float: right;
+}
+.img-responsive{
+	width:100%;
+	max-width: 640px;
+}
 .clearfix {
   *zoom: 1; 
 } 

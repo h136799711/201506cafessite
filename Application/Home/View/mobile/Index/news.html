@@ -1,0 +1,36 @@
+<extend name="mobile/template/base_index" />
+
+<block name="area_header">
+	<style type="text/css">
+	</style>
+</block>
+
+<block name="area_body">
+	<div class="header">
+		<include file="mobile/partials/header" />
+	</div>
+	
+	<div class="news-wrp">
+		<ul class="news clearfix">
+			<volist name="list" id="vo">
+				<li>
+					<a href="{:U('Home/Index/cafenews_view',array('id'=>$vo['id']))}">
+					<img src="{$vo.main_img}" alt="图片" class="pull-left" />
+					<div class="post-title">{$vo.post_title}</div>
+					<div class="post-date">{$vo.post_date|date="Y.m.d",###}</div>
+					</a>
+				</li>
+			</volist>
+		</ul>
+		<div class="pager">{$show}</div>
+	</div>
+
+	<div class="footer">
+		<include file="mobile/partials/footer" />
+	</div>
+
+</block>
+
+<block name="area_footer">
+
+</block>

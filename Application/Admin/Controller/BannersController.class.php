@@ -12,7 +12,7 @@ class BannersController extends  AdminController{
 	
 	public function index(){
 		
-		$position = getDatatree("BANNERS_POS_INDEX");
+		$position = getDatatree("BANNERS_POS_INDEX").','.getDatatree("MOBILE_BANNERS_POS_INDEX");
 		
 		$page = array('curpage' => I('get.p', 0), 'size' => C('LIST_ROWS'));
 		//
@@ -38,7 +38,7 @@ class BannersController extends  AdminController{
 			$notes = I('post.notes','');
 			$sort  = I('post.sort',0);
 			
-			$position = getDatatree("BANNERS_POS_INDEX");
+			$position = I('post.position',getDatatree("BANNERS_POS_INDEX"));
 			if(empty($position)){
 				$this->error("配置错误！");
 			}
@@ -83,12 +83,14 @@ class BannersController extends  AdminController{
 			$title = I('post.title','');
 //			$url = 
 			$notes = I('post.notes','');
+			$position = I('post.position',getDatatree("BANNERS_POS_INDEX"));
 			if(empty($position)){
 				$this->error("配置错误！");
 			}
 			$entity = array(
 				'title'=>$title,
 				'notes'=>$notes,
+				'position'=>$position,
 				'img'=>I('post.img',''),
 				'url'=>I('post.url',''),
 			);

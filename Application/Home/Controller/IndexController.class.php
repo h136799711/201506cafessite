@@ -22,7 +22,13 @@ class IndexController extends HomeController {
 		$list = D('Post')-> where($where)->order('id desc')->limit(3)->select();
 		
 		$this->assign('list',$list);
-		$position = getDatatree("BANNERS_POS_INDEX");
+		if($this->theme == "mobile"){
+			$position = getDatatree("MOBILE_BANNERS_POS_INDEX");
+			//TODO//获取3条最新的新闻
+			
+		}else{
+			$position = getDatatree("BANNERS_POS_INDEX");
+		}
 		$page = array("curpage"=>0,'size'=>5);
 		$order= " sort desc ";
 		$banners = apiCall("BoyeBase/Banners/queryWithPosition", array($position,$page,$order));
@@ -31,6 +37,7 @@ class IndexController extends HomeController {
 			$this->error($banners['info']);
 		}
 		
+		$this->assign("meta_title","奥肯多咖啡首页");
 		$this->assign("banners",$banners['info']);
 		$this->theme($this->theme)->display();
 	}
@@ -121,8 +128,21 @@ class IndexController extends HomeController {
 		if(!$result['status']){
 			$this->error($result['info']);
 		}
-
 		$this->assign("vo",$result['info']);
+		
+		$map = array('id'=>array("gt",$id));
+		$result = apiCall("Admin/Post/getInfo", array($map));		
+		if(!$result['status']){
+			$this->error($result['info']);
+		}
+		$this->assign("next",$result['info']);
+		$map = array('id'=>array("lt",$id));
+		$result = apiCall("Admin/Post/getInfo", array($map));
+		if(!$result['status']){
+			$this->error($result['info']);
+		}
+		$this->assign("prev",$result['info']);
+		
 		$this->theme($this->theme)->display();
 	}
 	
@@ -133,7 +153,9 @@ class IndexController extends HomeController {
 	
 	public function news(){
 		$title = I('post.title','');
+		
 		$this->assign("meta_title","企业新闻");
+		
 		$map = array(
 			'post_category'=>getDatatree("NEWS_NOTICE"),
 		);

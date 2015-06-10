@@ -1,12 +1,87 @@
 <extend name="mobile/template/base_index" />
 
 <block name="area_header">
+
+	<!--<link rel="stylesheet" type="text/css" href="__CDN__/touchslider/1.1/default.css" />-->
+	<script type="text/javascript" src="__CDN__/touchslider/1.1/TouchSlide.1.1.js"></script>
 	<style type="text/css">
-		html{
-			font-size: 12px;
+		
+		.tabBox {
+			height: 100%;
+		}
+		.tabBox .bd {
+			height: 100%;
+			width: 6.4rem;
+		}
+		/* 焦点图 */
+		
+		.slideBox .bd ul {
+			-webkit-margin-before: 0px;
+			-webkit-margin-start: 0px;
+			-webkit-padding-start: 0px;
+		}
+		.slideBox {
+			position: relative;
+			overflow: hidden;
+			margin: 0px auto;
+			max-width: 640px;
+			/* 设置焦点图最大宽度 */
+		}
+		.slideBox .hd {
+			position: absolute;
+			height: 0.28rem;
+			line-height: 0.28rem;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+		}
+		.slideBox .hd li {
+			display: inline-block;
+			width: 0.05rem;
+			height: 0.05rem;
+			-webkit-border-radius: 0.05rem;
+			-moz-border-radius: 0.05rem;
+			border-radius: 0.05rem;
+			background: #333;
+			text-indent: -9999rem;
+			overflow: hidden;
+			margin: 0 0.06rem;
+		}
+		.slideBox .hd li.on {
+			background: #fff;
+		}
+		.slideBox .bd {
+			position: relative;
+			z-index: 0;
+		}
+		.slideBox .bd li {
+			position: relative;
+			text-align: center;
+		}
+		.slideBox .bd li img {
+			background: center center no-repeat;
+			vertical-align: top;
+			width: 6.4rem;
+			/* 图片宽度100%，达到自适应效果 */
+		}
+		.slideBox .bd li a {
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		/* 去掉链接触摸高亮 */
+		
+		.slideBox .bd li .tit {
+			display: block;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			text-indent: 0.1rem;
+			height: 0.28rem;
+			line-height: 0.28rem;
+			color: #fff;
+			text-align: left;
+			background: url(__CDN__/touchslider/1.1/images/focusBg.png) repeat-x;
 		}
 	</style>
-
 </block>
 
 <block name="area_body">
@@ -16,13 +91,34 @@
 	</div>
 
 	<div class="banner-wrp">
-		<div></div>
+		<div id="leftTabBox" class="tabBox slideBox">
+			<div class="bd">
+				<volist name="banners['list']" id="vo">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="{$vo.img}" alt="{$vo.title}" class="img-responsive" title="{$vo.notes}" />
+							</a>
+						</li>
+					</ul>
+				</volist>
+			</div>
+			<div class="hd">
+				<ul>
+					<volist name="banners['list']" id="vo">
+						<li>{$key+1}</li>
+					</volist>
+				</ul>
+			</div>
+		</div>
+
+	</div>
 	</div>
 
 	<div class="cate-wrp clearfix">
 		<div class="cate-item-wrp">
 			<div class="cate-item">
-				<a href="{:U('Home/Index/aboutus')}">
+				<a href="{:U('Home/Index/cafenews_view?id=20')}">
 					<div class="item-icon">
 						<i class="fa fa-home"></i>
 					</div>
@@ -54,17 +150,48 @@
 
 	<div class="list-wrp">
 		<div class="list-title"><i class="title-icon fa fa-star"></i>世界的味道</div>
-		<div class="list-content"></div>
+		<div class="list-content">
+			<img src="__IMG__/mobile/js.jpg" class="img-responsive" alt="js" />
+			<div class="content-desc">
+				我们的产品品类非常之多，其中总有一些能让您沉浸在其香味和味道之中。
+			</div>
+			<div class="content-link">
+				<a href="{:U('Home/Index/products')}">我们的产品<i class="fa fa-chevron-right"></i></a>
+			</div>
+		</div>
 	</div>
 
 	<div class="list-wrp">
 		<div class="list-title"><i class="title-icon fa fa-star"></i>咖啡的历史</div>
-		<div class="list-content"></div>
+		<div class="list-content">
+			<img src="__IMG__/mobile/cp.jpg" class="img-responsive" alt="js" />
+			<div class="content-desc">
+				点击链接查看，我们最喜爱的饮料－咖啡的历史演变史。
+			</div>
+			<div class="content-link">
+				<a href="{:U('Home/Index/cafenews_view?id=14')}">查看历史<i class="fa fa-chevron-right"></i></a>
+			</div>
+		</div>
 	</div>
-
+	
 	<div class="list-wrp">
 		<div class="list-title"><i class="title-icon fa fa-star"></i>热点新闻</div>
-		<div class="list-content"></div>
+		<div class="list-content">
+			<ul class="content-news clearfix">
+				<volist name="list" id="vo">
+					<li><a href="{:U('Home/Index/cafenews_view',array('id'=>$vo['id']))}">
+						<img src="{$vo.main_img}" alt="图片" class="pull-left" />
+						<div class="post-title">{$vo.post_title}</div>
+						<div class="post-date">{$vo.post_date|date="Y.m.d",###}</div>
+						</a>
+					</li>
+				</volist>
+			</ul>
+			<div class="content-link">
+				<a href="{:U('Home/Index/news')}">查看更多<i class="fa fa-chevron-right"></i></a>
+			</div>
+		</div>
+
 	</div>
 	<div class="footer">
 		<include file="mobile/partials/footer" />
@@ -73,8 +200,10 @@
 
 <block name="area_footer">
 	<script>
-		$(function(){
-			
-		})
+		$(function() {
+			TouchSlide({
+				slideCell: "#leftTabBox"
+			});
+		});
 	</script>
 </block>

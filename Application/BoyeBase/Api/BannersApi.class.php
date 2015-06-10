@@ -22,7 +22,11 @@ class BannersApi extends Api{
 	 */
 	public function queryWithPosition($position, $page = array('curpage'=>0,'size'=>10), $order = false, $params = false){
 		
-		$map = array("b.position"=>$position);
+		if(strpos($position,",") === false){
+			$map = array("b.position"=>$position);	
+		}else{
+			$map = array("b.position"=>array("in",$position));
+		}
 		
 		$field = 'b.id,dt.name as position_name,b.url,b.noticetime,b.endtime,b.starttime,b.title,b.createtime,b.storeid,b.img,b.position,b.notes';
 		

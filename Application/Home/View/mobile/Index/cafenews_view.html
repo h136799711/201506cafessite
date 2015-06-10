@@ -1,0 +1,45 @@
+<extend name="mobile/template/base_index" />
+
+<block name="area_header">
+
+</block>
+
+<block name="area_body">
+
+	<div class="header">
+		<include file="mobile/partials/header" />
+	</div>
+	
+	<div class="breadcrumb padding-sm clearfix">
+		<notempty name="prev">
+		<a class="pull-left" href="{:U('Home/Index/cafenews_view',array('id'=>$prev['id']))}">上一篇:{$prev['post_title']}</a>
+		<else/>
+		<div class="pull-left">没有上一篇了</div>
+		</notempty>
+		
+		<notempty name="next">		
+		<a class="pull-right" href="{:U('Home/Index/cafenews_view',array('id'=>$next['id']))}">下一篇:{$next['post_title']}</a>
+		<else/>		
+		<div class="pull-right">没有下一篇了</div>
+		</notempty>
+	</div>
+	
+	<div class="post-view padding-sm">
+		<h1 class="text-center">{$vo['post_title']}</h1>
+		<div class="post-excerpt text-center">{$vo.post_date|date="Y.m.d",###} </div>
+		<div class="post-content ">
+			<p><img src="{$vo['main_img']}" class="img-responsive" alt="{$vo['post_title']}" /></p>
+			{:htmlspecialchars_decode($vo['post_content'])}
+		</div>
+	</div>
+	
+	<div class="footer">
+		<include file="mobile/partials/footer" />
+	</div>
+	
+	
+</block>
+
+<block name="area_footer">
+
+</block>
