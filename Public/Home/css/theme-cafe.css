@@ -47,6 +47,7 @@ html{
 .app .news-wrp .news .post-date{
 	color:#c30e2e;
 }
-.app .cafe-topbar .right-menu i{
+.app .cafe-topbar .right-menu i,
+.app .cafe-topbar .left-menu i{
 	color:#2c272d;
 }

@@ -14,6 +14,72 @@ ul {
 a{
 	text-decoration: none;
 }
+
+legend {
+  margin-bottom: 0.2rem;
+  line-height: inherit;
+  color: #333;
+  border-bottom: 0.01rem solid #e5e5e5;
+  padding-bottom: 0.05rem;
+  font-size: 0.36rem;
+}
+label {
+  display: inline-block;
+  margin-bottom:0.05rem;
+  font-weight: 700;
+}
+.form .form-group{
+	margin-bottom: 0.24rem;
+}
+
+.form input[type=number], .form input[type=search], .form input[type=text], .form input[type=password], .form input[type=datetime], .form input[type=datetime-local], .form input[type=date], .form input[type=month], .form input[type=time], .form input[type=week], .form input[type=email], .form input[type=url], .form input[type=tel], .form input[type=color], .form select, .form textarea, .form-field {
+  display: block;
+  width: 100%;
+  padding: 0.05rem;
+  font-size: 0.16rem;
+  line-height: 1.2;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn {  
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  user-select: none;
+  -webkit-transition: background-color 300ms ease-out,border-color 300ms ease-out;
+  transition: background-color 300ms ease-out,border-color 300ms ease-out;
+}
+.btn-coffee {
+  color: #fff;
+  background-color: #dd514c;
+  border-color: #dd514c;
+}
+.btn-coffee:focus, .btn-coffee:hover {
+  background-color: #d7342e;
+}
+.btn-coffee:visited{
+  color: #fff;
+}
+.btn-block {
+  width: 100%;
+  display: block;
+}
 /**
  * 首页样式
  */
@@ -59,6 +125,14 @@ body.theme-cafe{
 }
 .app .cafe-topbar .right-menu i{
 	font-size: 0.5rem;
+}
+.app .cafe-topbar .left-menu{
+	position: absolute;
+	left: 0.1rem;
+	top: 0.17rem;
+}
+.app .cafe-topbar .left-menu i {
+  	font-size: 0.5rem;
 }
 /**
  * 首页Banner

@@ -1,0 +1,166 @@
+<extend name="mobile/template/base_index" />
+
+<block name="area_header">
+	<link rel="stylesheet" type="text/css" media="all" href="__CDN__/jquery-datetimepicker/jquery.datetimepicker.css">
+	<script type="text/javascript" src="__CDN__/jquery-datetimepicker/jquery.datetimepicker.js"></script>
+	<style type="text/css">
+	</style>
+</block>
+
+<block name="area_body">
+
+	<div class="header">
+		<include file="mobile/partials/header" />
+	</div>
+
+	<div class="cafemember-form">
+		<form action="{:U('Home/Index/cafemember')}" class="cafemember form" enctype="multipart/form-data" method="post">
+			<fieldset>
+				<legend>奥肯多咖啡俱乐部会员注册</legend>
+				<div class="form-group">
+					<label for="formcontact_surname"><strong>姓名<span class="asterisco">*</span>: </strong></label>
+					<input id="formcontact_surname" name="formcontact[name]" type="text" value="" >
+				</div>
+				<div class="form-group">
+					<label for="formcontact_surname"><strong>性别<span class="asterisco">*</span>: </strong></label>
+					<label style="display: inline;">
+						<input type="radio" value="1" name="formcontact[sex]" checked="checked" style="width: 32px;" />先生</label>
+					<label style="display: inline;">
+						<input type="radio" name="formcontact[sex]" value="0" style="width: 32px;" />女士</label>
+				</div>
+
+				<div class="form-group">
+					<label for="formcontact_type"><strong>机型<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_type"  name="formcontact[machine_type]" type="text" value="">
+				</div>
+				
+				<div class="form-group"> 
+					<label for="formcontact_type"><strong>有无奶泡机<span class="asterisco">*</span>: </strong>
+					</label>
+					<label style="display: inline;">
+						<input type="radio" value="1" name="formcontact[has_milk_frother]" checked="checked" style="width: 32px;" />有</label>
+					<label style="display: inline;">
+						<input type="radio" name="formcontact[has_milk_frother]" value="0" style="width: 32px;" />无</label>
+				</div>
+					
+				<div class="form-group">
+					<label for="formcontact_cafe_club_code"><strong>奥肯多咖啡会注册卡号<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_cafe_club_code" name="formcontact[cafe_club_code]" type="text" value="">
+				</div>
+				<div class="form-group">
+					<label for="formcontact_email"><strong>邮箱:<span class="asterisco">*</span>: </strong>
+					</label>
+
+					<input id="formcontact_email" name="formcontact[email]" type="text" value="">
+
+				</div>
+
+				<div class="form-group">
+					<label for="formcontact_phone"><strong>移动电话<span class="asterisco">*</span>: </strong>
+					</label>
+
+					<input id="formcontact_phone" name="formcontact[phone]" type="text" value="">
+
+				</div>
+
+				<div class="form-group">
+					<label for="formcontact_birthday"><strong>生日:<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_birthday" name="formcontact[birthday]" type="text" value="">
+				</div>
+
+				<div class="form-group">
+					<label for="formcontact_type"><strong>面板颜色:<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_type" name="formcontact[color]" type="text" value="">
+				</div>
+
+				<div class="form-group">
+					<label for="formcontact_type"><strong>意愿面板颜色:<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_type" name="formcontact[wishcolor]" type="text" value="">
+
+				</div>
+				<div class="form-group">
+					<h2>收件地址（选填）</h2>
+				</div>
+				<div class="form-group">
+					<label for="formcontact_type"><strong>国家<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_type" name="formcontact[country]" type="text" value="中国">
+				</div>
+				
+				<div class="form-group">
+					<label for="formcontact_type"><strong>省份<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_type" name="formcontact[province]" type="text" value="">
+				</div>
+
+				<div class="form-group">
+					<label for="formcontact_type"><strong>区县<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_type" name="formcontact[district]" type="text" value="">
+				</div>
+				<div class="form-group">
+					<label for="formcontact_city"><strong>城市<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_city" name="formcontact[city]" type="text" value="">
+				</div>
+				<div class="form-group">
+					<label for="formcontact_postcode"><strong>邮编<span class="asterisco">*</span>: </strong>
+					</label>
+					<input id="formcontact_postcode" name="formcontact[post_code]" type="text" value="">
+				</div>
+				<div class="form-group">
+					<label for="formcontact_address1"><strong>地址1<span class="asterisco">*</span>: </strong>
+					</label>
+					<textarea rows="3" id='formcontact_address1' name="formcontact[address1]"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="formcontact_address2"><strong>地址2: </strong>
+					</label>
+					<textarea rows="3" id='formcontact_address2' name="formcontact[address2]"></textarea>
+				</div>
+				<div class="form-group">
+					<input class="btn btn-coffee btn-block" onclick="return checkData();" name="commit" title="Submit" type="submit" value="提交">
+				</div>
+
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="footer">
+
+		<include file="mobile/partials/footer" />
+
+	</div>
+	<!--footer-->
+
+</block>
+<block name="area_footer">
+	<script type="text/javascript">
+	function checkData(){
+		if(!$("#formcontact_cafe_club_code").val()){
+			alert("必须填写注册会员卡号!");
+			return false;
+		}
+		
+		if(!$("#formcontact_surname").val()){
+			alert("必须填写姓名!");
+			return false;
+		}
+		
+		return true;
+	}
+		$(function() {
+			
+			$('#formcontact_birthday').datetimepicker({
+				lang: 'ch',
+				timepicker: false,
+				format: "Y-m-d",
+			});
+		})
+	</script>
+</block>
