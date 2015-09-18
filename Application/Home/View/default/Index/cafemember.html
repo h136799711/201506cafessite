@@ -172,13 +172,25 @@
 																												<input id="formcontact_type" name="formcontact[wishcolor]" type="text" value="">
 																											
 																											</div>
+
+                                                                                                            <div class="color">
+                                                                                                                <label for="formcontact_type"><strong>哪个店铺购买的:<span class="asterisco">*</span>: </strong>
+                                                                                                                </label>
+                                                                                                                    <input name="formcontact[store_branchname]" type="hidden" id="store_branchname" />
+                                                                                                                    <select STYLE="width: 100%;HEIGHT: 26PX;" id="store_branch" name="formcontact[store_branch]" >
+                                                                                                                        <option value="">请选择</option>
+                                                                                                                        <volist name="branchs" id="vo">
+                                                                                                                            <option value="{$vo.id}">{$vo.name}</option>
+                                                                                                                        </volist>
+                                                                                                                    </select>
+                                                                                                            </div>
 																											<div class="title">
 																												收件地址
 																											</div>
 																											<div class="color">
 																												<label for="formcontact_type"><strong>国家: </strong>
 																												</label>
-																												<input id="formcontact_type" name="formcontact[country]" type="text" value="">
+																												<input id="formcontact_type" name="formcontact[country]" type="text" value="中国">
 																											</div>
 																											
 																											<div class="color">

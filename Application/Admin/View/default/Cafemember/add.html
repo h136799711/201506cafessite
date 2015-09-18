@@ -54,7 +54,7 @@
 							</div>
 						</div>
 						
-						<div class="form-group col-lg-6 pull-left">
+						<div class="form-group col-lg-6 ">
 							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">奥肯多卡号</label>
 							<div class="col-md-10 col-lg-10">
 								<input type="text" class="required form-control input-short" name="cafe_club_code" id="inputtitle" placeholder="请输入奥肯多咖啡俱乐部会员卡号" >
@@ -108,7 +108,7 @@
 						</div>
 						
 						<div class="form-group col-lg-6">
-							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">机型</label>
+							<label for="inputtitle" class="col-md-2 col-lg-2 control-label">带奶泡机</label>
 							<div class="col-md-10 col-lg-10">
 								<label class="radio-inline">
 									<input type="radio" checked="checked" name="has_milk_frother" value="1" />
@@ -121,6 +121,18 @@
 								<div class="help-block">(是否带奶泡机Milk Frother)</div>
 							</div>
 						</div>
+                        <div class="form-group col-lg-6">
+                            <label for="inputtitle" class="col-md-2 col-lg-2 control-label">哪个店铺购买的</label>
+                            <div class="col-md-10 col-lg-10">
+                                <input name="store_branchname" type="hidden" id="store_branchname" />
+                                <select id="store_branch" name="store_branch" class="form-control input-normal " >
+                                    <option value="">请选择</option>
+                                    {:W("Partials/datatree",array(getDatatree('SHOP_BRANCH'),true,0,0))}
+                                </select>
+                                <div class="help-block">(在哪个店铺购买的)</div>
+                            </div>
+                        </div>
+
 						<div class="form-group col-lg-12"> 
 							<h4>收货地址</h4>
 						</div>
@@ -197,6 +209,13 @@
 				timepicker:false,
 				format:"Y-m-d",				
 			});
+
+            $("#store_branch").change(function(){
+                console.log("选择新的!");
+                var branchname = $("#store_branch").find("option:selected").text();
+                branchname = branchname.replace(/\ +/g,"");
+                $("#store_branchname").val(branchname);
+            });
 		})
 	</script>
 </block>

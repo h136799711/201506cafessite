@@ -218,6 +218,13 @@ class IndexController extends HomeController {
 	 */
 	public function cafemember(){
 		if(IS_GET){
+            $map = array(
+                'parentid'=>getDatatree("SHOP_BRANCH")
+            );
+            $result= apiCall("Admin/Datatree/queryNoPaging",array($map));
+            if($result['status']){
+                $this->assign("branchs",$result['info']);
+            }
 			$this->assign("meta_title","会员登记");
 			$this->theme($this->theme)->display();
 		}else{
@@ -246,6 +253,8 @@ class IndexController extends HomeController {
 				
 				$this->error($result['info']);
 			}
+
+
 			
 			$this->success("成功提交信息!");
 			

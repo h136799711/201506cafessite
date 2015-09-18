@@ -22,6 +22,7 @@ defined("BOYE_SYS_NAME") or die("未定义");
 		'NEWS_NOTICE'=>22,//新闻通知公告
 		'PRODUCT_CATE'=>31,//产品分类
 		'BANNERS_POS_INDEX'=>38,//banners首页大图
-		'MOBILE_BANNERS_POS_INDEX'=>47,//移动端banners首页大图
+		'MOBILE_BANNERS_POS_INDEX'=>50,//移动端banners首页大图
+        'SHOP_BRANCH'=>47, //购买店铺来源——分店
 	)
 );

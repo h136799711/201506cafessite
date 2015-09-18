@@ -94,7 +94,8 @@ class CafememberController extends AdminController{
 			$entity['wish_color'] = I('post.wish_color','');
 			$entity['machine_type'] = I('post.machine_type',0);
 			$entity['color'] = I('post.color','');
-			
+            $entity['store_branch'] = I('post.store_branch',0);
+            $entity['store_branchname'] = I('post.store_branchname','');
 
 			$result = apiCall("Admin/Cafemember/saveByID", array($id,$entity));
 	
@@ -138,6 +139,8 @@ class CafememberController extends AdminController{
 			$entity['wish_color'] = I('post.wish_color','');
 			$entity['machine_type'] = I('post.machine_type',0);
 			$entity['color'] = I('post.color','');
+            $entity['store_branch'] = I('post.store_branch',0);
+            $entity['store_branchname'] = I('post.store_branchname','');
 			
 
 			$result = apiCall("Admin/Cafemember/add", array($entity));

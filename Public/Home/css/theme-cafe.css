@@ -5,10 +5,11 @@ html{
 
 .cafe-topbar{
 	background: #c30e2e;
+    background: #000000;
 }
 
 .cafe-topbar .cafe-topbar-brand{
-	border: 2px solid #1A171B;
+	/*border: 2px solid #1A171B;*/
 	border-radius: 5px;
 }
 
@@ -49,5 +50,5 @@ html{
 }
 .app .cafe-topbar .right-menu i,
 .app .cafe-topbar .left-menu i{
-	color:#2c272d;
+	color:#FFFFFF;
 }
